@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact &amp; Timings | Pramukh Neuropsychiatry Clinic | Valsad</title>
+    <meta name="description" content="View clinic timings, opening hours, address details, and contact numbers for Pramukh Neuropsychiatry Clinic in Abrama, Valsad, Gujarat." />
+    <meta name="keywords" content="psychiatrist address valsad, neuropsychiatrist phone number, pramukh clinic timings, consult doctor valsaddharampur road" />
+    <meta name="author" content="Dr. Virensinh Solanki" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo-symbol.svg" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%2300a8b5%22 rx=%2230%22/><text y=%2265%22 x=%2215%22 font-size=%2250%22 fill=%22white%22 font-weight=%22bold%22>P</text></svg>'" />
+    <meta name="theme-color" content="#00a8b5" />
+
+    <!-- Style and Icon Imports -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white text-slate antialiased">
+
+    <!-- Page Loader -->
+    <div id="page-loader" class="loader">
+        <a href="index.html" class="text-logo text-logo--lg text-logo--light">
+            <div class="text-logo__symbol">P</div>
+            <span class="text-logo__name">PRAMUKH</span>
+        </a>
+        <div id="loader-ecg" class="loader-content">
+            <svg class="ecg-svg" viewBox="0 0 200 60">
+                <path class="ecg-line" d="M0,30 L8,30 L12,20 L16,40 L20,5 L24,55 L28,25 L36,35 L44,20 L48,40 L52,5 L56,55 L60,25 L68,35 L76,20 L80,40 L84,5 L88,55 L92,25 L100,35 L108,20 L112,40 L116,5 L120,55 L124,25 L132,35 L140,20 L144,40 L148,5 L152,55 L156,25 L164,35 L172,20 L176,40 L180,5 L184,55 L188,25 L196,30 L200,30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <p class="loader-tagline">Consultations in comfortable environments</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor (Desktop only) -->
+    <div class="cursor-wrapper" id="custom-cursor">
+        <div class="cursor-dot" id="cursor-dot"></div>
+        <div class="cursor-circle" id="cursor-circle"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header scrolled">
+        <div class="header__container">
+            <nav class="header__nav">
+                <a href="index.html" class="text-logo text-logo--md">
+                    <div class="text-logo__symbol">P</div>
+                    <span class="text-logo__name">PRAMUKH</span>
+                </a>
+                
+                <div class="header__nav-desktop">
+                    <a href="index.html" class="header__nav-link" style="color: var(--dark);">Home</a>
+                    <a href="about.html" class="header__nav-link" style="color: var(--dark);">About</a>
+                    
+                    <!-- Dropdown Menu for Services -->
+                    <div class="header__dropdown">
+                        <a href="services.html" class="header__nav-link" style="color: var(--dark);">
+                            Services
+                            <span class="material-symbols-outlined header__dropdown-arrow">expand_more</span>
+                        </a>
+                        <div class="header__dropdown-menu">
+                            <div class="header__dropdown-inner">
+                                <div class="header__dropdown-services">
+                                    <a href="services.html#mental-health" class="header__dropdown-card">
+                                        <span class="material-symbols-outlined header__dropdown-card-icon">psychology</span>
+                                        <div>
+                                            <span class="header__dropdown-card-title">Brain & Mental Health</span>
+                                            <span class="header__dropdown-card-desc">Depression, Anxiety, OCD, Stress</span>
+                                        </div>
+                                    </a>
+                                    <a href="services.html#de-addiction" class="header__dropdown-card">
+                                        <span class="material-symbols-outlined header__dropdown-card-icon">volunteer_activism</span>
+                                        <div>
+                                            <span class="header__dropdown-card-title">De-Addiction Clinic</span>
+                                            <span class="header__dropdown-card-desc">Alcohol, Tobacco & Drug Recovery</span>
+                                        </div>
+                                    </a>
+                                    <a href="services.html#psychosexual" class="header__dropdown-card">
+                                        <span class="material-symbols-outlined header__dropdown-card-icon">settings_accessibility</span>
+                                        <div>
+                                            <span class="header__dropdown-card-title">Psychosexual Clinic</span>
+                                            <span class="header__dropdown-card-desc">Treatment for sexual health concerns</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="header__dropdown-procedures">
+                                    <span class="header__dropdown-procedures-label">Specialist Clinics</span>
+                                    <div class="header__dropdown-procedures-list">
+                                        <a href="services.html#headache" class="header__dropdown-pill">Headache</a>
+                                        <a href="services.html#sleep" class="header__dropdown-pill">Sleep Disorders</a>
+                                        <a href="services.html#epilepsy" class="header__dropdown-pill">Epilepsy</a>
+                                        <a href="services.html#child" class="header__dropdown-pill">Child & Adolescent</a>
+                                        <a href="services.html#elderly" class="header__dropdown-pill">Elderly Care</a>
+                                        <a href="services.html#counseling" class="header__dropdown-pill">Counseling</a>
+                                    </div>
+                                </div>
+                                <a href="services.html" class="header__dropdown-all">
+                                    View All Psychiatric Services
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="header__nav-link" style="color: var(--primary);">OPD Timings</a>
+                    <a href="faq.html" class="header__nav-link" style="color: var(--dark);">FAQs</a>
+                    <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="header__cta">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                        Book Appointment
+                    </a>
+                </div>
+
+                <button class="header__mobile-btn" style="color: var(--dark);" onclick="Alpine.store('mobileNav').toggleServicesSheet()" aria-label="Toggle menu">
+                    <span class="material-symbols-outlined header__mobile-btn-icon">menu</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero__bg"></div>
+        <div class="container">
+            <div class="page-hero__content reveal">
+                <div class="badge">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <span>OPD Details</span>
+                </div>
+                <h1 class="page-hero__title">
+                    Timing Schedules &amp; <span class="page-hero__title-highlight">Locations</span>
+                </h1>
+                <p class="page-hero__description">
+                    Plan your visit to Pramukh Neuropsychiatry Clinic in Abrama, Valsad. View opening hours, in-person consultant schedules, and emergency booking numbers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Details Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="about-profile__grid">
+                
+                <!-- Timing & Location Details Card -->
+                <div class="about-profile__content reveal-left">
+                    <h2 class="about-profile__title" style="font-size: 1.75rem; margin-bottom: 1.5rem;">OPD Opening Hours</h2>
+                    
+                    <div class="opd-preview__card" style="box-shadow: var(--shadow); margin-bottom: 2rem;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <h3 class="opd-preview__hospital-name" style="color: var(--primary); font-size: 1.25rem;">Full Day In-Person Schedule</h3>
+                            <p style="font-size: 0.95rem; font-weight: 700; color: var(--dark); margin: 0.5rem 0;">Mon, Tue, Thu, Sat</p>
+                            <p style="font-size: 0.85rem; color: var(--slate);"><span class="material-symbols-outlined" style="font-size: 1rem; color: var(--secondary);">schedule</span> 9:00 AM - 1:00 PM</p>
+                            <p style="font-size: 0.85rem; color: var(--slate);"><span class="material-symbols-outlined" style="font-size: 1rem; color: var(--secondary);">schedule</span> 4:00 PM - 7:00 PM</p>
+                        </div>
+                        <div style="border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                            <h3 class="opd-preview__hospital-name" style="color: var(--primary); font-size: 1.25rem;">Half Day In-Person Schedule</h3>
+                            <p style="font-size: 0.95rem; font-weight: 700; color: var(--dark); margin: 0.5rem 0;">Wed, Fri</p>
+                            <p style="font-size: 0.85rem; color: var(--slate);"><span class="material-symbols-outlined" style="font-size: 1rem; color: var(--secondary);">schedule</span> 9:00 AM - 1:00 PM Only</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card contact-card--static" style="margin-bottom: 1rem;">
+                        <div class="contact-card__icon"><span class="material-symbols-outlined">call</span></div>
+                        <div class="contact-card__text">
+                            <span class="contact-card__label">Appointment Booking Phone</span>
+                            <span class="contact-card__value">+91 87330 96725 (Mon-Sat, 8 AM - 8 PM)</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-card contact-card--static">
+                        <div class="contact-card__icon"><span class="material-symbols-outlined">mail</span></div>
+                        <div class="contact-card__text">
+                            <span class="contact-card__label">Clinic Email Address</span>
+                            <span class="contact-card__value">pramukhneuropsychiatry@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Map details -->
+                <div class="about-profile__content reveal-right">
+                    <h2 class="about-profile__title" style="font-size: 1.75rem; margin-bottom: 1.5rem;">Valsad Clinic Address</h2>
+                    
+                    <div class="opd-preview__card" style="box-shadow: var(--shadow); background-color: var(--light-teal); border-color: var(--border-teal);">
+                        <p class="opd-preview__address" style="font-size: 1.1rem; font-weight: 700; color: var(--dark);">
+                            <span class="material-symbols-outlined" style="color: var(--primary); font-size: 1.5rem;">location_on</span>
+                            <span>Pramukh Neuropsychiatry Clinic</span>
+                        </p>
+                        <p style="font-size: 0.95rem; padding-left: 2rem; color: var(--slate); margin-bottom: 1.5rem; line-height: 1.7;">
+                            205, B Metropolis, Opposite Parikh Hospital (2nd Floor),<br>
+                            Valsad-Dharampur Road, Abrama, Valsad,<br>
+                            Gujarat, India - 396001.
+                        </p>
+                        
+                        <!-- Stylysed Map Placeholder Box -->
+                        <div style="background-color: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0.75rem; padding: 1.5rem; margin-bottom: 1.5rem;">
+                            <span class="material-symbols-outlined" style="font-size: 3rem; color: var(--primary); animation: pulseHeart 1.5s infinite;">map</span>
+                            <div>
+                                <h4 style="font-size: 0.95rem; color: var(--dark);">Locate Clinic on Google Maps</h4>
+                                <p style="font-size: 0.75rem; color: var(--slate);">Abrama Area, Valsad-Dharampur Main Road</p>
+                            </div>
+                            <a href="https://maps.google.com/?q=Pramukh+Neuropsychiatry+Clinic+Abrama+Valsad" target="_blank" rel="noopener" class="btn btn--secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Open Google Map</a>
+                        </div>
+
+                        <div class="opd-preview__card-footer">
+                            <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20appointment." target="_blank" class="opd-preview__book-btn" style="flex: 1;">Book Outpatient Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mega-footer">
+        <div class="footer-main">
+            <div class="footer-main__container">
+                <div class="footer-main__grid footer-main__grid--5cols">
+                    <div class="footer-main__brand">
+                        <a href="index.html" class="text-logo text-logo--lg text-logo--light">
+                            <div class="text-logo__symbol">P</div>
+                            <span class="text-logo__name">PRAMUKH</span>
+                        </a>
+                        <p class="footer-main__brand-desc">
+                            Gold Medalist psychiatric solutions. Specialized in mental health, de-addiction, headache, sleep, and sexual healthcare in Valsad, Gujarat.
+                        </p>
+                    </div>
+
+                    <div class="footer-main__column">
+                        <h4 class="footer-heading">Psychiatric Clinics</h4>
+                        <ul class="footer-links">
+                            <li><a href="services.html#mental-health" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Mental Health Disorders</a></li>
+                            <li><a href="services.html#de-addiction" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>De-Addiction Program</a></li>
+                            <li><a href="services.html#psychosexual" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Psychosexual Clinic</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-main__column">
+                        <h4 class="footer-heading">Specialty Care</h4>
+                        <ul class="footer-links">
+                            <li><a href="services.html#sleep" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Sleep Clinic</a></li>
+                            <li><a href="services.html#child" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Child Psychiatry</a></li>
+                            <li><a href="services.html#counseling" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Counseling Services</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-main__column">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Home Page</a></li>
+                            <li><a href="about.html" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Dr. Solanki Profile</a></li>
+                            <li><a href="contact.html" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>OPD timings</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-main__column">
+                        <h4 class="footer-heading">Get in Touch</h4>
+                        <ul class="footer-main__contact-list">
+                            <li class="footer-contact-item">
+                                <span class="material-symbols-outlined footer-contact-item__icon">location_on</span>
+                                <span>205, B Metropolis, Abrama, Valsad, Gujarat</span>
+                            </li>
+                            <li class="footer-contact-item">
+                                <span class="material-symbols-outlined footer-contact-item__icon">phone</span>
+                                <a href="tel:+918733096725">+91 87330 96725</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom__container">
+                <div class="footer-bottom__inner">
+                    <p>&copy; 2026 Pramukh Neuropsychiatry Clinic. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation Bar & Drawer Trigger sheets -->
+    <nav class="bottom-nav" x-data="{ lastScrollY: 0, hidden: false, init() {
+        window.addEventListener('scroll', () => {
+            const currentY = window.scrollY;
+            const atBottom = (currentY + window.innerHeight) >= (document.documentElement.scrollHeight - 5);
+            this.hidden = !atBottom && currentY > this.lastScrollY && currentY > 50;
+            this.lastScrollY = currentY;
+        }, { passive: true });
+    } }" :class="{ 'is-hidden': hidden }" x-cloak>
+        <div class="bottom-nav__inner">
+            <a href="index.html" class="bottom-nav__item">
+                <span class="bottom-nav__icon"><span class="material-symbols-outlined">home</span></span>
+                <span class="bottom-nav__label">Home</span>
+                <span class="bottom-nav__indicator"></span>
+            </a>
+            
+            <button class="bottom-nav__item" @click="$store.mobileNav.toggleAboutSheet()">
+                <span class="bottom-nav__icon"><span class="material-symbols-outlined">person</span></span>
+                <span class="bottom-nav__label">About</span>
+                <span class="bottom-nav__indicator"></span>
+            </button>
+            
+            <div class="bottom-nav__center">
+                <button class="bottom-nav__book" :class="{ 'is-expanded': $store.mobileNav.bookExpanded }" @click="$store.mobileNav.toggleBook()">
+                    <span class="bottom-nav__book-default" x-show="!$store.mobileNav.bookExpanded">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                    </span>
+                    <div class="bottom-nav__book-expanded" x-show="$store.mobileNav.bookExpanded" x-transition x-on:click.stop>
+                        <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="bottom-nav__book-action bottom-nav__book-action--whatsapp"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+                        <a href="tel:+918733096725" class="bottom-nav__book-action bottom-nav__book-action--call"><span class="material-symbols-outlined">call</span></a>
+                    </div>
+                </button>
+                <span class="bottom-nav__label bottom-nav__label--center">Book</span>
+            </div>
+            
+            <button class="bottom-nav__item" @click="$store.mobileNav.toggleServicesSheet()">
+                <span class="bottom-nav__icon"><span class="material-symbols-outlined">medical_services</span></span>
+                <span class="bottom-nav__label">Services</span>
+                <span class="bottom-nav__indicator"></span>
+            </button>
+            
+            <button class="bottom-nav__item" @click="$store.mobileNav.toggleFaqSheet()">
+                <span class="bottom-nav__icon"><span class="material-symbols-outlined">help</span></span>
+                <span class="bottom-nav__label">FAQs</span>
+                <span class="bottom-nav__indicator"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Services Bottom Sheet Drawers (Mobile layout responsive) -->
+    <div class="services-sheet" x-data x-show="$store.mobileNav.servicesSheetOpen" x-cloak>
+        <div class="services-sheet__backdrop" @click="$store.mobileNav.closeServicesSheet()" x-show="$store.mobileNav.servicesSheetOpen" x-transition></div>
+        <div class="services-sheet__content" x-show="$store.mobileNav.servicesSheetOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="translate-y-full" x-transition:enter-end="translate-y-0" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-full">
+            <div class="services-sheet__inner">
+                <div class="services-sheet__handle"><span class="services-sheet__handle-bar"></span></div>
+                <div class="services-sheet__header">
+                    <h3 class="services-sheet__title">Specialist Clinics</h3>
+                    <button class="services-sheet__close" @click="$store.mobileNav.closeServicesSheet()"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="services-sheet__services">
+                    <a href="services.html#mental-health" class="services-sheet__card services-sheet__card--sky" @click="$store.mobileNav.closeServicesSheet()">
+                        <div class="services-sheet__card-icon"><span class="material-symbols-outlined">psychology</span></div>
+                        <div class="services-sheet__card-content">
+                            <span class="services-sheet__card-title">Brain &amp; Mental Health</span>
+                            <span class="services-sheet__card-desc">Depression, Anxiety, OCD, Stress Care</span>
+                        </div>
+                        <span class="material-symbols-outlined services-sheet__card-arrow">chevron_right</span>
+                    </a>
+                    <a href="services.html#de-addiction" class="services-sheet__card services-sheet__card--tangerine" @click="$store.mobileNav.closeServicesSheet()">
+                        <div class="services-sheet__card-icon"><span class="material-symbols-outlined">volunteer_activism</span></div>
+                        <div class="services-sheet__card-content">
+                            <span class="services-sheet__card-title">Addiction Clinic</span>
+                            <span class="services-sheet__card-desc">Comprehensive De-Addiction treatments</span>
+                        </div>
+                        <span class="material-symbols-outlined services-sheet__card-arrow">chevron_right</span>
+                    </a>
+                    <a href="services.html#psychosexual" class="services-sheet__card services-sheet__card--ocean" @click="$store.mobileNav.closeServicesSheet()">
+                        <div class="services-sheet__card-icon"><span class="material-symbols-outlined">settings_accessibility</span></div>
+                        <div class="services-sheet__card-content">
+                            <span class="services-sheet__card-title">Psychosexual Clinic</span>
+                            <span class="services-sheet__card-desc">Premature Ejaculation &amp; ED care</span>
+                        </div>
+                        <span class="material-symbols-outlined services-sheet__card-arrow">chevron_right</span>
+                    </a>
+                </div>
+                <div class="services-sheet__procedures">
+                    <h4 class="services-sheet__procedures-title">Quick Access</h4>
+                    <div class="services-sheet__procedures-scroll">
+                        <a href="services.html#headache" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Headache</a>
+                        <a href="services.html#sleep" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Sleep</a>
+                        <a href="services.html#epilepsy" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Epilepsy</a>
+                        <a href="services.html#child" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Child ADHD</a>
+                        <a href="services.html#elderly" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Dementia</a>
+                        <a href="services.html#counseling" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Therapy/CBT</a>
+                    </div>
+                </div>
+                <a href="services.html" class="services-sheet__view-all" @click="$store.mobileNav.closeServicesSheet()">View All Services <span class="material-symbols-outlined">arrow_forward</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Bottom Sheet Drawer -->
+    <div class="about-sheet" x-data x-show="$store.mobileNav.aboutSheetOpen" x-cloak>
+        <div class="about-sheet__backdrop" @click="$store.mobileNav.closeAboutSheet()" x-show="$store.mobileNav.aboutSheetOpen" x-transition></div>
+        <div class="about-sheet__content" x-show="$store.mobileNav.aboutSheetOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="translate-y-full" x-transition:enter-end="translate-y-0" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-full">
+            <div class="about-sheet__inner">
+                <div class="about-sheet__handle"><span class="about-sheet__handle-bar"></span></div>
+                <div class="about-sheet__header">
+                    <h3 class="about-sheet__title">About the Doctor</h3>
+                    <button class="about-sheet__close" @click="$store.mobileNav.closeAboutSheet()"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="about-sheet__doctor">
+                    <img src="images/dr-virensinh-headshot.png" alt="Dr. Virensinh Solanki" class="about-sheet__doctor-photo" />
+                    <div class="about-sheet__doctor-info">
+                        <span class="about-sheet__doctor-name">Dr. Virensinh Solanki</span>
+                        <span class="about-sheet__doctor-degrees">M.D. Psychiatry (Gold Medalist)</span>
+                        <span class="about-sheet__doctor-spec">Neuropsychiatrist &amp; Sexologist</span>
+                    </div>
+                </div>
+                <div class="about-sheet__credentials">
+                    <div class="about-sheet__credential">
+                        <span class="material-symbols-outlined">school</span>
+                        <div class="about-sheet__credential-text">
+                            <span class="about-sheet__credential-label">MBBS</span>
+                            <span class="about-sheet__credential-detail">GMERS Medical College, Valsad</span>
+                        </div>
+                    </div>
+                    <div class="about-sheet__credential">
+                        <span class="material-symbols-outlined">workspace_premium</span>
+                        <div class="about-sheet__credential-text">
+                            <span class="about-sheet__credential-label">MD (Gold Medalist)</span>
+                            <span class="about-sheet__credential-detail">SSG Hospital &amp; GMC Baroda</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-sheet__stats">
+                    <div class="about-sheet__stat">
+                        <span class="about-sheet__stat-number">5+</span>
+                        <span class="about-sheet__stat-label">Years Exp</span>
+                    </div>
+                    <div class="about-sheet__stat">
+                        <span class="about-sheet__stat-number">10+</span>
+                        <span class="about-sheet__stat-label">Hospitals</span>
+                    </div>
+                    <div class="about-sheet__stat">
+                        <span class="about-sheet__stat-number">100%</span>
+                        <span class="about-sheet__stat-label">Private</span>
+                    </div>
+                </div>
+                <div class="about-sheet__links">
+                    <a href="about.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
+                        <span class="material-symbols-outlined">person</span><span>Full Profile</span>
+                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
+                    </a>
+                    <a href="contact.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
+                        <span class="material-symbols-outlined">location_on</span><span>OPD Timings</span>
+                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
+                    </a>
+                </div>
+                <a href="about.html" class="about-sheet__view-all" @click="$store.mobileNav.closeAboutSheet()">View Full Profile <span class="material-symbols-outlined">arrow_forward</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQs Bottom Sheet Drawer -->
+    <div class="faq-sheet" x-data x-show="$store.mobileNav.faqSheetOpen" x-cloak>
+        <div class="faq-sheet__backdrop" @click="$store.mobileNav.closeFaqSheet()" x-show="$store.mobileNav.faqSheetOpen" x-transition></div>
+        <div class="faq-sheet__content" x-show="$store.mobileNav.faqSheetOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="translate-y-full" x-transition:enter-end="translate-y-0" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-full">
+            <div class="faq-sheet__inner">
+                <div class="faq-sheet__handle"><span class="faq-sheet__handle-bar"></span></div>
+                <div class="faq-sheet__header">
+                    <h3 class="faq-sheet__title">FAQ Help</h3>
+                    <button class="faq-sheet__close" @click="$store.mobileNav.closeFaqSheet()"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="faq-sheet__list" x-data="{ openIdx: 0 }">
+                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 0 }">
+                        <button class="faq-sheet__question" @click="openIdx = openIdx === 0 ? null : 0">
+                            <span>How can I book an appointment?</span>
+                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 0 }">expand_more</span>
+                        </button>
+                        <div class="faq-sheet__answer" x-show="openIdx === 0" x-collapse>
+                            <p>Call our Valsad clinic directly at <strong>+91 87330 96725</strong> or send a message via our WhatsApp booking links. Prior appointments ensure minimum waiting times.</p>
+                        </div>
+                    </div>
+                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 1 }">
+                        <button class="faq-sheet__question" @click="openIdx = openIdx === 1 ? null : 1">
+                            <span>Where is the clinic located?</span>
+                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 1 }">expand_more</span>
+                        </button>
+                        <div class="faq-sheet__answer" x-show="openIdx === 1" x-collapse>
+                            <p>Pramukh Neuropsychiatry Clinic is at <strong>205, B Metropolis, Opposite Parikh Hospital (2nd Floor), Valsad-Dharampur Road, Abrama, Valsad</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="faq.html" class="faq-sheet__view-all" @click="$store.mobileNav.closeFaqSheet()">View All FAQs <span class="material-symbols-outlined">arrow_forward</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts for Alpine Store & General Layout Interactivity -->
+    <script>
+    document.addEventListener('alpine:init', () => {
+        // Haptic tap simulation logic
+        const haptic = (type = 'light') => {
+            if (!('vibrate' in navigator)) return;
+            const patterns = { light: 8, medium: 15, tap: 5 };
+            try { navigator.vibrate(patterns[type] || 8); } catch(e) {}
+        };
+
+        // Mobile bottom sheet global states
+        Alpine.store('mobileNav', {
+            servicesSheetOpen: false,
+            aboutSheetOpen: false,
+            faqSheetOpen: false,
+            bookExpanded: false,
+            bookTimeout: null,
+
+            closeAllSheets() {
+                this.servicesSheetOpen = false;
+                this.aboutSheetOpen = false;
+                this.faqSheetOpen = false;
+                document.body.style.overflow = '';
+            },
+            toggleServicesSheet() {
+                haptic('medium');
+                this.closeAllSheets();
+                this.servicesSheetOpen = !this.servicesSheetOpen;
+                this.bookExpanded = false;
+                if (this.servicesSheetOpen) {
+                    document.body.style.overflow = 'hidden';
+                    history.pushState({ modal: 'services' }, '');
+                }
+            },
+            closeServicesSheet() {
+                haptic('light');
+                this.servicesSheetOpen = false;
+                document.body.style.overflow = '';
+            },
+            toggleAboutSheet() {
+                haptic('medium');
+                this.closeAllSheets();
+                this.aboutSheetOpen = !this.aboutSheetOpen;
+                this.bookExpanded = false;
+                if (this.aboutSheetOpen) {
+                    document.body.style.overflow = 'hidden';
+                    history.pushState({ modal: 'about' }, '');
+                }
+            },
+            closeAboutSheet() {
+                haptic('light');
+                this.aboutSheetOpen = false;
+                document.body.style.overflow = '';
+            },
+            toggleFaqSheet() {
+                haptic('medium');
+                this.closeAllSheets();
+                this.faqSheetOpen = !this.faqSheetOpen;
+                this.bookExpanded = false;
+                if (this.faqSheetOpen) {
+                    document.body.style.overflow = 'hidden';
+                    history.pushState({ modal: 'faq' }, '');
+                }
+            },
+            closeFaqSheet() {
+                haptic('light');
+                this.faqSheetOpen = false;
+                document.body.style.overflow = '';
+            },
+            toggleBook() {
+                haptic('medium');
+                if (this.bookTimeout) clearTimeout(this.bookTimeout);
+                this.bookExpanded = !this.bookExpanded;
+                this.closeAllSheets();
+                if (this.bookExpanded) {
+                    this.bookTimeout = setTimeout(() => { this.bookExpanded = false; }, 4000);
+                }
+            }
+        });
+
+        // Intercept back-button behavior to close active sheet
+        window.addEventListener('popstate', (e) => {
+            const store = Alpine.store('mobileNav');
+            if (store.servicesSheetOpen) { store.closeServicesSheet(); history.pushState(null, ''); return; }
+            if (store.aboutSheetOpen) { store.closeAboutSheet(); history.pushState(null, ''); return; }
+            if (store.faqSheetOpen) { store.closeFaqSheet(); history.pushState(null, ''); return; }
+            if (store.bookExpanded) { store.bookExpanded = false; history.pushState(null, ''); return; }
+        });
+
+        // Push initial modal navigation intercept state
+        if (window.innerWidth < 1024) {
+            history.pushState(null, '');
+        }
+    });
+
+    // Custom Cursor tracking
+    document.addEventListener('mousemove', (e) => {
+        const dot = document.getElementById('cursor-dot');
+        const circle = document.getElementById('cursor-circle');
+        if (dot && circle) {
+            dot.style.top = e.clientY + 'px';
+            dot.style.left = e.clientX + 'px';
+            
+            circle.animate({
+                top: e.clientY + 'px',
+                left: e.clientX + 'px'
+            }, { duration: 300, fill: 'forwards' });
+        }
+    });
+
+    // Custom Cursor hover triggers
+    const hoverElements = document.querySelectorAll('a, button, .faq-item__question');
+    hoverElements.forEach(elem => {
+        elem.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        elem.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    // Page Loader dismissal
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+            setTimeout(() => { loader.classList.add('hidden'); }, 800);
+        }
+    });
+
+    // Intersection Observer for Scroll entrance reveals
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                
+                // If it is a stats card section, trigger the number counter
+                const counters = entry.target.querySelectorAll('[data-counter]');
+                counters.forEach(counter => {
+                    const limit = parseInt(counter.getAttribute('data-counter'), 10);
+                    const suffix = counter.getAttribute('data-counter-suffix') || '+';
+                    let current = 0;
+                    const duration = 1500;
+                    const stepTime = Math.abs(Math.floor(duration / limit));
+                    const timer = setInterval(() => {
+                        current += 1;
+                        counter.textContent = current + suffix;
+                        if (current >= limit) {
+                            clearInterval(timer);
+                            counter.textContent = limit + suffix;
+                        }
+                    }, Math.max(stepTime, 20));
+                });
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.1 });
+    const revealTargets = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .hero__stats');
+    revealTargets.forEach(target => revealObserver.observe(target));
+    </script>
+</body>
+</html>
