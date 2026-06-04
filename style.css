@@ -19,7 +19,7 @@
     --light: #f8fafc;
     --light-teal: #f0fafb;
     --white: #ffffff;
-    --tangerine: #fb923c;
+    --tangerine: #BA974A;
     --border: #e2e8f0;
     --border-teal: #d0f0f2;
     
@@ -3613,6 +3613,7 @@ img {
     top: 0;
     left: 0;
     width: 100vw;
+    height: 100dvh;
     height: 100vh;
     z-index: 2000;
     display: flex;
@@ -4337,7 +4338,8 @@ img {
     }
     
     .about-sheet__content {
-        max-height: 92vh !important;
+        max-height: 88dvh !important;
+        max-height: 88vh !important;
         overflow-y: auto !important;
         scrollbar-width: none !important;
     }
@@ -4347,8 +4349,8 @@ img {
     }
     
     .about-sheet__inner {
-        padding: 0.85rem 1.15rem calc(1.5rem + env(safe-area-inset-bottom, 0px)) 1.15rem !important;
-        gap: 0.6rem !important;
+        padding: 0.75rem 1.15rem calc(2.25rem + env(safe-area-inset-bottom, 0px)) 1.15rem !important;
+        gap: 0.5rem !important;
     }
     
     .about-sheet__doctor {
