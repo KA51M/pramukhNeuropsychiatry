@@ -333,6 +333,30 @@ img {
     color: var(--white);
 }
 
+.text-logo__img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: height 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .text-logo__img {
+        height: 52px;
+    }
+}
+
+.header.scrolled .text-logo__img {
+    height: 38px;
+}
+
+@media (min-width: 1024px) {
+    .header.scrolled .text-logo__img {
+        height: 44px;
+    }
+}
+
 .text-logo__name {
     color: var(--primary);
 }
@@ -3120,12 +3144,23 @@ img {
     left: 16px;
     width: 4px;
     height: 100%;
-    background-color: var(--border-teal);
+    background-color: rgba(0, 168, 181, 0.15); /* Semi-transparent track */
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    width: 4px;
+    height: 0%; /* Fills dynamically with scroll */
+    background-color: var(--primary);
+    z-index: 2;
+    transition: height 0.1s ease-out;
 }
 
 .timeline-heartbeat {
     position: absolute;
-    top: 0;
+    top: 0%;
     left: 10px;
     width: 16px;
     height: 16px;
@@ -3134,6 +3169,8 @@ img {
     box-shadow: 0 0 0 4px var(--primary-light);
     animation: pulseHeart 1.5s infinite;
     z-index: 3;
+    transition: top 0.1s ease-out, opacity 0.2s ease;
+    opacity: 0; /* hidden until scroll starts */
 }
 
 @keyframes pulseHeart {
@@ -4264,8 +4301,90 @@ img {
     }
     
     .about-sheet__inner {
-        padding: 0.85rem 1rem !important;
+        padding: 1.15rem 1.15rem 1.65rem 1.15rem !important;
+        gap: 0.85rem !important;
+    }
+    
+    .about-sheet__doctor {
+        padding: 1rem !important;
+        gap: 1rem !important;
+    }
+    
+    .about-sheet__doctor-photo {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .about-sheet__doctor-name {
+        font-size: 1.1rem !important;
+    }
+    
+    .about-sheet__doctor-degrees {
+        font-size: 0.8rem !important;
+    }
+    
+    .about-sheet__doctor-spec {
+        font-size: 0.75rem !important;
+    }
+    
+    .about-sheet__credentials-grid {
         gap: 0.65rem !important;
+    }
+    
+    .about-sheet__credential-card {
+        padding: 0.65rem !important;
+        gap: 0.65rem !important;
+    }
+    
+    .about-sheet__credential-card span.material-symbols-outlined {
+        font-size: 1.35rem !important;
+    }
+    
+    .about-sheet__credential-card-text {
+        overflow: hidden;
+    }
+    
+    .about-sheet__credential-card-label {
+        font-size: 0.82rem !important;
+    }
+    
+    .about-sheet__credential-card-detail {
+        font-size: 0.7rem !important;
+    }
+    
+    .about-sheet__stats-dark {
+        padding: 0.65rem 0.25rem !important;
+    }
+    
+    .about-sheet__stat-dark-number {
+        font-size: 1.2rem !important;
+    }
+    
+    .about-sheet__stat-dark-label {
+        font-size: 0.65rem !important;
+    }
+    
+    .about-sheet__quick-actions {
+        gap: 0.65rem !important;
+    }
+    
+    .about-sheet__action-card {
+        padding: 0.65rem 0.85rem !important;
+        font-size: 0.82rem !important;
+    }
+    
+    .about-sheet__action-card span.material-symbols-outlined {
+        font-size: 1.25rem !important;
+    }
+    
+    .about-sheet__btn-dark {
+        padding: 0.8rem !important;
+        font-size: 0.9rem !important;
+        background-color: #0b1a1d !important; /* bg color of home section */
+    }
+    
+    .about-sheet__btn-dark:active {
+        background-color: var(--primary) !important;
     }
     
     .faq-sheet__list {
