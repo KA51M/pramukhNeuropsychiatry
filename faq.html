@@ -495,65 +495,66 @@
                         <span class="about-sheet__doctor-spec">Neuropsychiatrist &amp; Sexologist</span>
                     </div>
                 </div>
-                <div class="about-sheet__credentials">
-                    <div class="about-sheet__credential">
+                <div class="about-sheet__credentials-grid">
+                    <div class="about-sheet__credential-card">
                         <span class="material-symbols-outlined">school</span>
-                        <div class="about-sheet__credential-text">
-                            <span class="about-sheet__credential-label">MBBS</span>
-                            <span class="about-sheet__credential-detail">GMERS Medical College, Valsad</span>
+                        <div class="about-sheet__credential-card-text">
+                            <span class="about-sheet__credential-card-label">MBBS</span>
+                            <span class="about-sheet__credential-card-detail">GMERS Valsad</span>
                         </div>
                     </div>
-                    <div class="about-sheet__credential">
+                    <div class="about-sheet__credential-card">
                         <span class="material-symbols-outlined">workspace_premium</span>
-                        <div class="about-sheet__credential-text">
-                            <span class="about-sheet__credential-label">MD (Gold Medalist)</span>
-                            <span class="about-sheet__credential-detail">SSG Hospital &amp; GMC Baroda</span>
+                        <div class="about-sheet__credential-card-text">
+                            <span class="about-sheet__credential-card-label">MD Psychiatry</span>
+                            <span class="about-sheet__credential-card-detail">GMC Baroda</span>
                         </div>
                     </div>
-                    <div class="about-sheet__credential">
+                    <div class="about-sheet__credential-card">
                         <span class="material-symbols-outlined">workspace_premium</span>
-                        <div class="about-sheet__credential-text">
-                            <span class="about-sheet__credential-label">Gold Medalist</span>
-                            <span class="about-sheet__credential-detail">GMC Baroda &amp; SSG Hospital</span>
+                        <div class="about-sheet__credential-card-text">
+                            <span class="about-sheet__credential-card-label">Gold Medalist</span>
+                            <span class="about-sheet__credential-card-detail">GMC Baroda</span>
                         </div>
                     </div>
-                    <div class="about-sheet__credential">
+                    <div class="about-sheet__credential-card">
                         <span class="material-symbols-outlined">verified</span>
-                        <div class="about-sheet__credential-text">
-                            <span class="about-sheet__credential-label">Neuropsychiatrist</span>
-                            <span class="about-sheet__credential-detail">Expert Mental Health &amp; De-Addiction</span>
+                        <div class="about-sheet__credential-card-text">
+                            <span class="about-sheet__credential-card-label">Specialist</span>
+                            <span class="about-sheet__credential-card-detail">De-Addiction &amp; Sexology</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-sheet__stats">
-                    <div class="about-sheet__stat">
-                        <span class="about-sheet__stat-number">5+</span>
-                        <span class="about-sheet__stat-label">Years Exp</span>
+                <div class="about-sheet__stats-dark">
+                    <div class="about-sheet__stat-dark">
+                        <span class="about-sheet__stat-dark-number">5+</span>
+                        <span class="about-sheet__stat-dark-label">Years Exp</span>
                     </div>
-                    <div class="about-sheet__stat">
-                        <span class="about-sheet__stat-number">10+</span>
+                    <div class="about-sheet__stat-dark">
+                        <span class="about-sheet__stat-dark-number">10+</span>
                         <span class="about-sheet__stat-label">Hospitals</span>
                     </div>
-                    <div class="about-sheet__stat">
+                    <div class="about-sheet__stat-dark">
                         <span class="about-sheet__stat-number">100%</span>
                         <span class="about-sheet__stat-label">Private</span>
                     </div>
                 </div>
-                <div class="about-sheet__links">
-                    <a href="about.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
-                        <span class="material-symbols-outlined">person</span><span>Full Profile</span>
-                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
+                <div class="about-sheet__quick-actions">
+                    <a href="contact.html" class="about-sheet__action-card" @click="$store.mobileNav.closeAboutSheet()">
+                        <span class="material-symbols-outlined">local_hospital</span>
+                        <span>OPD Timings</span>
+                        <span class="material-symbols-outlined action-arrow">chevron_right</span>
                     </a>
-                    <a href="contact.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
-                        <span class="material-symbols-outlined">local_hospital</span><span>OPD Timings</span>
-                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
-                    </a>
-                    <a href="faq.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
-                        <span class="material-symbols-outlined">help</span><span>FAQs</span>
-                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
+                    <a href="faq.html" class="about-sheet__action-card" @click="$store.mobileNav.closeAboutSheet()">
+                        <span class="material-symbols-outlined">help</span>
+                        <span>FAQ Center</span>
+                        <span class="material-symbols-outlined action-arrow">chevron_right</span>
                     </a>
                 </div>
-                <a href="about.html" class="about-sheet__view-all" @click="$store.mobileNav.closeAboutSheet()">View Full Profile <span class="material-symbols-outlined">arrow_forward</span></a>
+                <a href="about.html" class="about-sheet__btn-dark" @click="$store.mobileNav.closeAboutSheet()">
+                    <span>View Full Profile</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
             </div>
         </div>
     </div>
