@@ -741,19 +741,58 @@ img {
     color: var(--white);
 }
 
-.hero__badge {
-    margin-bottom: 1.5rem;
-    background-color: rgba(0, 168, 181, 0.15);
-    color: var(--primary-light);
-    border-color: rgba(0, 168, 181, 0.3);
+.hero__premium-card {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 0.65rem 1.15rem;
+    margin-bottom: 1.75rem;
+    width: fit-content;
+    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
 }
 
-.hero__badge-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #22c55e;
-    border-radius: 50%;
-    animation: blink 1.5s infinite;
+.hero__premium-card:hover {
+    border-color: rgba(184, 151, 74, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
+}
+
+.premium-card__icon {
+    font-size: 2rem !important;
+    color: #BA974A;
+    background: rgba(184, 151, 74, 0.12);
+    padding: 0.4rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(184, 151, 74, 0.2);
+    flex-shrink: 0;
+}
+
+.premium-card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    line-height: 1.2;
+}
+
+.premium-card__badge {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #BA974A;
+}
+
+.premium-card__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
 }
 
 @keyframes blink {
@@ -3823,7 +3862,7 @@ img {
 }
 
 .about-sheet__credential-card span.material-symbols-outlined {
-    color: var(--primary);
+    color: #BA974A;
     font-size: 1.25rem;
     flex-shrink: 0;
 }
@@ -3852,7 +3891,7 @@ img {
 .about-sheet__stats-dark {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: var(--dark);
+    background-color: #00A7B3;
     border-radius: var(--radius-lg);
     padding: 0.5rem 0.25rem;
     text-align: center;
@@ -3861,7 +3900,7 @@ img {
 .about-sheet__stat-dark {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .about-sheet__stat-dark:last-child {
@@ -3872,12 +3911,12 @@ img {
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 1.1rem;
-    color: var(--secondary);
+    color: var(--white);
 }
 
 .about-sheet__stat-dark-label {
     font-size: 0.6rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
 }
 
@@ -3919,7 +3958,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: var(--dark);
+    background: #00A7B3;
     color: var(--white);
     border-radius: var(--radius);
     padding: 0.6rem;
@@ -3932,7 +3971,7 @@ img {
 }
 
 .about-sheet__btn-dark:active {
-    background: var(--primary);
+    background: #008892;
 }
 
 .about-sheet__btn-dark span.material-symbols-outlined {
@@ -4291,7 +4330,7 @@ img {
     }
     
     .about-sheet__content {
-        max-height: 85vh !important;
+        max-height: 90vh !important;
         overflow-y: hidden !important;
         scrollbar-width: none !important;
     }
@@ -4301,43 +4340,45 @@ img {
     }
     
     .about-sheet__inner {
-        padding: 1.15rem 1.15rem 1.65rem 1.15rem !important;
-        gap: 0.85rem !important;
+        padding: 1rem 1.15rem 1.35rem 1.15rem !important;
+        gap: 0.6rem !important;
     }
     
     .about-sheet__doctor {
-        padding: 1rem !important;
-        gap: 1rem !important;
+        padding: 0.85rem !important;
+        gap: 0.85rem !important;
     }
     
     .about-sheet__doctor-photo {
-        width: 60px !important;
-        height: 60px !important;
+        width: 58px !important;
+        height: 58px !important;
     }
     
     .about-sheet__doctor-name {
-        font-size: 1.1rem !important;
+        font-size: 1.05rem !important;
     }
     
     .about-sheet__doctor-degrees {
-        font-size: 0.8rem !important;
+        font-size: 0.78rem !important;
     }
     
     .about-sheet__doctor-spec {
-        font-size: 0.75rem !important;
+        font-size: 0.72rem !important;
     }
     
     .about-sheet__credentials-grid {
-        gap: 0.65rem !important;
+        gap: 0.5rem !important;
     }
     
     .about-sheet__credential-card {
-        padding: 0.65rem !important;
-        gap: 0.65rem !important;
+        padding: 0.5rem 0.65rem !important;
+        gap: 0.55rem !important;
+        height: 48px !important; /* Force all 4 cards to be exactly same height */
+        align-items: center !important;
     }
     
     .about-sheet__credential-card span.material-symbols-outlined {
-        font-size: 1.35rem !important;
+        font-size: 1.25rem !important;
     }
     
     .about-sheet__credential-card-text {
@@ -4345,46 +4386,49 @@ img {
     }
     
     .about-sheet__credential-card-label {
-        font-size: 0.82rem !important;
+        font-size: 0.78rem !important;
     }
     
     .about-sheet__credential-card-detail {
-        font-size: 0.7rem !important;
+        font-size: 0.68rem !important;
     }
     
     .about-sheet__stats-dark {
-        padding: 0.65rem 0.25rem !important;
+        padding: 0.45rem 0.25rem !important;
+        background-color: #00A7B3 !important; /* Teal background */
     }
     
     .about-sheet__stat-dark-number {
-        font-size: 1.2rem !important;
+        font-size: 1.15rem !important;
+        color: var(--white) !important;
     }
     
     .about-sheet__stat-dark-label {
-        font-size: 0.65rem !important;
+        font-size: 0.62rem !important;
+        color: rgba(255, 255, 255, 0.9) !important;
     }
     
     .about-sheet__quick-actions {
-        gap: 0.65rem !important;
+        gap: 0.5rem !important;
     }
     
     .about-sheet__action-card {
-        padding: 0.65rem 0.85rem !important;
-        font-size: 0.82rem !important;
+        padding: 0.55rem 0.75rem !important;
+        font-size: 0.78rem !important;
     }
     
     .about-sheet__action-card span.material-symbols-outlined {
-        font-size: 1.25rem !important;
+        font-size: 1.2rem !important;
     }
     
     .about-sheet__btn-dark {
-        padding: 0.8rem !important;
-        font-size: 0.9rem !important;
-        background-color: #0b1a1d !important; /* bg color of home section */
+        padding: 0.75rem !important;
+        font-size: 0.85rem !important;
+        background-color: #00A7B3 !important; /* Change view full profile bg to brand teal */
     }
     
     .about-sheet__btn-dark:active {
-        background-color: var(--primary) !important;
+        background-color: #008892 !important;
     }
     
     .faq-sheet__list {

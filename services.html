@@ -628,6 +628,24 @@
                      this.currentY = 0;
                  }
              }"
+             x-effect="if ($store.mobileNav.aboutSheetOpen) { setTimeout(() => { 
+                 $el.querySelectorAll('[data-counter]').forEach(counter => {
+                     const limit = parseInt(counter.getAttribute('data-counter'), 10);
+                     const suffix = counter.getAttribute('data-counter-suffix') || '+';
+                     let current = 0;
+                     const duration = 1000;
+                     const stepTime = Math.abs(Math.floor(duration / limit));
+                     counter.textContent = '0' + suffix;
+                     const timer = setInterval(() => {
+                         current += 1;
+                         counter.textContent = current + suffix;
+                         if (current >= limit) {
+                             clearInterval(timer);
+                             counter.textContent = limit + suffix;
+                         }
+                     }, Math.max(stepTime, 15));
+                 });
+             }, 300); }"
              x-show="$store.mobileNav.aboutSheetOpen" 
              x-transition:enter="transition ease-out duration-300 transform" 
              x-transition:enter-start="translate-y-full" 
@@ -686,16 +704,16 @@
                 </div>
                 <div class="about-sheet__stats-dark">
                     <div class="about-sheet__stat-dark">
-                        <span class="about-sheet__stat-dark-number">5+</span>
+                        <span class="about-sheet__stat-dark-number" data-counter="5">0+</span>
                         <span class="about-sheet__stat-dark-label">Years Exp</span>
                     </div>
                     <div class="about-sheet__stat-dark">
-                        <span class="about-sheet__stat-dark-number">10+</span>
-                        <span class="about-sheet__stat-label">Hospitals</span>
+                        <span class="about-sheet__stat-dark-number" data-counter="10">0+</span>
+                        <span class="about-sheet__stat-dark-label">Hospitals</span>
                     </div>
                     <div class="about-sheet__stat-dark">
-                        <span class="about-sheet__stat-number">100%</span>
-                        <span class="about-sheet__stat-label">Private</span>
+                        <span class="about-sheet__stat-dark-number" data-counter="100" data-counter-suffix="%">0%</span>
+                        <span class="about-sheet__stat-dark-label">Private</span>
                     </div>
                 </div>
                 <div class="about-sheet__quick-actions">
