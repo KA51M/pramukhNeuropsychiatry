@@ -498,7 +498,7 @@
             <div class="services-sheet__inner">
                 <div class="services-sheet__handle"><span class="services-sheet__handle-bar"></span></div>
                 <div class="services-sheet__header">
-                    <h3 class="services-sheet__title">Specialist Clinics</h3>
+                    <h3 class="services-sheet__title">Overview</h3>
                     <button class="services-sheet__close" @click="$store.mobileNav.closeServicesSheet()"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="services-sheet__services">
@@ -550,31 +550,15 @@
             <div class="about-sheet__inner">
                 <div class="about-sheet__handle"><span class="about-sheet__handle-bar"></span></div>
                 <div class="about-sheet__header">
-                    <h3 class="about-sheet__title">About the Doctor</h3>
+                    <h3 class="about-sheet__title">Overview</h3>
                     <button class="about-sheet__close" @click="$store.mobileNav.closeAboutSheet()"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="about-sheet__doctor">
                     <img src="images/dr-virensinh-headshot.png" alt="Dr. Virensinh Solanki" class="about-sheet__doctor-photo" />
                     <div class="about-sheet__doctor-info">
                         <span class="about-sheet__doctor-name">Dr. Virensinh Solanki</span>
-                        <span class="about-sheet__doctor-degrees">M.D. Psychiatry (Gold Medalist)</span>
+                        <span class="about-sheet__doctor-degrees">M.D. Psychiatry (Gold Medalist), MBBS</span>
                         <span class="about-sheet__doctor-spec">Neuropsychiatrist &amp; Sexologist</span>
-                    </div>
-                </div>
-                <div class="about-sheet__credentials">
-                    <div class="about-sheet__credential">
-                        <span class="material-symbols-outlined">school</span>
-                        <div class="about-sheet__credential-text">
-                            <span class="about-sheet__credential-label">MBBS</span>
-                            <span class="about-sheet__credential-detail">GMERS Medical College, Valsad</span>
-                        </div>
-                    </div>
-                    <div class="about-sheet__credential">
-                        <span class="material-symbols-outlined">workspace_premium</span>
-                        <div class="about-sheet__credential-text">
-                            <span class="about-sheet__credential-label">MD (Gold Medalist)</span>
-                            <span class="about-sheet__credential-detail">SSG Hospital &amp; GMC Baroda</span>
-                        </div>
                     </div>
                 </div>
                 <div class="about-sheet__stats">
@@ -591,16 +575,6 @@
                         <span class="about-sheet__stat-label">Private</span>
                     </div>
                 </div>
-                <div class="about-sheet__links">
-                    <a href="about.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
-                        <span class="material-symbols-outlined">person</span><span>Full Profile</span>
-                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
-                    </a>
-                    <a href="contact.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
-                        <span class="material-symbols-outlined">location_on</span><span>OPD Timings</span>
-                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
-                    </a>
-                </div>
                 <a href="about.html" class="about-sheet__view-all" @click="$store.mobileNav.closeAboutSheet()">View Full Profile <span class="material-symbols-outlined">arrow_forward</span></a>
             </div>
         </div>
@@ -613,7 +587,7 @@
             <div class="faq-sheet__inner">
                 <div class="faq-sheet__handle"><span class="faq-sheet__handle-bar"></span></div>
                 <div class="faq-sheet__header">
-                    <h3 class="faq-sheet__title">FAQ Help</h3>
+                    <h3 class="faq-sheet__title">Overview</h3>
                     <button class="faq-sheet__close" @click="$store.mobileNav.closeFaqSheet()"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="faq-sheet__list" x-data="{ openIdx: 0 }">

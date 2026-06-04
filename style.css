@@ -55,6 +55,7 @@
 html {
     scroll-behavior: smooth;
     text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -1859,15 +1860,16 @@ img {
 }
 
 .process__full-width {
-    width: 100vw;
+    width: 100%;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
     background-color: var(--white);
     padding: 3rem 0;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .process__timeline {
@@ -4083,3 +4085,161 @@ img {
     opacity: 1;
     transform: translate(0) scale(1);
 }
+
+/* ==========================================================================
+   Mobile Optimization Overrides
+   ========================================================================== */
+@media (max-width: 1023px) {
+    /* Hide Floating WhatsApp and reposition Scroll Top */
+    .whatsapp-btn {
+        display: none !important;
+    }
+    
+    .floating-buttons {
+        bottom: 5.5rem !important;
+        right: 1.25rem !important;
+    }
+    
+    /* Make Hamburger Menu invisible */
+    .header__mobile-btn {
+        display: none !important;
+    }
+    
+    /* Scale Mobile Bottom Nav */
+    .bottom-nav {
+        height: 70px !important;
+    }
+    
+    .bottom-nav__icon span.material-symbols-outlined {
+        font-size: 1.65rem !important;
+    }
+    
+    .bottom-nav__label {
+        font-size: 0.75rem !important;
+    }
+    
+    .bottom-nav__label--center {
+        margin-top: 30px !important;
+    }
+    
+    .bottom-nav__book {
+        width: 60px !important;
+        height: 60px !important;
+        top: -30px !important;
+    }
+    
+    .bottom-nav__book-default span.material-symbols-outlined {
+        font-size: 1.75rem !important;
+    }
+    
+    .bottom-nav__book.is-expanded {
+        width: 145px !important;
+    }
+    
+    /* Mobile Sheets zero internal scroll and compact layout adjustments */
+    .services-sheet__content, .about-sheet__content, .faq-sheet__content {
+        max-height: 90vh !important;
+        overflow-y: hidden !important; /* Disable internal sheet scrolling */
+    }
+    
+    .services-sheet__inner, .about-sheet__inner, .faq-sheet__inner {
+        padding: 1rem 1.25rem !important;
+        gap: 0.85rem !important;
+    }
+    
+    .services-sheet__services {
+        gap: 0.5rem !important;
+    }
+    
+    .services-sheet__card {
+        padding: 0.65rem 0.85rem !important;
+        gap: 0.75rem !important;
+    }
+    
+    .services-sheet__card-icon {
+        width: 38px !important;
+        height: 38px !important;
+        border-radius: var(--radius-md) !important;
+    }
+    
+    .services-sheet__card-icon span {
+        font-size: 1.15rem !important;
+    }
+    
+    .services-sheet__card-title {
+        font-size: 0.9rem !important;
+    }
+    
+    .services-sheet__card-desc {
+        font-size: 0.7rem !important;
+    }
+    
+    .services-sheet__procedures-title {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    .services-sheet__procedures {
+        margin-top: 0.25rem !important;
+    }
+    
+    .services-sheet__pill {
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .services-sheet__view-all, .about-sheet__view-all, .faq-sheet__view-all {
+        padding-top: 0.75rem !important;
+        margin-top: 0.25rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .about-sheet__doctor {
+        gap: 0.75rem !important;
+    }
+    
+    .about-sheet__doctor-photo {
+        width: 52px !important;
+        height: 52px !important;
+    }
+    
+    .about-sheet__doctor-name {
+        font-size: 1rem !important;
+    }
+    
+    .about-sheet__doctor-degrees {
+        font-size: 0.75rem !important;
+    }
+    
+    .about-sheet__doctor-spec {
+        font-size: 0.7rem !important;
+    }
+    
+    .about-sheet__stats {
+        padding: 0.75rem !important;
+        gap: 0.5rem !important;
+    }
+    
+    .about-sheet__stat-number {
+        font-size: 1.15rem !important;
+    }
+    
+    .about-sheet__stat-label {
+        font-size: 0.65rem !important;
+    }
+    
+    .faq-sheet__list {
+        gap: 0.5rem !important;
+    }
+    
+    .faq-sheet__question {
+        padding: 0.65rem 0.85rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .faq-sheet__answer {
+        padding: 0 0.85rem 0.65rem 0.85rem !important;
+        font-size: 0.75rem !important;
+    }
+}
+
