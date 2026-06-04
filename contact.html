@@ -334,11 +334,58 @@
     <!-- Services Bottom Sheet Drawers (Mobile layout responsive) -->
     <div class="services-sheet" x-data x-show="$store.mobileNav.servicesSheetOpen" x-cloak>
         <div class="services-sheet__backdrop" @click="$store.mobileNav.closeServicesSheet()" x-show="$store.mobileNav.servicesSheetOpen" x-transition></div>
-        <div class="services-sheet__content" x-show="$store.mobileNav.servicesSheetOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="translate-y-full" x-transition:enter-end="translate-y-0" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-full">
+        <div class="services-sheet__content" 
+             x-data="{
+                 startY: 0,
+                 currentY: 0,
+                 isDragging: false,
+
+                 onTouchStart(e) {
+                     const touch = e.touches[0];
+                     this.startY = touch.clientY;
+                     this.currentY = 0;
+                     this.isDragging = true;
+                     this.$el.style.transition = 'none';
+                 },
+
+                 onTouchMove(e) {
+                     if (!this.isDragging) return;
+                     const touch = e.touches[0];
+                     const deltaY = touch.clientY - this.startY;
+                     if (deltaY > 0) {
+                         this.currentY = deltaY;
+                         this.$el.style.transform = `translateY(${deltaY}px)`;
+                     }
+                 },
+
+                 onTouchEnd() {
+                     if (!this.isDragging) return;
+                     this.isDragging = false;
+                     this.$el.style.transition = 'transform 0.3s ease';
+
+                     if (this.currentY > 100) {
+                         $store.mobileNav.closeServicesSheet();
+                     }
+                     this.$el.style.transform = '';
+                     this.currentY = 0;
+                 }
+             }"
+             x-show="$store.mobileNav.servicesSheetOpen" 
+             x-transition:enter="transition ease-out duration-300 transform" 
+             x-transition:enter-start="translate-y-full" 
+             x-transition:enter-end="translate-y-0" 
+             x-transition:leave="transition ease-in duration-200 transform" 
+             x-transition:leave-start="translate-y-0" 
+             x-transition:leave-end="translate-y-full"
+             @click.stop
+             @touchstart="onTouchStart($event)"
+             @touchmove.passive="onTouchMove($event)"
+             @touchend="onTouchEnd()"
+        >
             <div class="services-sheet__inner">
                 <div class="services-sheet__handle"><span class="services-sheet__handle-bar"></span></div>
                 <div class="services-sheet__header">
-                    <h3 class="services-sheet__title">Overview</h3>
+                    <h3 class="services-sheet__title">Our Services</h3>
                     <button class="services-sheet__close" @click="$store.mobileNav.closeServicesSheet()"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="services-sheet__services">
@@ -386,19 +433,96 @@
     <!-- About Bottom Sheet Drawer -->
     <div class="about-sheet" x-data x-show="$store.mobileNav.aboutSheetOpen" x-cloak>
         <div class="about-sheet__backdrop" @click="$store.mobileNav.closeAboutSheet()" x-show="$store.mobileNav.aboutSheetOpen" x-transition></div>
-        <div class="about-sheet__content" x-show="$store.mobileNav.aboutSheetOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="translate-y-full" x-transition:enter-end="translate-y-0" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-full">
+        <div class="about-sheet__content" 
+             x-data="{
+                 startY: 0,
+                 currentY: 0,
+                 isDragging: false,
+
+                 onTouchStart(e) {
+                     const touch = e.touches[0];
+                     this.startY = touch.clientY;
+                     this.currentY = 0;
+                     this.isDragging = true;
+                     this.$el.style.transition = 'none';
+                 },
+
+                 onTouchMove(e) {
+                     if (!this.isDragging) return;
+                     const touch = e.touches[0];
+                     const deltaY = touch.clientY - this.startY;
+                     if (deltaY > 0) {
+                         this.currentY = deltaY;
+                         this.$el.style.transform = `translateY(${deltaY}px)`;
+                     }
+                 },
+
+                 onTouchEnd() {
+                     if (!this.isDragging) return;
+                     this.isDragging = false;
+                     this.$el.style.transition = 'transform 0.3s ease';
+
+                     if (this.currentY > 100) {
+                         $store.mobileNav.closeAboutSheet();
+                     }
+                     this.$el.style.transform = '';
+                     this.currentY = 0;
+                 }
+             }"
+             x-show="$store.mobileNav.aboutSheetOpen" 
+             x-transition:enter="transition ease-out duration-300 transform" 
+             x-transition:enter-start="translate-y-full" 
+             x-transition:enter-end="translate-y-0" 
+             x-transition:leave="transition ease-in duration-200 transform" 
+             x-transition:leave-start="translate-y-0" 
+             x-transition:leave-end="translate-y-full"
+             @click.stop
+             @touchstart="onTouchStart($event)"
+             @touchmove.passive="onTouchMove($event)"
+             @touchend="onTouchEnd()"
+        >
             <div class="about-sheet__inner">
                 <div class="about-sheet__handle"><span class="about-sheet__handle-bar"></span></div>
                 <div class="about-sheet__header">
-                    <h3 class="about-sheet__title">Overview</h3>
+                    <h3 class="about-sheet__title">About the Doctor</h3>
                     <button class="about-sheet__close" @click="$store.mobileNav.closeAboutSheet()"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="about-sheet__doctor">
                     <img src="images/dr-virensinh-headshot.png" alt="Dr. Virensinh Solanki" class="about-sheet__doctor-photo" />
                     <div class="about-sheet__doctor-info">
                         <span class="about-sheet__doctor-name">Dr. Virensinh Solanki</span>
-                        <span class="about-sheet__doctor-degrees">M.D. Psychiatry (Gold Medalist), MBBS</span>
+                        <span class="about-sheet__doctor-degrees">MBBS, MD Psychiatry (Gold Medalist)</span>
                         <span class="about-sheet__doctor-spec">Neuropsychiatrist &amp; Sexologist</span>
+                    </div>
+                </div>
+                <div class="about-sheet__credentials">
+                    <div class="about-sheet__credential">
+                        <span class="material-symbols-outlined">school</span>
+                        <div class="about-sheet__credential-text">
+                            <span class="about-sheet__credential-label">MBBS</span>
+                            <span class="about-sheet__credential-detail">GMERS Medical College, Valsad</span>
+                        </div>
+                    </div>
+                    <div class="about-sheet__credential">
+                        <span class="material-symbols-outlined">workspace_premium</span>
+                        <div class="about-sheet__credential-text">
+                            <span class="about-sheet__credential-label">MD (Gold Medalist)</span>
+                            <span class="about-sheet__credential-detail">SSG Hospital &amp; GMC Baroda</span>
+                        </div>
+                    </div>
+                    <div class="about-sheet__credential">
+                        <span class="material-symbols-outlined">workspace_premium</span>
+                        <div class="about-sheet__credential-text">
+                            <span class="about-sheet__credential-label">Gold Medalist</span>
+                            <span class="about-sheet__credential-detail">GMC Baroda &amp; SSG Hospital</span>
+                        </div>
+                    </div>
+                    <div class="about-sheet__credential">
+                        <span class="material-symbols-outlined">verified</span>
+                        <div class="about-sheet__credential-text">
+                            <span class="about-sheet__credential-label">Neuropsychiatrist</span>
+                            <span class="about-sheet__credential-detail">Expert Mental Health &amp; De-Addiction</span>
+                        </div>
                     </div>
                 </div>
                 <div class="about-sheet__stats">
@@ -415,6 +539,20 @@
                         <span class="about-sheet__stat-label">Private</span>
                     </div>
                 </div>
+                <div class="about-sheet__links">
+                    <a href="about.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
+                        <span class="material-symbols-outlined">person</span><span>Full Profile</span>
+                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
+                    </a>
+                    <a href="contact.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
+                        <span class="material-symbols-outlined">local_hospital</span><span>OPD Timings</span>
+                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
+                    </a>
+                    <a href="faq.html" class="about-sheet__link" @click="$store.mobileNav.closeAboutSheet()">
+                        <span class="material-symbols-outlined">help</span><span>FAQs</span>
+                        <span class="material-symbols-outlined about-sheet__link-arrow">chevron_right</span>
+                    </a>
+                </div>
                 <a href="about.html" class="about-sheet__view-all" @click="$store.mobileNav.closeAboutSheet()">View Full Profile <span class="material-symbols-outlined">arrow_forward</span></a>
             </div>
         </div>
@@ -423,11 +561,59 @@
     <!-- FAQs Bottom Sheet Drawer -->
     <div class="faq-sheet" x-data x-show="$store.mobileNav.faqSheetOpen" x-cloak>
         <div class="faq-sheet__backdrop" @click="$store.mobileNav.closeFaqSheet()" x-show="$store.mobileNav.faqSheetOpen" x-transition></div>
-        <div class="faq-sheet__content" x-show="$store.mobileNav.faqSheetOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="translate-y-full" x-transition:enter-end="translate-y-0" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-full">
+        <div class="faq-sheet__content" 
+             x-data="{
+                 openIdx: 0,
+                 startY: 0,
+                 currentY: 0,
+                 isDragging: false,
+
+                 onTouchStart(e) {
+                     const touch = e.touches[0];
+                     this.startY = touch.clientY;
+                     this.currentY = 0;
+                     this.isDragging = true;
+                     this.$el.style.transition = 'none';
+                 },
+
+                 onTouchMove(e) {
+                     if (!this.isDragging) return;
+                     const touch = e.touches[0];
+                     const deltaY = touch.clientY - this.startY;
+                     if (deltaY > 0) {
+                         this.currentY = deltaY;
+                         this.$el.style.transform = `translateY(${deltaY}px)`;
+                     }
+                 },
+
+                 onTouchEnd() {
+                     if (!this.isDragging) return;
+                     this.isDragging = false;
+                     this.$el.style.transition = 'transform 0.3s ease';
+
+                     if (this.currentY > 100) {
+                         $store.mobileNav.closeFaqSheet();
+                     }
+                     this.$el.style.transform = '';
+                     this.currentY = 0;
+                 }
+             }"
+             x-show="$store.mobileNav.faqSheetOpen" 
+             x-transition:enter="transition ease-out duration-300 transform" 
+             x-transition:enter-start="translate-y-full" 
+             x-transition:enter-end="translate-y-0" 
+             x-transition:leave="transition ease-in duration-200 transform" 
+             x-transition:leave-start="translate-y-0" 
+             x-transition:leave-end="translate-y-full"
+             @click.stop
+             @touchstart="onTouchStart($event)"
+             @touchmove.passive="onTouchMove($event)"
+             @touchend="onTouchEnd()"
+        >
             <div class="faq-sheet__inner">
                 <div class="faq-sheet__handle"><span class="faq-sheet__handle-bar"></span></div>
                 <div class="faq-sheet__header">
-                    <h3 class="faq-sheet__title">Overview</h3>
+                    <h3 class="faq-sheet__title">Common Questions</h3>
                     <button class="faq-sheet__close" @click="$store.mobileNav.closeFaqSheet()"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="faq-sheet__list" x-data="{ openIdx: 0 }">

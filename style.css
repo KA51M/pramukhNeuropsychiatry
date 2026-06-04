@@ -3904,7 +3904,7 @@ img {
 }
 
 .bottom-nav.is-hidden {
-    transform: translateY(100%);
+    transform: translateY(calc(100% + 40px));
 }
 
 @media (min-width: 1024px) {
@@ -4136,10 +4136,10 @@ img {
         width: 145px !important;
     }
     
-    /* Mobile Sheets zero internal scroll and compact layout adjustments */
     .services-sheet__content, .about-sheet__content, .faq-sheet__content {
-        max-height: 90vh !important;
-        overflow-y: hidden !important; /* Disable internal sheet scrolling */
+        max-height: 85vh !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
     }
     
     .services-sheet__inner, .about-sheet__inner, .faq-sheet__inner {
