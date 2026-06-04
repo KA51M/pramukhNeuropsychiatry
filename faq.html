@@ -27,7 +27,6 @@
     <div id="page-loader" class="loader">
         <a href="index.html" class="text-logo text-logo--lg text-logo--light">
             <img src="images/logo.png" alt="Pramukh Logo" class="text-logo__img" />
-            <span class="text-logo__name">PRAMUKH</span>
         </a>
         <div id="loader-ecg" class="loader-content">
             <svg class="ecg-svg" viewBox="0 0 200 60">
@@ -682,6 +681,7 @@
                 this.aboutSheetOpen = false;
                 this.faqSheetOpen = false;
                 document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             },
             toggleServicesSheet() {
                 haptic('medium');
@@ -690,6 +690,7 @@
                 this.bookExpanded = false;
                 if (this.servicesSheetOpen) {
                     document.body.style.overflow = 'hidden';
+                    document.documentElement.style.overflow = 'hidden';
                     history.pushState({ modal: 'services' }, '');
                 }
             },
@@ -697,6 +698,7 @@
                 haptic('light');
                 this.servicesSheetOpen = false;
                 document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             },
             toggleAboutSheet() {
                 haptic('medium');
@@ -705,6 +707,7 @@
                 this.bookExpanded = false;
                 if (this.aboutSheetOpen) {
                     document.body.style.overflow = 'hidden';
+                    document.documentElement.style.overflow = 'hidden';
                     history.pushState({ modal: 'about' }, '');
                 }
             },
@@ -712,6 +715,7 @@
                 haptic('light');
                 this.aboutSheetOpen = false;
                 document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             },
             toggleFaqSheet() {
                 haptic('medium');
@@ -720,6 +724,7 @@
                 this.bookExpanded = false;
                 if (this.faqSheetOpen) {
                     document.body.style.overflow = 'hidden';
+                    document.documentElement.style.overflow = 'hidden';
                     history.pushState({ modal: 'faq' }, '');
                 }
             },
@@ -727,6 +732,7 @@
                 haptic('light');
                 this.faqSheetOpen = false;
                 document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             },
             toggleBook() {
                 haptic('medium');

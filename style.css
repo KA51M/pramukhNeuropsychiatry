@@ -75,6 +75,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.25;
 }
 
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-tangerine { color: var(--tangerine); }
+
 a {
     color: inherit;
     text-decoration: none;
@@ -3847,7 +3851,7 @@ img {
 
 .about-sheet__credentials-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
 }
 
@@ -3878,6 +3882,9 @@ img {
     font-weight: 700;
     font-size: 0.75rem;
     color: var(--dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .about-sheet__credential-card-detail {
@@ -4277,8 +4284,8 @@ img {
         -webkit-overflow-scrolling: touch;
     }
     
-    .services-sheet__inner, .about-sheet__inner, .faq-sheet__inner {
-        padding: 1rem 1.25rem !important;
+    .services-sheet__inner, .faq-sheet__inner {
+        padding: 1rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom, 0px)) 1.25rem !important;
         gap: 0.85rem !important;
     }
     
@@ -4340,89 +4347,94 @@ img {
     }
     
     .about-sheet__inner {
-        padding: 1rem 1.15rem 1.35rem 1.15rem !important;
-        gap: 0.6rem !important;
+        padding: 0.75rem 1rem calc(1.5rem + env(safe-area-inset-bottom, 0px)) 1rem !important;
+        gap: 0.45rem !important;
     }
     
     .about-sheet__doctor {
-        padding: 0.85rem !important;
-        gap: 0.85rem !important;
+        padding: 0.75rem !important;
+        gap: 0.75rem !important;
     }
     
     .about-sheet__doctor-photo {
-        width: 58px !important;
-        height: 58px !important;
+        width: 52px !important;
+        height: 52px !important;
     }
     
     .about-sheet__doctor-name {
-        font-size: 1.05rem !important;
+        font-size: 1rem !important;
     }
     
     .about-sheet__doctor-degrees {
-        font-size: 0.78rem !important;
+        font-size: 0.75rem !important;
     }
     
     .about-sheet__doctor-spec {
-        font-size: 0.72rem !important;
+        font-size: 0.7rem !important;
     }
     
     .about-sheet__credentials-grid {
-        gap: 0.5rem !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* Force exact same width */
+        gap: 0.45rem !important;
     }
     
     .about-sheet__credential-card {
-        padding: 0.5rem 0.65rem !important;
-        gap: 0.55rem !important;
+        padding: 0.45rem 0.6rem !important;
+        gap: 0.5rem !important;
         height: 48px !important; /* Force all 4 cards to be exactly same height */
         align-items: center !important;
+        min-width: 0 !important;
+        width: 100% !important;
     }
     
     .about-sheet__credential-card span.material-symbols-outlined {
-        font-size: 1.25rem !important;
+        font-size: 1.15rem !important;
     }
     
     .about-sheet__credential-card-text {
-        overflow: hidden;
+        overflow: hidden !important;
+        min-width: 0 !important;
+        flex: 1 !important;
     }
     
     .about-sheet__credential-card-label {
-        font-size: 0.78rem !important;
+        font-size: 0.75rem !important;
     }
     
     .about-sheet__credential-card-detail {
-        font-size: 0.68rem !important;
+        font-size: 0.65rem !important;
     }
     
     .about-sheet__stats-dark {
-        padding: 0.45rem 0.25rem !important;
+        padding: 0.35rem 0.2rem !important;
         background-color: #00A7B3 !important; /* Teal background */
     }
     
     .about-sheet__stat-dark-number {
-        font-size: 1.15rem !important;
+        font-size: 1.1rem !important;
         color: var(--white) !important;
     }
     
     .about-sheet__stat-dark-label {
-        font-size: 0.62rem !important;
+        font-size: 0.6rem !important;
         color: rgba(255, 255, 255, 0.9) !important;
     }
     
     .about-sheet__quick-actions {
-        gap: 0.5rem !important;
+        gap: 0.45rem !important;
     }
     
     .about-sheet__action-card {
-        padding: 0.55rem 0.75rem !important;
+        padding: 0.45rem 0.65rem !important;
         font-size: 0.78rem !important;
     }
     
     .about-sheet__action-card span.material-symbols-outlined {
-        font-size: 1.2rem !important;
+        font-size: 1.15rem !important;
     }
     
     .about-sheet__btn-dark {
-        padding: 0.75rem !important;
+        padding: 0.65rem !important;
         font-size: 0.85rem !important;
         background-color: #00A7B3 !important; /* Change view full profile bg to brand teal */
     }

@@ -27,7 +27,6 @@
     <div id="page-loader" class="loader">
         <a href="index.html" class="text-logo text-logo--lg text-logo--light">
             <img src="images/logo.png" alt="Pramukh Logo" class="text-logo__img" />
-            <span class="text-logo__name">PRAMUKH</span>
         </a>
         <div id="loader-ecg" class="loader-content">
             <svg class="ecg-svg" viewBox="0 0 200 60">
@@ -122,7 +121,7 @@
 
     <!-- Page Hero -->
     <section class="page-hero">
-        <div class="page-hero__bg"></div>
+        <div class="page-hero__bg" style="background-image: linear-gradient(rgba(11, 26, 29, 0.85), rgba(11, 26, 29, 0.85)), url('images/realimages/asthatic.png'); background-size: cover; background-position: center;"></div>
         <div class="container">
             <div class="page-hero__content reveal">
                 <div class="badge">
@@ -169,13 +168,10 @@
                     <p class="about-profile__subtitle">Consultant Neuropsychiatrist &amp; De-Addiction Specialist</p>
                     <div class="about-profile__bio">
                         <p>
-                            Dr. Virensinh Solanki is a highly trained psychiatrist dedicated to providing state-of-the-art mental healthcare solutions in South Gujarat. He completed his M.B.B.S. at GMERS Medical College in Valsad, establishing strong roots in the local community.
+                            Dr. Virensinh Solanki is a <strong class="text-secondary">Gold Medalist Neuropsychiatrist</strong> dedicated to providing modern mental healthcare solutions in South Gujarat. He completed his M.B.B.S. locally at GMERS Medical College, Valsad, and earned his M.D. in Psychiatry with distinction from the prestigious Government Medical College &amp; SSG Hospital, Baroda.
                         </p>
                         <p>
-                            He subsequently pursued his M.D. in Psychiatry at Government Medical College &amp; SSG Hospital Baroda, one of Gujarat's most respected medical schools, where he graduated with distinction as a <strong>Gold Medalist</strong>. This rigorous clinical training provided him with deep expertise in managing complex brain disorders, acute psychiatric crises, psychosexual issues, and child learning disabilities.
-                        </p>
-                        <p>
-                            At Pramukh Neuropsychiatry Clinic in Valsad, Dr. Solanki focuses on integrative healing. He firmly believes in breaking the societal stigma surrounding mental wellness by offering fully confidential consultations, detailed scientific explanations of brain disorders, and highly customized medication and counseling programs.
+                            With deep expertise in complex brain disorders, de-addiction, and sexual healthcare, he focuses on integrative, stigma-free healing. Dr. Solanki combines <strong class="text-primary">scientific explanation</strong> with customized therapy to empower patients on their journey to mental wellness.
                         </p>
                     </div>
 
@@ -804,6 +800,7 @@
                 this.aboutSheetOpen = false;
                 this.faqSheetOpen = false;
                 document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             },
             toggleServicesSheet() {
                 haptic('medium');
@@ -812,6 +809,7 @@
                 this.bookExpanded = false;
                 if (this.servicesSheetOpen) {
                     document.body.style.overflow = 'hidden';
+                    document.documentElement.style.overflow = 'hidden';
                     history.pushState({ modal: 'services' }, '');
                 }
             },
@@ -819,6 +817,7 @@
                 haptic('light');
                 this.servicesSheetOpen = false;
                 document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             },
             toggleAboutSheet() {
                 haptic('medium');
@@ -827,6 +826,7 @@
                 this.bookExpanded = false;
                 if (this.aboutSheetOpen) {
                     document.body.style.overflow = 'hidden';
+                    document.documentElement.style.overflow = 'hidden';
                     history.pushState({ modal: 'about' }, '');
                 }
             },
@@ -834,6 +834,7 @@
                 haptic('light');
                 this.aboutSheetOpen = false;
                 document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             },
             toggleFaqSheet() {
                 haptic('medium');
@@ -842,6 +843,7 @@
                 this.bookExpanded = false;
                 if (this.faqSheetOpen) {
                     document.body.style.overflow = 'hidden';
+                    document.documentElement.style.overflow = 'hidden';
                     history.pushState({ modal: 'faq' }, '');
                 }
             },
@@ -849,6 +851,7 @@
                 haptic('light');
                 this.faqSheetOpen = false;
                 document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             },
             toggleBook() {
                 haptic('medium');
