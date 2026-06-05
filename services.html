@@ -445,12 +445,17 @@
     </footer>
 
     <!-- Mobile Bottom Navigation Bar & Drawer Trigger sheets -->
-    <nav class="bottom-nav" x-data="{ lastScrollY: 0, hidden: false, init() {
+    <nav class="bottom-nav" x-data="{ lastScrollY: 0, hidden: false, scrollTimeout: null, init() {
         window.addEventListener('scroll', () => {
             const currentY = window.scrollY;
             const atBottom = (currentY + window.innerHeight) >= (document.documentElement.scrollHeight - 5);
             this.hidden = !atBottom && currentY > this.lastScrollY && currentY > 50;
             this.lastScrollY = currentY;
+            
+            if (this.scrollTimeout) clearTimeout(this.scrollTimeout);
+            this.scrollTimeout = setTimeout(() => {
+                this.hidden = false;
+            }, 800);
         }, { passive: true });
     } }" :class="{ 'is-hidden': hidden }" x-cloak>
         <div class="bottom-nav__inner">
