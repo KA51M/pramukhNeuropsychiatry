@@ -46,14 +46,9 @@
     <header class="header" x-data="{ scrolled: false, mobileOpen: false, init() { window.addEventListener('scroll', () => { this.scrolled = window.scrollY > 50; }); } }" :class="{ 'scrolled': scrolled }">
         <div class="header__container">
             <nav class="header__nav">
-                <div class="header__logo-container">
-                    <a href="index.html" class="text-logo text-logo--md">
-                        <img src="images/logo.png" alt="Pramukh Logo" class="text-logo__img" />
-                    </a>
-                    <a href="tel:+918733096725" class="header__mobile-call-btn" aria-label="Call Clinic">
-                        <span class="material-symbols-outlined">call</span>
-                    </a>
-                </div>
+                <a href="index.html" class="text-logo text-logo--md">
+                    <img src="images/logo.png" alt="Pramukh Logo" class="text-logo__img" />
+                </a>
                 
                 <div class="header__nav-desktop">
                     <a href="index.html" class="header__nav-link">Home</a>
@@ -118,10 +113,15 @@
                     </a>
                 </div>
 
-                <button class="header__mobile-btn" @click="mobileOpen = !mobileOpen" aria-label="Toggle menu">
-                    <span class="material-symbols-outlined header__mobile-btn-icon" x-show="!mobileOpen">menu</span>
-                    <span class="material-symbols-outlined header__mobile-btn-icon" x-show="mobileOpen" x-cloak>close</span>
-                </button>
+                <div class="header__mobile-actions">
+                    <a href="tel:+918733096725" class="header__mobile-call-btn" aria-label="Call Clinic">
+                        <span class="material-symbols-outlined">call</span>
+                    </a>
+                    <button class="header__mobile-btn" @click="mobileOpen = !mobileOpen" aria-label="Toggle menu">
+                        <span class="material-symbols-outlined header__mobile-btn-icon" x-show="!mobileOpen">menu</span>
+                        <span class="material-symbols-outlined header__mobile-btn-icon" x-show="mobileOpen" x-cloak>close</span>
+                    </button>
+                </div>
             </nav>
 
             <!-- Mobile Navigation Overlay -->
