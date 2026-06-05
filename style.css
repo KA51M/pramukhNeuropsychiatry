@@ -4280,14 +4280,27 @@ img {
     }
     
     .services-sheet__content, .about-sheet__content, .faq-sheet__content {
-        max-height: 85vh !important;
+        height: 85dvh !important;
+        height: 85vh !important;
+        max-height: 85dvh !important;
         overflow-y: auto !important;
+        scrollbar-width: none !important;
         -webkit-overflow-scrolling: touch;
     }
     
+    .services-sheet__content::-webkit-scrollbar,
+    .about-sheet__content::-webkit-scrollbar,
+    .faq-sheet__content::-webkit-scrollbar {
+        display: none !important;
+    }
+    
     .services-sheet__inner, .faq-sheet__inner {
-        padding: 1rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom, 0px)) 1.25rem !important;
+        padding: 1rem 1.25rem calc(100px + env(safe-area-inset-bottom, 0px)) 1.25rem !important;
         gap: 0.85rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 100% !important;
+        box-sizing: border-box !important;
     }
     
     .services-sheet__services {
@@ -4337,20 +4350,13 @@ img {
         font-size: 0.85rem !important;
     }
     
-    .about-sheet__content {
-        max-height: 88dvh !important;
-        max-height: 88vh !important;
-        overflow-y: auto !important;
-        scrollbar-width: none !important;
-    }
-    
-    .about-sheet__content::-webkit-scrollbar {
-        display: none !important;
-    }
-    
     .about-sheet__inner {
-        padding: 0.75rem 1.15rem calc(2.25rem + env(safe-area-inset-bottom, 0px)) 1.15rem !important;
-        gap: 0.5rem !important;
+        padding: 0.85rem 1.15rem calc(100px + env(safe-area-inset-bottom, 0px)) 1.15rem !important;
+        gap: 0.6rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 100% !important;
+        box-sizing: border-box !important;
     }
     
     .about-sheet__doctor {
@@ -4435,13 +4441,29 @@ img {
         font-size: 1.25rem !important;
     }
     
-    .about-sheet__btn-dark {
+    /* Style all bottom sheet view-all links and profile buttons as identical solid teal buttons */
+    .services-sheet__view-all, .faq-sheet__view-all, .about-sheet__btn-dark {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        background-color: #00A7B3 !important; /* Brand Teal */
+        color: var(--white) !important;
+        border-radius: var(--radius) !important;
         padding: 0.75rem !important;
         font-size: 0.9rem !important;
-        background-color: #00A7B3 !important; /* Change view full profile bg to brand teal */
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        text-align: center !important;
+        box-shadow: var(--shadow-sm) !important;
+        transition: var(--transition) !important;
+        border: none !important;
+        margin-top: auto !important; /* Push to bottom of content area */
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
     
-    .about-sheet__btn-dark:active {
+    .services-sheet__view-all:active, .faq-sheet__view-all:active, .about-sheet__btn-dark:active {
         background-color: #008892 !important;
     }
     
@@ -4457,6 +4479,49 @@ img {
     .faq-sheet__answer {
         padding: 0 0.85rem 0.65rem 0.85rem !important;
         font-size: 0.75rem !important;
+    }
+
+    /* 4-Step Wellness Process Mobile Layout (Vertical Timeline instead of horizontal scroll) */
+    .process__full-width {
+        overflow-x: hidden !important;
+        padding: 1.5rem 0 !important;
+    }
+    
+    .process__timeline {
+        display: flex !important;
+        flex-direction: column !important;
+        min-width: auto !important;
+        padding: 0 1.25rem !important;
+        gap: 2rem !important;
+    }
+    
+    .process__step {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        max-width: none !important;
+        width: 100% !important;
+        gap: 1.25rem !important;
+        position: relative !important;
+    }
+    
+    .process__step-icon {
+        flex-shrink: 0 !important;
+    }
+    
+    .process__step-content {
+        margin-top: 0.25rem !important;
+    }
+    
+    .process__connector {
+        position: absolute !important;
+        top: 70px !important;
+        left: 33px !important; /* Center of the 70px wide icon */
+        width: 3px !important;
+        height: calc(100% + 2rem - 70px) !important;
+        background-color: var(--border) !important;
+        z-index: 1 !important;
     }
 }
 
