@@ -899,6 +899,8 @@ img {
     border: 2px solid var(--secondary);
     object-fit: cover;
     background-color: var(--primary-light);
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
 }
 
 .hero__doctor-name {
@@ -3763,25 +3765,37 @@ img {
 }
 
 .services-sheet__procedures-scroll {
-    display: flex;
-    gap: 0.5rem;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-    scrollbar-width: none;
-}
-
-.services-sheet__procedures-scroll::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
 }
 
 .services-sheet__pill {
-    white-space: nowrap;
-    padding: 0.45rem 1rem;
-    background-color: var(--light);
-    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.85rem;
+    background-color: var(--light-teal);
+    border: 1px solid var(--border-teal);
+    color: var(--primary);
+    border-radius: var(--radius);
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--slate);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.services-sheet__pill-icon {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    flex-shrink: 0;
+}
+
+.services-sheet__pill:active {
+    background-color: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary-hover);
+    transform: scale(0.97);
 }
 
 .services-sheet__view-all, .about-sheet__view-all, .faq-sheet__view-all {

@@ -32,7 +32,7 @@
             <svg class="ecg-svg" viewBox="0 0 200 60">
                 <path class="ecg-line" d="M0,30 L8,30 L12,20 L16,40 L20,5 L24,55 L28,25 L36,35 L44,20 L48,40 L52,5 L56,55 L60,25 L68,35 L76,20 L80,40 L84,5 L88,55 L92,25 L100,35 L108,20 L112,40 L116,5 L120,55 L124,25 L132,35 L140,20 L144,40 L148,5 L152,55 L156,25 L164,35 L172,20 L176,40 L180,5 L184,55 L188,25 L196,30 L200,30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <p class="loader-tagline">Pioneering mental wellness, empowering lives</p>
+            <p class="loader-tagline">where Precision meets compassion</p>
         </div>
     </div>
 
@@ -192,7 +192,10 @@
                     </h1>
 
                     <div class="hero__doctor reveal">
-                        <img src="images/dr-virensinh-headshot.png" alt="Dr. Virensinh Solanki" class="hero__doctor-photo" />
+                        <picture>
+                            <source srcset="images/dr-virensinh-mobile.png" media="(max-width: 767px)">
+                            <img src="images/dr-virensinh-headshot.png" alt="Dr. Virensinh Solanki" class="hero__doctor-photo" />
+                        </picture>
                         <div>
                             <span class="hero__doctor-name">Dr. Virensinh Solanki</span>
                             <span class="hero__doctor-title">M.B.B.S. (Valsad), M.D. Psychiatry (Baroda) | Neuropsychiatrist</span>
@@ -983,7 +986,6 @@
                     <div class="footer-main__brand">
                         <a href="index.html" class="text-logo text-logo--lg text-logo--light">
                             <img src="images/logo.png" alt="Pramukh Logo" class="text-logo__img" />
-                            <span class="text-logo__name">PRAMUKH</span>
                         </a>
                         <p class="footer-main__brand-desc">
                             Pramukh Neuropsychiatry Clinic provides Gold Medalist psychiatric solutions. Specialized in mental health, de-addiction, headache, sleep, and sexual healthcare in Valsad, Gujarat.
@@ -1208,12 +1210,30 @@
                 <div class="services-sheet__procedures">
                     <h4 class="services-sheet__procedures-title">Quick Access</h4>
                     <div class="services-sheet__procedures-scroll">
-                        <a href="services.html#headache" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Headache</a>
-                        <a href="services.html#sleep" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Sleep</a>
-                        <a href="services.html#epilepsy" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Epilepsy</a>
-                        <a href="services.html#child" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Child ADHD</a>
-                        <a href="services.html#elderly" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Dementia</a>
-                        <a href="services.html#counseling" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">Therapy/CBT</a>
+                        <a href="services.html#headache" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">
+                            <span class="material-symbols-outlined services-sheet__pill-icon">healing</span>
+                            <span>Headache</span>
+                        </a>
+                        <a href="services.html#sleep" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">
+                            <span class="material-symbols-outlined services-sheet__pill-icon">bedtime</span>
+                            <span>Sleep</span>
+                        </a>
+                        <a href="services.html#epilepsy" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">
+                            <span class="material-symbols-outlined services-sheet__pill-icon">bolt</span>
+                            <span>Epilepsy</span>
+                        </a>
+                        <a href="services.html#child" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">
+                            <span class="material-symbols-outlined services-sheet__pill-icon">child_care</span>
+                            <span>Child ADHD</span>
+                        </a>
+                        <a href="services.html#elderly" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">
+                            <span class="material-symbols-outlined services-sheet__pill-icon">memory</span>
+                            <span>Dementia</span>
+                        </a>
+                        <a href="services.html#counseling" class="services-sheet__pill" @click="$store.mobileNav.closeServicesSheet()">
+                            <span class="material-symbols-outlined services-sheet__pill-icon">forum</span>
+                            <span>Therapy/CBT</span>
+                        </a>
                     </div>
                 </div>
                 <a href="services.html" class="services-sheet__view-all" @click="$store.mobileNav.closeServicesSheet()">View All Services <span class="material-symbols-outlined">arrow_forward</span></a>
@@ -1445,6 +1465,33 @@
                             <p>Pramukh Neuropsychiatry Clinic is at <strong>205, B Metropolis, Opposite Parikh Hospital (2nd Floor), Valsad-Dharampur Road, Abrama, Valsad</strong>.</p>
                         </div>
                     </div>
+                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 2 }">
+                        <button class="faq-sheet__question" @click="openIdx = openIdx === 2 ? null : 2">
+                            <span>Are my consultations confidential?</span>
+                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 2 }">expand_more</span>
+                        </button>
+                        <div class="faq-sheet__answer" x-show="openIdx === 2" x-collapse>
+                            <p>Absolutely. 100% patient privacy and diagnostic confidentiality are guaranteed for all clinical visits, treatments, and therapy records.</p>
+                        </div>
+                    </div>
+                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 3 }">
+                        <button class="faq-sheet__question" @click="openIdx = openIdx === 3 ? null : 3">
+                            <span>What treatments are offered?</span>
+                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 3 }">expand_more</span>
+                        </button>
+                        <div class="faq-sheet__answer" x-show="openIdx === 3" x-collapse>
+                            <p>Dr. Solanki provides specialized treatments for depression, anxiety, OCD, migraines, sleep disorders, psychosexual clinics, addiction de-toxification, and childhood ADHD/autism.</p>
+                        </div>
+                    </div>
+                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 4 }">
+                        <button class="faq-sheet__question" @click="openIdx = openIdx === 4 ? null : 4">
+                            <span>Can I consult online/remotely?</span>
+                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 4 }">expand_more</span>
+                        </button>
+                        <div class="faq-sheet__answer" x-show="openIdx === 4" x-collapse>
+                            <p>Yes. Remote video consultations are available for follow-up patients and individuals outside Valsad. Slots can be scheduled through our WhatsApp helpline.</p>
+                        </div>
+                    </div>
                 </div>
                 <a href="faq.html" class="faq-sheet__view-all" @click="$store.mobileNav.closeFaqSheet()">View All FAQs <span class="material-symbols-outlined">arrow_forward</span></a>
             </div>
@@ -1553,27 +1600,29 @@
         }
     });
 
-    // Custom Cursor tracking
-    document.addEventListener('mousemove', (e) => {
-        const dot = document.getElementById('cursor-dot');
-        const circle = document.getElementById('cursor-circle');
-        if (dot && circle) {
-            dot.style.top = e.clientY + 'px';
-            dot.style.left = e.clientX + 'px';
-            
-            circle.animate({
-                top: e.clientY + 'px',
-                left: e.clientX + 'px'
-            }, { duration: 300, fill: 'forwards' });
-        }
-    });
+    if (window.innerWidth >= 1024) {
+        // Custom Cursor tracking
+        document.addEventListener('mousemove', (e) => {
+            const dot = document.getElementById('cursor-dot');
+            const circle = document.getElementById('cursor-circle');
+            if (dot && circle) {
+                dot.style.top = e.clientY + 'px';
+                dot.style.left = e.clientX + 'px';
+                
+                circle.animate({
+                    top: e.clientY + 'px',
+                    left: e.clientX + 'px'
+                }, { duration: 300, fill: 'forwards' });
+            }
+        });
 
-    // Custom Cursor hover triggers
-    const hoverElements = document.querySelectorAll('a, button, .faq-item__question');
-    hoverElements.forEach(elem => {
-        elem.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-        elem.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
+        // Custom Cursor hover triggers
+        const hoverElements = document.querySelectorAll('a, button, .faq-item__question');
+        hoverElements.forEach(elem => {
+            elem.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            elem.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+    }
 
     // Page Loader dismissal
     window.addEventListener('load', () => {
