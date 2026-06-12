@@ -2581,15 +2581,15 @@ img {
 
 .cta-zone {
     position: relative;
-    padding: 4.5rem 0;
+    padding: 3rem 0;
     background-color: var(--light);
 }
 
 .cta-zone__card {
     background: linear-gradient(135deg, #0b1a1d 0%, #061113 100%);
     border-radius: var(--radius-2xl);
-    padding: 4.5rem 3rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    padding: 3rem 2.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
@@ -2618,30 +2618,30 @@ img {
 }
 
 .cta-zone__icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: rgba(184, 151, 74, 0.15);
     color: var(--secondary);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.cta-zone__icon span {
-    font-size: 1.75rem;
-}
-
-.cta-zone__title {
-    font-size: 2.25rem;
-    color: var(--white);
     margin-bottom: 1rem;
 }
 
+.cta-zone__icon span {
+    font-size: 1.5rem;
+}
+
+.cta-zone__title {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+}
+
 .cta-zone__description {
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -2650,7 +2650,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .cta-btn {
@@ -2659,9 +2659,9 @@ img {
     gap: 0.5rem;
     font-family: var(--font-heading);
     font-weight: 700;
-    padding: 0.85rem 1.75rem;
+    padding: 0.75rem 1.5rem;
     border-radius: var(--radius-lg);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: var(--transition);
 }
 
@@ -2693,7 +2693,7 @@ img {
 .cta-zone__contacts {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
 }
 
@@ -2707,7 +2707,7 @@ img {
     background-color: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius-xl);
-    padding: 1.25rem;
+    padding: 0.85rem 1.25rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -2725,7 +2725,7 @@ img {
 .contact-card__icon {
     color: var(--primary);
     background-color: rgba(0, 168, 181, 0.1);
-    padding: 0.6rem;
+    padding: 0.5rem;
     border-radius: var(--radius-lg);
 }
 
@@ -2735,14 +2735,14 @@ img {
 }
 
 .contact-card__label {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--slate-light);
 }
 
 .contact-card__value {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--white);
 }
 
@@ -2752,11 +2752,17 @@ img {
 
 @media (max-width: 767px) {
     .cta-zone {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
     .cta-zone__card {
-        padding: 3rem 1.5rem;
+        padding: 2.25rem 1.25rem;
         border-radius: var(--radius-xl);
+    }
+    .cta-zone__actions {
+        margin-bottom: 1.5rem;
+    }
+    .contact-card {
+        padding: 0.75rem 1rem;
     }
 }
 
