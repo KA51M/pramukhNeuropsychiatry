@@ -104,34 +104,10 @@
                         </div>
                     </div>
                     
-                    <a href="contact.html" class="header__nav-link">Our Clinics</a>
-                    <div class="header__dropdown">
-                        <a href="#" class="header__nav-link">
-                            Resources
-                            <span class="material-symbols-outlined header__dropdown-arrow">expand_more</span>
-                        </a>
-                        <div class="header__dropdown-menu" style="min-width: 220px;">
-                            <div class="header__dropdown-inner" style="padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
-                                <a href="faq.html" class="header__dropdown-card" style="display: flex; align-items: center; gap: 0.75rem;">
-                                    <span class="material-symbols-outlined" style="color: var(--primary);">help</span>
-                                    <div>
-                                        <span class="header__dropdown-card-title" style="font-size: 0.95rem; font-weight: 600; display: block; color: var(--dark);">FAQ Center</span>
-                                        <span class="header__dropdown-card-desc" style="font-size: 0.75rem; color: var(--slate); display: block;">Common questions answered</span>
-                                    </div>
-                                </a>
-                                <a href="about.html" class="header__dropdown-card" style="display: flex; align-items: center; gap: 0.75rem;">
-                                    <span class="material-symbols-outlined" style="color: var(--primary);">school</span>
-                                    <div>
-                                        <span class="header__dropdown-card-title" style="font-size: 0.95rem; font-weight: 600; display: block; color: var(--dark);">Qualifications</span>
-                                        <span class="header__dropdown-card-desc" style="font-size: 0.75rem; color: var(--slate); display: block;">Dr. Solanki's background</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="faq.html" class="header__nav-link">FAQ</a>
+                    <a href="contact.html" class="header__nav-link">OPD Timings</a>
+                    <a href="faq.html" class="header__nav-link">FAQs</a>
                     
-                    <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment%20at%20Pramukh%20Neuropsychiatry." target="_blank" rel="noopener noreferrer" class="header__cta header__cta--gold">
+                    <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="header__cta">
                         <span class="material-symbols-outlined">calendar_month</span>
                         Book Appointment
                     </a>
@@ -154,7 +130,7 @@
                     <a href="index.html" class="header__nav-mobile-link" @click="mobileOpen = false">Home</a>
                     <a href="about.html" class="header__nav-mobile-link" @click="mobileOpen = false">About</a>
                     <a href="services.html" class="header__nav-mobile-link" @click="mobileOpen = false">Services</a>
-                    <a href="contact.html" class="header__nav-mobile-link" @click="mobileOpen = false">OPD Locations</a>
+                    <a href="contact.html" class="header__nav-mobile-link" @click="mobileOpen = false">OPD Timings</a>
                     <a href="faq.html" class="header__nav-mobile-link" @click="mobileOpen = false">FAQs</a>
                     <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="header__cta--mobile">
                         <span class="material-symbols-outlined">calendar_month</span>
@@ -180,6 +156,14 @@
                     <h1 class="new-hero__title">
                         Advanced <span class="text-teal-highlight">De-Addiction</span> &amp; Neuropsychiatry Care
                     </h1>
+                    <!-- Doctor profile badge for mobile view only -->
+                    <div class="new-hero__doctor-badge">
+                        <img src="images/dr-virensinh-headshot.png" alt="Dr. Virensinh Solanki" class="new-hero__doctor-badge-photo" />
+                        <div class="new-hero__doctor-badge-info">
+                            <span class="new-hero__doctor-badge-name">Dr. Virensinh Solanki</span>
+                            <span class="new-hero__doctor-badge-title">M.B.B.S., M.D. Psychiatry | Consultant Neuropsychiatrist</span>
+                        </div>
+                    </div>
                     <p class="new-hero__description">
                         We provide evidence-based, compassionate and personalized treatment for a wide range of mental health conditions.
                     </p>
@@ -783,11 +767,10 @@
         </div>
     </section>
 
-    <!-- Mega Footer -->
-    <footer class="mega-footer">
-        <section class="cta-zone">
-            <div class="cta-zone__bg"></div>
-            <div class="cta-zone__container">
+    <!-- CTA Section -->
+    <section class="cta-zone">
+        <div class="cta-zone__container">
+            <div class="cta-zone__card">
                 <div class="cta-zone__content">
                     <div class="cta-zone__icon"><span class="material-symbols-outlined">calendar_month</span></div>
                     <h2 class="cta-zone__title">Ready to Seek Help?</h2>
@@ -823,8 +806,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <!-- Mega Footer -->
+    <footer class="mega-footer">
         <div class="footer-main">
             <div class="footer-main__container">
                 <div class="footer-main__grid footer-main__grid--5cols">
