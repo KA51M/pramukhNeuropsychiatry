@@ -104,10 +104,34 @@
                         </div>
                     </div>
                     
-                    <a href="contact.html" class="header__nav-link">OPD Timings</a>
-                    <a href="faq.html" class="header__nav-link">FAQs</a>
+                    <a href="contact.html" class="header__nav-link">Our Clinics</a>
+                    <div class="header__dropdown">
+                        <a href="#" class="header__nav-link">
+                            Resources
+                            <span class="material-symbols-outlined header__dropdown-arrow">expand_more</span>
+                        </a>
+                        <div class="header__dropdown-menu" style="min-width: 220px;">
+                            <div class="header__dropdown-inner" style="padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                                <a href="faq.html" class="header__dropdown-card" style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="material-symbols-outlined" style="color: var(--primary);">help</span>
+                                    <div>
+                                        <span class="header__dropdown-card-title" style="font-size: 0.95rem; font-weight: 600; display: block; color: var(--dark);">FAQ Center</span>
+                                        <span class="header__dropdown-card-desc" style="font-size: 0.75rem; color: var(--slate); display: block;">Common questions answered</span>
+                                    </div>
+                                </a>
+                                <a href="about.html" class="header__dropdown-card" style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="material-symbols-outlined" style="color: var(--primary);">school</span>
+                                    <div>
+                                        <span class="header__dropdown-card-title" style="font-size: 0.95rem; font-weight: 600; display: block; color: var(--dark);">Qualifications</span>
+                                        <span class="header__dropdown-card-desc" style="font-size: 0.75rem; color: var(--slate); display: block;">Dr. Solanki's background</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="faq.html" class="header__nav-link">FAQ</a>
                     
-                    <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment%20at%20Pramukh%20Neuropsychiatry." target="_blank" rel="noopener noreferrer" class="header__cta">
+                    <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment%20at%20Pramukh%20Neuropsychiatry." target="_blank" rel="noopener noreferrer" class="header__cta header__cta--gold">
                         <span class="material-symbols-outlined">calendar_month</span>
                         Book Appointment
                     </a>
@@ -142,205 +166,144 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero__background">
-            <div class="hero__gradient"></div>
-            <div class="hero__glow hero__glow--primary"></div>
-            <div class="hero__glow hero__glow--secondary"></div>
-            <div class="hero__diagonal"></div>
+    <section class="new-hero">
+        <div class="new-hero__background">
+            <div class="new-hero__gradient"></div>
+            <div class="new-hero__glow new-hero__glow--primary"></div>
+            <div class="new-hero__glow new-hero__glow--secondary"></div>
         </div>
 
         <div class="container">
-            <div class="hero__grid">
-                <div class="hero__content">
-                    <div class="hero__premium-card reveal reveal-left">
-                        <span class="material-symbols-outlined premium-card__icon">workspace_premium</span>
-                        <div class="premium-card__text">
-                            <span class="premium-card__badge">Gold Medalist</span>
-                            <span class="premium-card__title">Psychiatrist &amp; Sexologist</span>
-                        </div>
-                    </div>
-
-                    <!-- Alpine.js Title Rotator -->
-                    <h1 class="hero__title reveal" x-data="{ 
-                        currentIndex: 0, 
-                        isAnimating: false,
-                        titles: [
-                            { prefix: 'Specialist in', highlight: 'Neuropsychiatry', suffix: 'and brain health.' },
-                            { prefix: 'Advanced', highlight: 'De-Addiction', suffix: 'recovery clinics.' },
-                            { prefix: 'Expert', highlight: 'Psychosexual', suffix: 'medical care.' },
-                            { prefix: 'Dedicated', highlight: 'Mental Health', suffix: 'disorder therapy.' }
-                        ],
-                        init() {
-                            setInterval(() => {
-                                this.isAnimating = true;
-                                setTimeout(() => {
-                                    this.currentIndex = (this.currentIndex + 1) % this.titles.length;
-                                    this.isAnimating = false;
-                                }, 500);
-                            }, 4000);
-                        }
-                    }">
-                        <span class="hero__title-stack">
-                            <template x-for="(title, index) in titles" :key="index">
-                                <span class="hero__title-item" :class="{ 'is-active': currentIndex === index, 'is-animating': isAnimating && currentIndex === index }" x-show="currentIndex === index">
-                                    <span class="hero__title-line1">
-                                        <span class="hero__title-prefix" x-text="title.prefix"></span>
-                                        <span class="hero__title-highlight" x-text="title.highlight"></span>
-                                    </span>
-                                    <span class="hero__title-line2">
-                                        <span class="hero__title-suffix" x-text="title.suffix"></span>
-                                    </span>
-                                </span>
-                            </template>
-                        </span>
+            <div class="new-hero__grid">
+                <div class="new-hero__content">
+                    <span class="new-hero__badge">Advanced Care. Lasting Recovery.</span>
+                    <h1 class="new-hero__title">
+                        Advanced <span class="text-teal-highlight">De-Addiction</span> &amp; Neuropsychiatry Care
                     </h1>
-
-                    <div class="hero__doctor reveal">
-                        <picture>
-                            <source srcset="images/dr-virensinh-mobile.png" media="(max-width: 767px)">
-                            <img src="images/dr-virensinh-headshot.png" alt="Dr. Virensinh Solanki" class="hero__doctor-photo" />
-                        </picture>
-                        <div>
-                            <span class="hero__doctor-name">Dr. Virensinh Solanki</span>
-                            <span class="hero__doctor-title">M.B.B.S. (Valsad), M.D. Psychiatry (Baroda) | Neuropsychiatrist</span>
-                        </div>
-                    </div>
-
-                    <p class="hero__description reveal">
-                        Gold Medalist expertise providing evidence-based, compassionate care for mental health disorders, psychosexual problems, sleep disturbances, and customized de-addiction programs in Valsad, Gujarat.
+                    <p class="new-hero__description">
+                        We provide evidence-based, compassionate and personalized treatment for a wide range of mental health conditions.
                     </p>
-
-                    <div class="hero__actions reveal">
+                    <div class="new-hero__actions">
                         <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
                             <span class="material-symbols-outlined">calendar_month</span>
                             Book Appointment
                         </a>
-                        <a href="services.html" class="btn btn--outline btn--lg" style="color: white; border-color: rgba(255, 255, 255, 0.3);">
-                            View Services
+                        <a href="services.html" class="btn btn--outline btn--lg new-hero__btn-outline">
+                            View Our Services
                             <span class="material-symbols-outlined">arrow_forward</span>
                         </a>
                     </div>
-
-                    <div class="hero__stats reveal-stagger">
-                        <div class="hero__stat">
-                            <span class="hero__stat-number" data-counter="5">0+</span>
-                            <span class="hero__stat-label">Years Exp.</span>
+                    <div class="new-hero__stats">
+                        <div class="new-hero__stat">
+                            <span class="new-hero__stat-num">5+</span>
+                            <span class="new-hero__stat-label">Years of Trust</span>
                         </div>
-                        <div class="hero__stat">
-                            <span class="hero__stat-number" data-counter="10">0+</span>
-                            <span class="hero__stat-label">Visiting Hospitals</span>
+                        <div class="new-hero__stat">
+                            <span class="new-hero__stat-num">10+</span>
+                            <span class="new-hero__stat-label">Expert Specialists</span>
                         </div>
-                        <div class="hero__stat">
-                            <span class="hero__stat-number" data-counter="100" data-counter-suffix="%">0%</span>
-                            <span class="hero__stat-label">Confidentiality</span>
+                        <div class="new-hero__stat">
+                            <span class="new-hero__stat-num">100%</span>
+                            <span class="new-hero__stat-label">Confidential Care</span>
                         </div>
-                        <div class="hero__stat">
-                            <span class="hero__stat-number" data-counter="1">0</span>
-                            <span class="hero__stat-label">OPD Location</span>
+                        <div class="new-hero__stat">
+                            <span class="new-hero__stat-num">1+</span>
+                            <span class="new-hero__stat-label">Clinics</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="hero__image-wrapper reveal-right">
-                    <div class="hero__image-container">
-                        <img src="images/dr-virensinh-profile.png" alt="Dr. Virensinh Solanki - Pramukh Neuropsychiatry" class="hero__image" />
-                        <div class="hero__image-overlay"></div>
-                        <div class="hero__image-badge">
-                            <div class="hero__image-badge-icon">
-                                <span class="material-symbols-outlined">workspace_premium</span>
-                            </div>
-                            <div class="hero__image-badge-text">
-                                <span class="hero__image-badge-title">Gold Medalist MD</span>
-                                <span class="hero__image-badge-sub">Government Medical College, Baroda</span>
-                            </div>
+                <div class="new-hero__image-column">
+                    <div class="new-hero__card">
+                        <img src="images/dr-virensinh-profile.png" alt="Dr. Virensinh Solanki - Pramukh Neuropsychiatry" class="new-hero__image" />
+                        
+                        <!-- Top-Left Experience Badge -->
+                        <div class="new-hero__badge-experience">
+                            <span class="material-symbols-outlined">workspace_premium</span>
+                            <span>15+ YEARS Experience</span>
+                        </div>
+                        
+                        <!-- Bottom-Left Glassmorphic Info Card -->
+                        <div class="new-hero__doctor-details">
+                            <h3>Dr. Virensinh Solanki</h3>
+                            <p>Consultant Neuropsychiatrist &amp; De-Addiction Specialist</p>
+                        </div>
+
+                        <!-- Bottom-Right Patient Focused Badge -->
+                        <div class="new-hero__badge-focused">
+                            <span class="focused-number">100%</span>
+                            <span class="focused-label">Patient Focused</span>
                         </div>
                     </div>
-                    <div class="hero__float-experience reveal-scale">
-                        <span class="material-symbols-outlined hero__float-experience-icon">psychology</span>
-                        <span class="hero__float-experience-text">5+ Years Exp</span>
-                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="hero__scroll reveal">
-            <span>Scroll</span>
-            <div class="hero__scroll-indicator">
-                <span class="hero__scroll-dot"></span>
             </div>
         </div>
     </section>
 
-    <!-- Doctor Intro Section -->
-    <section class="section section--gray intro">
+    <!-- Section 2: Meet Our Expert -->
+    <section class="expert-section">
         <div class="container">
-            <div class="intro__grid">
-                <div class="intro__photo-col reveal-left">
-                    <img src="images/dr-virensinh-headshot.png" alt="Dr. Virensinh Solanki" class="intro__photo" />
-                    <div class="intro__trust-badges">
-                        <span class="intro__trust-badge">
-                            <span class="material-symbols-outlined">workspace_premium</span>
-                            Gold Medalist
-                        </span>
-                        <span class="intro__trust-badge">
-                            <span class="material-symbols-outlined">verified</span>
-                            M.D. Psychiatry
-                        </span>
-                        <span class="intro__trust-badge">
-                            <span class="material-symbols-outlined">clinical_notes</span>
-                            5+ Years Exp
-                        </span>
+            <div class="expert-grid">
+                <div class="expert-image-col">
+                    <div class="expert-image-card">
+                        <img src="images/dr-virensinh-profile.png" alt="Dr. Virensinh Solanki" class="expert-photo" />
+                        <!-- Brain Icon top-right -->
+                        <div class="expert-brain-badge">
+                            <span class="material-symbols-outlined">psychology</span>
+                        </div>
+                        <!-- Signature bottom-left -->
+                        <div class="expert-signature">
+                            <span>Dr. V. Solanki</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="intro__content-col reveal-right">
-                    <h2 class="intro__title">
-                        Dr. Virensinh Solanki
-                        <span class="intro__title-highlight">M.B.B.S., M.D.</span>
+                <div class="expert-content-col">
+                    <span class="expert-section-tag">MEET OUR EXPERT</span>
+                    <h2 class="expert-title">
+                        Dr. Virensinh Solanki <span class="credentials-badge">M.B.B.S., M.D.</span>
                     </h2>
-                    <p class="intro__specialization">Consultant Neuropsychiatrist, Sexologist &amp; De-Addiction Specialist</p>
-                    <p class="intro__motto">"Scientific diagnosis, compassionate healing, absolute confidentiality."</p>
-                    <p class="intro__description">
-                        Dr. Virensinh Solanki is an esteemed neuropsychiatrist who achieved Gold Medalist honors during his MD in Psychiatry at Government Medical College &amp; SSG Hospital Baroda. Having earned his MBBS at GMERS Medical College Valsad, he brings state-of-the-art mental healthcare back to Valsad. Combining evidence-based pharmacotherapy with modern psychological counseling, Dr. Solanki provides comprehensive healing tailored to individual recovery paths.
+                    <p class="expert-subtitle">Consultant Neuropsychiatrist &amp; De-Addiction Specialist</p>
+                    <p class="expert-description">
+                        With over 15 years of experience in neuropsychiatry and addiction medicine, Dr. Solanki is dedicated to helping individuals achieve long-term recovery and mental wellness. His evidence-based approach and compassionate care have transformed thousands of lives.
                     </p>
 
-                    <div class="intro__stats-row">
-                        <div class="intro__stat-inline">
-                            <span class="intro__stat-inline-number">5+</span>
-                            <span class="intro__stat-inline-label">Years of Experience</span>
+                    <div class="expert-stats-grid">
+                        <div class="expert-stat-box">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
                         </div>
-                        <div class="intro__stat-inline">
-                            <span class="intro__stat-inline-number">10+</span>
-                            <span class="intro__stat-inline-label">Visiting Attachments</span>
+                        <div class="expert-stat-box">
+                            <h3>10+</h3>
+                            <p>Specialities</p>
                         </div>
-                        <div class="intro__stat-inline">
-                            <span class="intro__stat-inline-number">1</span>
-                            <span class="intro__stat-inline-label">Modern OPD Center</span>
+                        <div class="expert-stat-box">
+                            <h3>1+</h3>
+                            <p>Clinic Locations</p>
                         </div>
-                    </div>
-
-                    <div class="intro__credentials">
-                        <div class="intro__credential">
-                            <span class="material-symbols-outlined">school</span>
-                            <span>M.B.B.S. — GMERS Medical College, Valsad</span>
-                        </div>
-                        <div class="intro__credential">
-                            <span class="material-symbols-outlined">workspace_premium</span>
-                            <span>M.D. Psychiatry (Gold Medalist) — GMC Baroda</span>
-                        </div>
-                        <div class="intro__credential">
-                            <span class="material-symbols-outlined">health_and_safety</span>
-                            <span>Specialized training in De-Addiction &amp; Sexology</span>
-                        </div>
-                        <div class="intro__credential">
-                            <span class="material-symbols-outlined">psychology</span>
-                            <span>Cognitive Behavioral &amp; Family Therapy consultant</span>
+                        <div class="expert-stat-box">
+                            <h3>1000+</h3>
+                            <p>Lives Transformed</p>
                         </div>
                     </div>
 
-                    <a href="about.html" class="btn btn--secondary intro__cta">
-                        <span>Learn More About Dr. Solanki</span>
+                    <div class="expert-checklists">
+                        <div class="expert-check-item">
+                            <span class="material-symbols-outlined check-icon">verified</span>
+                            <span>Evidence Based Treatment</span>
+                        </div>
+                        <div class="expert-check-item">
+                            <span class="material-symbols-outlined check-icon">favorite</span>
+                            <span>Personalized Care</span>
+                        </div>
+                        <div class="expert-check-item">
+                            <span class="material-symbols-outlined check-icon">shield</span>
+                            <span>Confidential &amp; Safe</span>
+                        </div>
+                    </div>
+
+                    <a href="about.html" class="btn btn--secondary btn-know-more">
+                        Know More About Dr. Solanki
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
@@ -348,595 +311,472 @@
         </div>
     </section>
 
-    <!-- Specialized Services Grid -->
-    <section class="services section">
+    <!-- Section 3: Our Services -->
+    <section class="services-section">
         <div class="container">
-            <div class="services__header reveal">
-                <div class="badge">
-                    <span class="material-symbols-outlined">health_and_safety</span>
-                    <span>Treatment Clinics</span>
-                </div>
-                <h2 class="services__title">
-                    Expert Mental Health Care <span class="services__title-highlight">You Can Trust</span>
-                </h2>
-                <p class="services__description">
-                    Empathetic evaluation and modern medical treatments covering neuropsychiatry, de-addiction, psychosexual issues, and child mental health.
-                </p>
+            <div class="services-header">
+                <span class="services-tag">OUR SERVICES</span>
+                <h2 class="services-title">Expert Mental Health Care <span class="teal-highlight">You Can Trust</span></h2>
+                <p class="services-subtitle">Comprehensive care for a healthier mind and a better tomorrow.</p>
             </div>
 
-            <div class="services__grid reveal-stagger">
-                <div class="service-card service-card--featured">
-                    <div class="service-card__icon"><span class="material-symbols-outlined">psychology</span></div>
-                    <h3 class="service-card__title">Brain &amp; Mental Health</h3>
-                    <p class="service-card__description">Diagnosis and compassionate management of depression, anxiety, panic attacks, OCD, bipolar disorder, and emotional instability.</p>
-                    <div class="service-card__features">
-                        <span class="service-card__feature"><span class="material-symbols-outlined">verified</span>Depression &amp; Anxiety</span>
-                        <span class="service-card__feature"><span class="material-symbols-outlined">verified</span>OCD &amp; Panic Attacks</span>
-                        <span class="service-card__feature"><span class="material-symbols-outlined">verified</span>Mood Regulation</span>
+            <div class="services-grid">
+                <!-- Card 1: De-Addiction Treatment -->
+                <div class="service-block">
+                    <div class="service-block__icon-wrapper">
+                        <span class="material-symbols-outlined">volunteer_activism</span>
                     </div>
-                    <a href="services.html#mental-health" class="service-card__link">Learn More <span class="material-symbols-outlined">arrow_forward</span></a>
-                    <div class="service-card__badge">Core Specialty</div>
+                    <h3 class="service-block__title">De-Addiction Treatment</h3>
+                    <p class="service-block__desc">
+                        Evidence-based programs to help you overcome addiction and reclaim control of your life.
+                    </p>
+                    <ul class="service-block__list">
+                        <li>Alcohol De-Addiction</li>
+                        <li>Drug De-Addiction</li>
+                        <li>Nicotine De-Addiction</li>
+                    </ul>
+                    <a href="services.html#de-addiction" class="service-block__link">
+                        Learn More <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-card__icon"><span class="material-symbols-outlined">volunteer_activism</span></div>
-                    <h3 class="service-card__title">Addiction Clinic</h3>
-                    <p class="service-card__description">Comprehensive, confidential medical de-addiction for alcohol, nicotine products, opium, ganja, brown sugar, and modern screen addictions.</p>
-                    <div class="service-card__features">
-                        <span class="service-card__feature"><span class="material-symbols-outlined">verified</span>Alcohol De-addiction</span>
-                        <span class="service-card__feature"><span class="material-symbols-outlined">verified</span>Tobacco &amp; Ganja Recovery</span>
-                        <span class="service-card__feature"><span class="material-symbols-outlined">verified</span>Medication-Assisted Rehab</span>
+                <!-- Card 2: Psychiatric Care -->
+                <div class="service-block">
+                    <div class="service-block__icon-wrapper">
+                        <span class="material-symbols-outlined">psychology</span>
                     </div>
-                    <a href="services.html#de-addiction" class="service-card__link">Learn More <span class="material-symbols-outlined">arrow_forward</span></a>
+                    <h3 class="service-block__title">Psychiatric Care</h3>
+                    <p class="service-block__desc">
+                        Personalized treatment for conditions like depression, anxiety, bipolar disorder, schizophrenia and more.
+                    </p>
+                    <ul class="service-block__list">
+                        <li>Depression</li>
+                        <li>Anxiety Disorders</li>
+                        <li>Mood Disorders</li>
+                    </ul>
+                    <a href="services.html#mental-health" class="service-block__link">
+                        Learn More <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-card__icon"><span class="material-symbols-outlined">settings_accessibility</span></div>
-                    <h3 class="service-card__title">Psychosexual Clinic</h3>
-                    <p class="service-card__description">Scientific, professional medical treatment for sexual dysfunction, premature ejaculation, erectile dysfunction, and reduced desire in men &amp; women.</p>
-                    <div class="service-card__features">
-                        <span class="service-card__feature"><span class="material-symbols-outlined">verified</span>Erectile Dysfunction</span>
-                        <span class="service-card__feature"><span class="material-symbols-outlined">verified</span>Premature Ejaculation</span>
-                        <span class="service-card__feature"><span class="material-symbols-outlined">verified</span>Counseling &amp; Hormonal Care</span>
+                <!-- Card 3: Child & Adolescent Care -->
+                <div class="service-block">
+                    <div class="service-block__icon-wrapper">
+                        <span class="material-symbols-outlined">child_care</span>
                     </div>
-                    <a href="services.html#psychosexual" class="service-card__link">Learn More <span class="material-symbols-outlined">arrow_forward</span></a>
+                    <h3 class="service-block__title">Child &amp; Adolescent Care</h3>
+                    <p class="service-block__desc">
+                        Specialized care for children and teenagers facing emotional, behavioral and developmental challenges.
+                    </p>
+                    <ul class="service-block__list">
+                        <li>ADHD</li>
+                        <li>Autism Spectrum</li>
+                        <li>Behavioral Issues</li>
+                    </ul>
+                    <a href="services.html#child" class="service-block__link">
+                        Learn More <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
-            </div>
 
-            <div class="services__procedures reveal">
-                <h3 class="services__procedures-title">Specialized Outpatient Clinics</h3>
-                <div class="services__procedures-grid reveal-stagger">
-                    <a href="services.html#headache" class="procedure-card">
-                        <div class="procedure-card__icon"><span class="material-symbols-outlined">insights</span></div>
-                        <span class="procedure-card__title">Headache Clinic</span>
-                        <span class="procedure-card__tag">Migraine</span>
-                    </a>
-                    <a href="services.html#sleep" class="procedure-card">
-                        <div class="procedure-card__icon"><span class="material-symbols-outlined">bedtime</span></div>
-                        <span class="procedure-card__title">Sleep Clinic</span>
-                        <span class="procedure-card__tag">Insomnia</span>
-                    </a>
-                    <a href="services.html#epilepsy" class="procedure-card">
-                        <div class="procedure-card__icon"><span class="material-symbols-outlined">flash_on</span></div>
-                        <span class="procedure-card__title">Epilepsy Clinic</span>
-                        <span class="procedure-card__tag">Fits/Seizures</span>
-                    </a>
-                    <a href="services.html#child" class="procedure-card">
-                        <div class="procedure-card__icon"><span class="material-symbols-outlined">child_care</span></div>
-                        <span class="procedure-card__title">Child &amp; Adolescent</span>
-                        <span class="procedure-card__tag">ADHD/Autism</span>
-                    </a>
-                    <a href="services.html#elderly" class="procedure-card">
-                        <div class="procedure-card__icon"><span class="material-symbols-outlined">elderly</span></div>
-                        <span class="procedure-card__title">Elderly Mental Care</span>
-                        <span class="procedure-card__tag">Dementia/Memory</span>
-                    </a>
-                    <a href="services.html#counseling" class="procedure-card">
-                        <div class="procedure-card__icon"><span class="material-symbols-outlined">groups</span></div>
-                        <span class="procedure-card__title">Counseling Center</span>
-                        <span class="procedure-card__tag">CBT/Couple Therapy</span>
+                <!-- Card 4: Counselling & Therapy -->
+                <div class="service-block">
+                    <div class="service-block__icon-wrapper">
+                        <span class="material-symbols-outlined">forum</span>
+                    </div>
+                    <h3 class="service-block__title">Counselling &amp; Therapy</h3>
+                    <p class="service-block__desc">
+                        One-on-one and family therapy sessions to support mental well-being and personal growth.
+                    </p>
+                    <ul class="service-block__list">
+                        <li>Individual Therapy</li>
+                        <li>Couple Therapy</li>
+                        <li>Family Counselling</li>
+                    </ul>
+                    <a href="services.html#counseling" class="service-block__link">
+                        Learn More <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
             </div>
 
-            <div class="services__cta reveal">
-                <a href="services.html" class="btn btn--secondary btn--lg">
-                    View Counseling &amp; Advanced Treatments
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </a>
+            <!-- Specialized Outpatient Clinics -->
+            <div class="outpatient-section">
+                <h3 class="outpatient-title">Specialized Outpatient Clinics</h3>
+                <div class="outpatient-grid">
+                    <a href="services.html#de-addiction" class="outpatient-pill">
+                        <span class="material-symbols-outlined pill-icon">volunteer_activism</span>
+                        <span>Addiction Clinic</span>
+                    </a>
+                    <a href="services.html#elderly" class="outpatient-pill">
+                        <span class="material-symbols-outlined pill-icon">psychology</span>
+                        <span>Memory Clinic</span>
+                    </a>
+                    <a href="services.html#child" class="outpatient-pill">
+                        <span class="material-symbols-outlined pill-icon">child_care</span>
+                        <span>ADHD Clinic</span>
+                    </a>
+                    <a href="services.html#mental-health" class="outpatient-pill">
+                        <span class="material-symbols-outlined pill-icon">female</span>
+                        <span>Women's Mental Health</span>
+                    </a>
+                    <a href="services.html#de-addiction" class="outpatient-pill">
+                        <span class="material-symbols-outlined pill-icon">local_hospital</span>
+                        <span>De-Addiction OPD</span>
+                    </a>
+                    <a href="services.html#elderly" class="outpatient-pill">
+                        <span class="material-symbols-outlined pill-icon">elderly</span>
+                        <span>Geriatric Mental Health</span>
+                    </a>
+                </div>
+                <div class="outpatient-actions">
+                    <a href="services.html" class="btn btn--secondary btn-all-services">
+                        View All Services &amp; Treatments
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Spotlight Section: De-Addiction Recovery -->
-    <section class="section section--gray spotlight">
-        <div class="spotlight__bg-glow"></div>
+    <!-- Section 4: Why Choose Us -->
+    <section class="why-section">
         <div class="container">
-            <div class="spotlight__grid">
-                <div class="spotlight__content reveal-left">
-                    <div class="spotlight__lead-stat">
-                        <span class="spotlight__lead-number">5+</span>
-                        <span class="spotlight__lead-label">Years of Certified Success</span>
-                    </div>
-                    <h2 class="spotlight__title">Advanced Outpatient <span class="text-tangerine">De-Addiction Clinic</span></h2>
-                    <p class="spotlight__description">
-                        Break free from alcohol, tobacco, gutkha, opium, and cannabis addiction under Dr. Virensinh Solanki's evidence-based medical treatment plans. We prioritize confidentiality, detox meds, and supportive counseling.
+            <div class="why-grid">
+                <div class="why-content-col">
+                    <span class="why-tag">WHY CHOOSE US</span>
+                    <h2 class="why-title">Advanced Outpatient <span class="text-gold-highlight">De-Addiction &amp; Neuropsychiatry Clinic</span></h2>
+                    <p class="why-description">
+                        We combine clinical excellence with compassionate care to deliver the best outcomes for our patients.
                     </p>
-                    <ul class="spotlight__benefits">
-                        <li class="spotlight__benefit">
-                            <span class="spotlight__benefit-icon"><span class="material-symbols-outlined">verified</span></span>
-                            <div class="spotlight__benefit-content">
-                                <strong>Absolute Confidentiality</strong>
-                                <span>No judgment, complete privacy for patient profiles.</span>
-                            </div>
+                    <ul class="why-checklists">
+                        <li>
+                            <span class="material-symbols-outlined check-circle">check_circle</span>
+                            <span>Expert &amp; Experienced Team</span>
                         </li>
-                        <li class="spotlight__benefit">
-                            <span class="spotlight__benefit-icon"><span class="material-symbols-outlined">verified</span></span>
-                            <div class="spotlight__benefit-content">
-                                <strong>Scientific Detoxification</strong>
-                                <span>FDA-approved pharmacological protocols to reduce cravings.</span>
-                            </div>
+                        <li>
+                            <span class="material-symbols-outlined check-circle">check_circle</span>
+                            <span>Personalized Treatment Plans</span>
                         </li>
-                        <li class="spotlight__benefit">
-                            <span class="spotlight__benefit-icon"><span class="material-symbols-outlined">verified</span></span>
-                            <div class="spotlight__benefit-content">
-                                <strong>Relapse Prevention Counseling</strong>
-                                <span>CBT techniques to handle emotional triggers and stress.</span>
-                            </div>
+                        <li>
+                            <span class="material-symbols-outlined check-circle">check_circle</span>
+                            <span>Holistic &amp; Evidence-Based Approach</span>
                         </li>
-                        <li class="spotlight__benefit">
-                            <span class="spotlight__benefit-icon"><span class="material-symbols-outlined">verified</span></span>
-                            <div class="spotlight__benefit-content">
-                                <strong>Supportive Family Therapy</strong>
-                                <span>Educating family structures to ensure a positive home environment.</span>
-                            </div>
+                        <li>
+                            <span class="material-symbols-outlined check-circle">check_circle</span>
+                            <span>Confidential &amp; Supportive Environment</span>
                         </li>
                     </ul>
-                    <a href="services.html#de-addiction" class="btn btn--primary spotlight__cta">
-                        <span>Learn About De-Addiction Methods</span>
-                        <span class="material-symbols-outlined">arrow_forward</span>
+                    <a href="about.html" class="btn btn--primary btn-why-cta">
+                        Learn More About Our Approach
                     </a>
                 </div>
 
-                <div class="spotlight__stats-col reveal-right">
-                    <div class="spotlight__stats-card">
-                        <div class="spotlight__stat spotlight__stat--featured">
-                            <span class="spotlight__stat-number">100%</span>
-                            <span class="spotlight__stat-label">Private &amp; Confidential Consultation</span>
+                <div class="why-card-col">
+                    <div class="why-illustration-card">
+                        <div class="why-stats-part">
+                            <div class="why-stat-item">
+                                <h3>100%</h3>
+                                <p>Patient Satisfaction</p>
+                            </div>
+                            <div class="why-stat-item">
+                                <h3>5+</h3>
+                                <p>Years of Excellence</p>
+                            </div>
+                            <div class="why-stat-item">
+                                <h3>10+</h3>
+                                <p>Conditions Treated</p>
+                            </div>
                         </div>
-                        <div class="spotlight__stat">
-                            <span class="spotlight__stat-number" data-counter="5">0+</span>
-                            <span class="spotlight__stat-label">Years Clinic Exp</span>
+                        <div class="why-image-part">
+                            <img src="images/brain_illustration.png" alt="Mental Health Brain Illustration" class="brain-illustration-img" />
                         </div>
-                        <div class="spotlight__stat">
-                            <span class="spotlight__stat-number">OPD</span>
-                            <span class="spotlight__stat-label">Valsad Abrama Area</span>
-                        </div>
-                        <div class="spotlight__stat">
-                            <span class="spotlight__stat-number" data-counter="10">0+</span>
-                            <span class="spotlight__stat-label">Visiting Attachments</span>
-                        </div>
-                    </div>
-                    <div class="spotlight__trust">
-                        <span class="material-symbols-outlined">workspace_premium</span>
-                        <span>Gold Medalist Psychiatry MD baroda</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Pramukh Neuropsychiatry -->
-    <section class="why-choose section">
+    <!-- Section 5: Our Excellence -->
+    <section class="excellence-section">
         <div class="container">
-            <div class="why-choose__grid">
-                <div class="why-choose__content">
-                    <blockquote class="why-choose__quote reveal">
-                        "Dr. Solanki explains brain disorders logically and makes treatment stress-free."
-                    </blockquote>
-                    <h2 class="why-choose__title reveal">Gold Medalist Expertise Meets <span class="why-choose__title-highlight">Empathetic Care</span></h2>
-                    <p class="why-choose__description reveal">
-                        Choosing the right psychiatrist is the first step to reclaiming wellness. Pramukh Neuropsychiatry Clinic stands out for scientific excellence, transparent fees, and compassionate, patient-first care.
+            <div class="excellence-header">
+                <span class="excellence-tag">OUR EXCELLENCE</span>
+                <h2 class="excellence-title">Gold Medalist Experts <span class="teal-highlight">You Can Trust</span></h2>
+                <p class="excellence-subtitle">Driven by expertise and empathy, our team is committed to delivering world-class mental health care.</p>
+            </div>
+
+            <div class="excellence-grid">
+                <div class="excellence-left-col">
+                    <div class="excellence-list-item">
+                        <div class="excellence-icon-box">
+                            <span class="material-symbols-outlined">school</span>
+                        </div>
+                        <div class="excellence-list-text">
+                            <h3>Academic Excellence</h3>
+                            <p>Gold Medalist in M.D. (Psychiatry)</p>
+                        </div>
+                    </div>
+                    <div class="excellence-list-item">
+                        <div class="excellence-icon-box">
+                            <span class="material-symbols-outlined">workspace_premium</span>
+                        </div>
+                        <div class="excellence-list-text">
+                            <h3>Experienced Professionals</h3>
+                            <p>Trained in leading national institutions</p>
+                        </div>
+                    </div>
+                    <div class="excellence-list-item">
+                        <div class="excellence-icon-box">
+                            <span class="material-symbols-outlined">clinical_notes</span>
+                        </div>
+                        <div class="excellence-list-text">
+                            <h3>Research &amp; Publications</h3>
+                            <p>Author of research papers in national &amp; international journals</p>
+                        </div>
+                    </div>
+                    <div class="excellence-list-item">
+                        <div class="excellence-icon-box">
+                            <span class="material-symbols-outlined">patient_list</span>
+                        </div>
+                        <div class="excellence-list-text">
+                            <h3>Patient-Centric Care</h3>
+                            <p>Compassionate, ethical &amp; evidence-based approach</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excellence-right-col">
+                    <div class="gallery-grid">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=400&q=80" alt="Expert Psychiatrists" />
+                            <span class="gallery-caption">Expert Psychiatrists</span>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=400&q=80" alt="Compassionate Care" />
+                            <span class="gallery-caption">Compassionate Care</span>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80" alt="Personalized Treatment" />
+                            <span class="gallery-caption">Personalized Treatment</span>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=400&q=80" alt="Evidence-Based Practice" />
+                            <span class="gallery-caption">Evidence-Based Practice</span>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&q=80" alt="Therapeutic Environment" />
+                            <span class="gallery-caption">Therapeutic Environment</span>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80" alt="Long-Term Support" />
+                            <span class="gallery-caption">Long-Term Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Our Approach -->
+    <section class="approach-section">
+        <div class="container">
+            <div class="approach-header">
+                <span class="approach-tag">OUR APPROACH</span>
+                <h2 class="approach-title">Our 4-Step Mental Wellness Plan</h2>
+                <p class="approach-subtitle">A structured path to healing, growth and long-term well-being.</p>
+            </div>
+
+            <div class="approach-steps">
+                <div class="approach-line"></div>
+                <!-- Step 1 -->
+                <div class="approach-step-card">
+                    <div class="step-icon-wrapper">
+                        <span class="step-num">01</span>
+                        <span class="material-symbols-outlined">chat</span>
+                    </div>
+                    <h3 class="step-title">Consultation</h3>
+                    <p class="step-desc">Understanding your concerns and medical history</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="approach-step-card">
+                    <div class="step-icon-wrapper">
+                        <span class="step-num">02</span>
+                        <span class="material-symbols-outlined">psychology</span>
+                    </div>
+                    <h3 class="step-title">Assessment</h3>
+                    <p class="step-desc">Comprehensive evaluation and diagnosis</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="approach-step-card">
+                    <div class="step-icon-wrapper">
+                        <span class="step-num">03</span>
+                        <span class="material-symbols-outlined">medical_services</span>
+                    </div>
+                    <h3 class="step-title">Treatment</h3>
+                    <p class="step-desc">Personalized treatment and therapy plan</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="approach-step-card">
+                    <div class="step-icon-wrapper">
+                        <span class="step-num">04</span>
+                        <span class="material-symbols-outlined">volunteer_activism</span>
+                    </div>
+                    <h3 class="step-title">Recovery</h3>
+                    <p class="step-desc">Continuous support for lasting recovery</p>
+                </div>
+            </div>
+
+            <div class="approach-actions">
+                <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn-journey-cta">
+                    Begin Your Journey
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Clinic Locations -->
+    <section class="locations-section">
+        <div class="container">
+            <div class="locations-header">
+                <span class="locations-tag">CLINIC LOCATIONS</span>
+                <h2 class="locations-title">OPD Timings &amp; Clinic Location</h2>
+                <p class="locations-subtitle">We are here to support your mental well-being every step of the way.</p>
+            </div>
+
+            <div class="locations-grid">
+                <div class="locations-left-col">
+                    <div class="locations-info">
+                        <div class="locations-map-pin">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <h3>OPD Timings &amp; Clinic Location</h3>
+                        <p class="locations-general-desc">
+                            We are here to support your mental well-being every step of the way. Visit us at our modern OPD clinics.
+                        </p>
+                        <div class="notice-box">
+                            <div class="notice-item">
+                                <span class="material-symbols-outlined notice-icon">event_busy</span>
+                                <span>Sunday: By Prior Appointment Only</span>
+                            </div>
+                            <div class="notice-item">
+                                <span class="material-symbols-outlined notice-icon">emergency</span>
+                                <span>Emergency Support: Available on prior appointment.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="locations-right-col">
+                    <!-- Location 1 -->
+                    <div class="location-clinic-card">
+                        <span class="material-symbols-outlined clinic-icon">local_hospital</span>
+                        <h4 class="clinic-name">Pramukh Neuropsychiatry Clinic</h4>
+                        <div class="clinic-detail">
+                            <span class="material-symbols-outlined">location_on</span>
+                            <span>Sargasan, Gandhinagar - 382421, Gujarat</span>
+                        </div>
+                        <div class="clinic-detail">
+                            <span class="material-symbols-outlined">schedule</span>
+                            <span>Mon - Sat: 9:00 AM - 1:00 PM | 5:00 PM - 8:00 PM</span>
+                        </div>
+                        <div class="clinic-card-actions">
+                            <a href="https://maps.google.com/?q=Pramukh+Neuropsychiatry+Sargasan+Gandhinagar" target="_blank" class="btn btn--outline btn-directions">Get Directions</a>
+                            <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment%20in%20Gandhinagar." target="_blank" class="btn btn--primary btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Location 2 -->
+                    <div class="location-clinic-card">
+                        <span class="material-symbols-outlined clinic-icon">local_hospital</span>
+                        <h4 class="clinic-name">Pramukh Neuropsychiatry Clinic</h4>
+                        <div class="clinic-detail">
+                            <span class="material-symbols-outlined">location_on</span>
+                            <span>Maninagar, Ahmedabad - 380008, Gujarat</span>
+                        </div>
+                        <div class="clinic-detail">
+                            <span class="material-symbols-outlined">schedule</span>
+                            <span>Mon - Sat: 9:00 AM - 1:00 PM | 5:00 PM - 8:00 PM</span>
+                        </div>
+                        <div class="clinic-card-actions">
+                            <a href="https://maps.google.com/?q=Pramukh+Neuropsychiatry+Maninagar+Ahmedabad" target="_blank" class="btn btn--outline btn-directions">Get Directions</a>
+                            <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment%20in%20Ahmedabad." target="_blank" class="btn btn--primary btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="locations-bottom-actions">
+                <a href="contact.html" class="btn btn--secondary btn-all-locations">
+                    View All Clinics &amp; Details
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: FAQ & Questions -->
+    <section class="new-faq-section">
+        <div class="container">
+            <div class="new-faq-grid">
+                <div class="new-faq-left-col">
+                    <span class="new-faq-tag">COMMON QUESTIONS</span>
+                    <h2 class="new-faq-left-title">Have Questions? <br/><span class="teal-highlight">We're here to help!</span></h2>
+                    <p class="new-faq-left-desc">
+                        Find professional answers to common psychiatric, de-addiction, and appointment questions. If you need immediate assistance, feel free to contact our office.
                     </p>
-
-                    <div class="credentials-card reveal">
-                        <div class="credentials-card__header">
-                            <div class="credentials-card__icon"><span class="material-symbols-outlined">school</span></div>
-                            <h4 class="credentials-card__title">Academic Excellence</h4>
-                        </div>
-                        <ul class="credentials-card__list">
-                            <li><span class="material-symbols-outlined">check_circle</span>MBBS from GMERS Medical College, Valsad</li>
-                            <li><span class="material-symbols-outlined">check_circle</span>MD Psychiatry (Gold Medalist) from GMC &amp; SSG Hospital Baroda</li>
-                            <li><span class="material-symbols-outlined">check_circle</span>Specialist training in Neuropsychiatry &amp; De-Addiction</li>
-                        </ul>
-                    </div>
-
-                    <div class="mentors-card reveal">
-                        <h4 class="mentors-card__title">
-                            <span class="material-symbols-outlined">diversity_3</span>
-                            Treatment Philosophy
-                        </h4>
-                        <div class="mentors-card__list">
-                            <div class="mentor-item">
-                                <span class="mentor-item__name">Evidence-Based Pharmacotherapy</span>
-                                <span class="mentor-item__specialty">Accurate psychiatric diagnoses using latest DSM-5 guidelines.</span>
-                            </div>
-                            <div class="mentor-item">
-                                <span class="mentor-item__name">Integrative Psychology</span>
-                                <span class="mentor-item__specialty">Combining medication with Cognitive Behavioral Therapy (CBT) and REBT.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="about.html" class="why-choose__link reveal">Learn more about Dr. Solanki <span class="material-symbols-outlined">arrow_forward</span></a>
-                </div>
-
-                <div class="why-choose__reasons reveal-stagger" x-data="{ showAll: false }">
-                    <div class="reason-card">
-                        <div class="reason-card__icon"><span class="material-symbols-outlined">clinical_notes</span></div>
-                        <h4 class="reason-card__title">Personalized Care</h4>
-                        <p class="reason-card__description">Treatment plans customized entirely around the patient's biological, social, and emotional background.</p>
-                    </div>
-                    <div class="reason-card">
-                        <div class="reason-card__icon"><span class="material-symbols-outlined">workspace_premium</span></div>
-                        <h4 class="reason-card__title">Gold Medalist Surgeon of the Mind</h4>
-                        <p class="reason-card__description">Top academic credentialing from SSG Hospital Baroda, Gujarat.</p>
-                    </div>
-                    <div class="reason-card">
-                        <div class="reason-card__icon"><span class="material-symbols-outlined">visibility_off</span></div>
-                        <h4 class="reason-card__title">100% Confidentiality</h4>
-                        <p class="reason-card__description">Every consultation, diagnosis, and treatment detail is kept strictly private.</p>
-                    </div>
-                    <div class="reason-card">
-                        <div class="reason-card__icon"><span class="material-symbols-outlined">family_restroom</span></div>
-                        <h4 class="reason-card__title">Supportive Environment</h4>
-                        <p class="reason-card__description">Empathetic, warm consulting style making child and elderly mental health stress-free.</p>
-                    </div>
-                    
-                    <!-- Collapsible additional reasons on mobile -->
-                    <div class="reason-card" :class="{ 'reason-card--hidden-mobile': !showAll }">
-                        <div class="reason-card__icon"><span class="material-symbols-outlined">payment</span></div>
-                        <h4 class="reason-card__title">Transparent Cost Guidance</h4>
-                        <p class="reason-card__description">Upfront consultation fees and highly optimized drug therapy prescription plans.</p>
-                    </div>
-                    <div class="reason-card" :class="{ 'reason-card--hidden-mobile': !showAll }">
-                        <div class="reason-card__icon"><span class="material-symbols-outlined">home_health</span></div>
-                        <h4 class="reason-card__title">Locally Available</h4>
-                        <p class="reason-card__description">Convenient modern clinic located on the Valsad-Dharampur main road in Abrama.</p>
-                    </div>
-
-                    <button class="why-choose__show-more" x-show="!showAll" @click="showAll = true">
-                        <span>Show more reasons</span>
-                        <span class="material-symbols-outlined">expand_more</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4-Step Treatment Process -->
-    <section class="section section--gray process">
-        <div class="container">
-            <div class="section__header process__header reveal">
-                <h2 class="process__title">Our 4-Step Mental Wellness Plan</h2>
-                <p class="process__subtitle">From evaluation to sustained recovery, we support you at every single step.</p>
-            </div>
-        </div>
-
-        <div class="process__full-width">
-            <div class="process__timeline reveal-stagger">
-                <div class="process__step">
-                    <div class="process__step-icon">
-                        <span class="process__step-number">1</span>
-                        <span class="material-symbols-outlined">calendar_month</span>
-                    </div>
-                    <div class="process__step-content">
-                        <h3 class="process__step-title">Consultation</h3>
-                        <p class="process__step-description">Book a slot at our Valsad clinic. Discuss concerns in a calm, non-judgmental space.</p>
-                        <ul class="process__step-points">
-                            <li>Medical history review</li>
-                            <li>Symptom assessment</li>
-                            <li>Absolute confidentiality</li>
-                        </ul>
-                    </div>
-                    <div class="process__connector"></div>
-                </div>
-
-                <div class="process__step">
-                    <div class="process__step-icon">
-                        <span class="process__step-number">2</span>
-                        <span class="material-symbols-outlined">stethoscope</span>
-                    </div>
-                    <div class="process__step-content">
-                        <h3 class="process__step-title">Diagnosis</h3>
-                        <p class="process__step-description">Thorough scientific evaluation utilizing clinical criteria and diagnostic tests.</p>
-                        <ul class="process__step-points">
-                            <li>Cognitive/Psychological tests</li>
-                            <li>Co-occurring illness check</li>
-                            <li>Personalized treatment plan</li>
-                        </ul>
-                    </div>
-                    <div class="process__connector"></div>
-                </div>
-
-                <div class="process__step">
-                    <div class="process__step-icon">
-                        <span class="process__step-number">3</span>
-                        <span class="material-symbols-outlined">pill</span>
-                    </div>
-                    <div class="process__step-content">
-                        <h3 class="process__step-title">Therapy &amp; Meds</h3>
-                        <p class="process__step-description">Combination of optimized psychiatric medication and customized counseling.</p>
-                        <ul class="process__step-points">
-                            <li>FDA-approved pharmacotherapy</li>
-                            <li>CBT &amp; counseling sessions</li>
-                            <li>Addiction detox protocols</li>
-                        </ul>
-                    </div>
-                    <div class="process__connector"></div>
-                </div>
-
-                <div class="process__step">
-                    <div class="process__step-icon">
-                        <span class="process__step-number">4</span>
-                        <span class="material-symbols-outlined">favorite</span>
-                    </div>
-                    <div class="process__step-content">
-                        <h3 class="process__step-title">Recovery</h3>
-                        <p class="process__step-description">Regular follow-up appointments and relapse prevention strategies.</p>
-                        <ul class="process__step-points">
-                            <li>Dose optimization / Tapering</li>
-                            <li>Lifestyle coaching</li>
-                            <li>WhatsApp emergency support</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="process__cta reveal">
-                <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
-                    <span class="material-symbols-outlined">chat</span>
-                    <span>Book Your Consultation</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timings & Address Section -->
-    <section class="section opd-preview">
-        <div class="container">
-            <div class="section__header reveal">
-                <span class="badge">Visit Our Clinic</span>
-                <h2 class="opd-preview__title">OPD Timings &amp; Clinic Location</h2>
-                <p class="opd-preview__subtitle">Consult Dr. Virensinh Solanki at Pramukh Neuropsychiatry Clinic in Valsad, Gujarat.</p>
-            </div>
-
-            <div class="opd-preview__grid reveal-stagger">
-                <div class="opd-preview__card">
-                    <div class="opd-preview__card-header">
-                        <span class="opd-preview__step">1</span>
-                        <div class="opd-preview__timing">
-                            <span class="material-symbols-outlined">schedule</span>
-                            <span>Mon, Tue, Thu, Sat</span>
-                        </div>
-                    </div>
-                    <div class="opd-preview__card-body">
-                        <h3 class="opd-preview__hospital-name">Pramukh Neuropsychiatry Clinic</h3>
-                        <p class="opd-preview__address">
-                            <span class="material-symbols-outlined">location_on</span>
-                            <span>205, B Metropolis, Abrama, Valsad, Gujarat</span>
-                        </p>
-                        <p class="opd-preview__seo-text">Available: 9:00 AM - 1:00 PM | 4:00 PM - 7:00 PM</p>
-                        <div class="opd-preview__card-footer">
-                            <a href="https://maps.google.com/?q=Pramukh+Neuropsychiatry+Clinic+Abrama+Valsad" class="opd-preview__directions-btn" target="_blank" rel="noopener">
-                                <span class="material-symbols-outlined">directions</span>Directions
-                            </a>
-                            <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20appointment%20on%20Mon/Tue/Thu/Sat" class="opd-preview__book-btn" target="_blank" rel="noopener">Book Now</a>
+                    <div class="new-faq-contact-card">
+                        <span class="material-symbols-outlined support-icon">support_agent</span>
+                        <div>
+                            <h4>Need immediate help?</h4>
+                            <p>Call our clinic desk: <a href="tel:+918733096725" class="support-link">+91 87330 96725</a></p>
                         </div>
                     </div>
                 </div>
 
-                <div class="opd-preview__card">
-                    <div class="opd-preview__card-header">
-                        <span class="opd-preview__step">2</span>
-                        <div class="opd-preview__timing">
-                            <span class="material-symbols-outlined">schedule</span>
-                            <span>Wed, Fri (Half Day)</span>
-                        </div>
-                    </div>
-                    <div class="opd-preview__card-body">
-                        <h3 class="opd-preview__hospital-name">Pramukh Neuropsychiatry Clinic</h3>
-                        <p class="opd-preview__address">
-                            <span class="material-symbols-outlined">location_on</span>
-                            <span>205, B Metropolis, Abrama, Valsad, Gujarat</span>
-                        </p>
-                        <p class="opd-preview__seo-text">Available: 9:00 AM - 1:00 PM Only</p>
-                        <div class="opd-preview__card-footer">
-                            <a href="https://maps.google.com/?q=Pramukh+Neuropsychiatry+Clinic+Abrama+Valsad" class="opd-preview__directions-btn" target="_blank" rel="noopener">
-                                <span class="material-symbols-outlined">directions</span>Directions
-                            </a>
-                            <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20appointment%20on%20Wed/Fri" class="opd-preview__book-btn" target="_blank" rel="noopener">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="opd-preview__footer reveal">
-                <div class="opd-preview__footer-notes">
-                    <div class="opd-preview__visiting">
-                        <span class="material-symbols-outlined">info</span>
-                        <span><strong>Visiting Attachments:</strong> Available at over 10 major hospitals in South Gujarat.</span>
-                    </div>
-                    <div class="opd-preview__attachments">
-                        <span class="material-symbols-outlined">home_health</span>
-                        <span>Emergency counseling and phone guidance available for registered patients.</span>
-                    </div>
-                </div>
-                <a href="contact.html" class="btn btn--secondary">
-                    <span>View Address Map &amp; Details</span>
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Slider (patient recovery stories) -->
-    <section class="testimonials section section--gray" x-data="{ 
-        activeIndex: 0,
-        slidesCount: 3,
-        dots: [0, 1, 2],
-        next() { this.activeIndex = (this.activeIndex + 1) % this.slidesCount; },
-        prev() { this.activeIndex = (this.activeIndex - 1 + this.slidesCount) % this.slidesCount; },
-        goTo(idx) { this.activeIndex = idx; }
-    }">
-        <div class="container">
-            <div class="testimonials__header reveal">
-                <div class="badge">
-                    <span class="material-symbols-outlined">reviews</span>
-                    <span>Recovery Stories</span>
-                </div>
-                <h2 class="testimonials__title">What Our Patients <span class="testimonials__title-highlight">Say</span></h2>
-                <p class="testimonials__description">Real mental health recovery experiences from individuals who trusted Dr. Virensinh Solanki with their psychiatric care.</p>
-            </div>
-
-            <div class="reveal">
-                <div class="testimonials__carousel">
-                    <div class="testimonials__viewport">
-                        <div class="testimonials__track" :style="'transform: translateX(-' + (activeIndex * 100) + '%);'">
-                            <div class="testimonials__slide">
-                                <div class="testimonial-card testimonial-card--featured">
-                                    <div class="testimonial-card__quote"><span class="material-symbols-outlined">format_quote</span></div>
-                                    <div class="testimonial-card__stars">
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                    </div>
-                                    <p class="testimonial-card__text">"I was suffering from severe panic attacks and anxiety for months. Dr. Solanki diagnosed me, explained the brain's adrenaline logic, and prescribed medication along with counseling. Within 3 weeks, my anxiety was completely under control."</p>
-                                    <div class="testimonial-card__procedure">
-                                        <span class="material-symbols-outlined">psychology</span> Anxiety &amp; Panic Therapy
-                                    </div>
-                                    <div class="testimonial-card__author">
-                                        <div class="testimonial-card__avatar" style="background-color: var(--primary-light); color: var(--primary);">RP</div>
-                                        <div class="testimonial-card__info">
-                                            <span class="testimonial-card__name">Rohan Patel</span>
-                                            <span class="testimonial-card__location"><span class="material-symbols-outlined">location_on</span>Valsad</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials__slide">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-card__quote"><span class="material-symbols-outlined">format_quote</span></div>
-                                    <div class="testimonial-card__stars">
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                    </div>
-                                    <p class="testimonial-card__text">"My brother was heavily addicted to alcohol. Dr. Virensinh's de-addiction therapy saved our family. The doctor monitored his withdrawal symptoms carefully and treated him with extreme kindness. He is now 6 months sober."</p>
-                                    <div class="testimonial-card__procedure">
-                                        <span class="material-symbols-outlined">volunteer_activism</span> Alcohol De-Addiction
-                                    </div>
-                                    <div class="testimonial-card__author">
-                                        <div class="testimonial-card__avatar" style="background-color: var(--secondary-light); color: var(--secondary);">MS</div>
-                                        <div class="testimonial-card__info">
-                                            <span class="testimonial-card__name">Meera Shah</span>
-                                            <span class="testimonial-card__location"><span class="material-symbols-outlined">location_on</span>Vapi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials__slide">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-card__quote"><span class="material-symbols-outlined">format_quote</span></div>
-                                    <div class="testimonial-card__stars">
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                        <span class="material-symbols-outlined">star</span>
-                                    </div>
-                                    <p class="testimonial-card__text">"We consulted Dr. Solanki for our daughter's learning issues and behavioral outbursts. He diagnosed ADHD and explained ADHD parenting techniques in Gujarati. Her school concentration and home behavior have improved significantly."</p>
-                                    <div class="testimonial-card__procedure">
-                                        <span class="material-symbols-outlined">child_care</span> Child ADHD Treatment
-                                    </div>
-                                    <div class="testimonial-card__author">
-                                        <div class="testimonial-card__avatar" style="background-color: var(--primary-light); color: var(--primary);">SK</div>
-                                        <div class="testimonial-card__info">
-                                            <span class="testimonial-card__name">Sanjay K.</span>
-                                            <span class="testimonial-card__location"><span class="material-symbols-outlined">location_on</span>Dharampur</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="testimonials__arrow testimonials__arrow--prev" @click="prev" aria-label="Previous slide">
-                        <span class="material-symbols-outlined">chevron_left</span>
-                    </button>
-                    <button class="testimonials__arrow testimonials__arrow--next" @click="next" aria-label="Next slide">
-                        <span class="material-symbols-outlined">chevron_right</span>
-                    </button>
-
-                    <div class="testimonials__dots">
-                        <template x-for="idx in dots" :key="idx">
-                            <button class="testimonials__dot" :class="{ 'is-active': activeIndex === idx }" @click="goTo(idx)"></button>
-                        </template>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Accordion section -->
-    <section class="section faq-preview">
-        <div class="container">
-            <div class="faq-preview__grid">
-                <div class="faq-preview__header reveal-left">
-                    <span class="badge">FAQ Help</span>
-                    <h2 class="faq-preview__title">Common <span class="text-tangerine">Questions</span></h2>
-                    <p class="faq-preview__description">Find professional answers to common psychiatric, de-addiction, and appointment questions.</p>
-                    <a href="faq.html" class="btn btn--primary faq-preview__cta">
-                        <span class="material-symbols-outlined">help</span>View All FAQs
-                    </a>
-                </div>
-
-                <div class="faq-preview__accordion reveal-right" x-data="{ openIndex: 0 }">
-                    <div class="faq-item" :class="{ 'faq-item--open': openIndex === 0 }">
-                        <button class="faq-item__question" @click="openIndex = openIndex === 0 ? null : 0">
-                            <span>Are psychiatric medicines addictive or lifelong?</span>
-                            <span class="material-symbols-outlined faq-item__icon" :class="{ 'faq-item__icon--rotated': openIndex === 0 }">expand_more</span>
+                <div class="new-faq-right-col" x-data="{ openIndex: 0 }">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-accordion-item" :class="{ 'is-open': openIndex === 0 }">
+                        <button class="faq-accordion-question" @click="openIndex = openIndex === 0 ? null : 0">
+                            <span>What conditions do you treat?</span>
+                            <span class="material-symbols-outlined accordion-arrow" :class="{ 'rotated': openIndex === 0 }">expand_more</span>
                         </button>
-                        <div class="faq-item__answer" x-show="openIndex === 0" x-collapse>
-                            <p>No, standard psychiatric medicines (like antidepressants) are non-addictive. Dr. Solanki prescribes them for a specific period to correct chemical imbalances, and tapers them off gradually once recovery is stable.</p>
+                        <div class="faq-accordion-answer" x-show="openIndex === 0" x-collapse>
+                            <p>
+                                Dr. Solanki specializes in neuropsychiatry and de-addiction medicine, treating anxiety disorders, clinical depression, OCD, bipolar disorder, adult/child ADHD, sleep disorders, headache/migraine, and psychosexual health concerns.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="faq-item" :class="{ 'faq-item--open': openIndex === 1 }">
-                        <button class="faq-item__question" @click="openIndex = openIndex === 1 ? null : 1">
-                            <span>How long is the de-addiction recovery program?</span>
-                            <span class="material-symbols-outlined faq-item__icon" :class="{ 'faq-item__icon--rotated': openIndex === 1 }">expand_more</span>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-accordion-item" :class="{ 'is-open': openIndex === 1 }">
+                        <button class="faq-accordion-question" @click="openIndex = openIndex === 1 ? null : 1">
+                            <span>Do you provide online consultation?</span>
+                            <span class="material-symbols-outlined accordion-arrow" :class="{ 'rotated': openIndex === 1 }">expand_more</span>
                         </button>
-                        <div class="faq-item__answer" x-show="openIndex === 1" x-collapse>
-                            <p>Detoxification typically takes 1 to 2 weeks to safely manage physical withdrawal symptoms. This is followed by a relapse prevention program consisting of medication and counseling for 3 to 6 months.</p>
+                        <div class="faq-accordion-answer" x-show="openIndex === 1" x-collapse>
+                            <p>
+                                Yes, online consultations are available for follow-ups and secondary evaluations. However, a first-time in-person diagnosis at our Gandhinagar or Ahmedabad clinics is highly recommended for accurate treatment planning.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="faq-item" :class="{ 'faq-item--open': openIndex === 2 }">
-                        <button class="faq-item__question" @click="openIndex = openIndex === 2 ? null : 2">
-                            <span>Will my consulting records be kept confidential?</span>
-                            <span class="material-symbols-outlined faq-item__icon" :class="{ 'faq-item__icon--rotated': openIndex === 2 }">expand_more</span>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-accordion-item" :class="{ 'is-open': openIndex === 2 }">
+                        <button class="faq-accordion-question" @click="openIndex = openIndex === 2 ? null : 2">
+                            <span>Is my information confidential?</span>
+                            <span class="material-symbols-outlined accordion-arrow" :class="{ 'rotated': openIndex === 2 }">expand_more</span>
                         </button>
-                        <div class="faq-item__answer" x-show="openIndex === 2" x-collapse>
-                            <p>Absolutely. Strict confidentiality is the ethical cornerstone of neuropsychiatry. All patient records, diagnoses, and session details are kept fully private and secure.</p>
+                        <div class="faq-accordion-answer" x-show="openIndex === 2" x-collapse>
+                            <p>
+                                Absolutely. Absolute confidentiality is the ethical cornerstone of neuropsychiatry. All patient records, diagnoses, and session details are kept fully private and secure.
+                            </p>
                         </div>
+                    </div>
+
+                    <div class="faq-more-action">
+                        <a href="faq.html" class="btn btn--primary btn-faq-all">
+                            View All FAQs
+                        </a>
                     </div>
                 </div>
             </div>
