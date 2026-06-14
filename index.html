@@ -622,144 +622,197 @@
     <!-- Section 7: Clinic Locations -->
     <section class="locations-section">
         <div class="container">
-            <div class="locations-header">
-                <span class="locations-tag">CLINIC LOCATIONS</span>
-                <h2 class="locations-title">OPD Timings &amp; Clinic Location</h2>
-                <p class="locations-subtitle">We are here to support your mental well-being every step of the way.</p>
-            </div>
-
             <div class="locations-grid">
-                <div class="locations-left-col">
-                    <div class="locations-info">
-                        <div class="locations-map-pin">
-                            <span class="material-symbols-outlined">location_on</span>
-                        </div>
-                        <h3>OPD Timings &amp; Clinic Location</h3>
-                        <p class="locations-general-desc">
-                            We are here to support your mental well-being every step of the way. Visit us at our modern OPD clinics.
-                        </p>
-                        <div class="notice-box">
-                            <div class="notice-item">
-                                <span class="material-symbols-outlined notice-icon">event_busy</span>
-                                <span>Sunday: By Prior Appointment Only</span>
-                            </div>
-                            <div class="notice-item">
-                                <span class="material-symbols-outlined notice-icon">emergency</span>
-                                <span>Emergency Support: Available on prior appointment.</span>
-                            </div>
-                        </div>
+                <!-- Column 1: Info & Illustration -->
+                <div class="locations-column locations-column--info">
+                    <span class="locations-tag">CLINIC LOCATIONS</span>
+                    <h2 class="locations-title">OPD Timings &amp; <br/>Clinic Location</h2>
+                    <p class="locations-subtitle">We are here to support your mental well-being every step of the way.</p>
+                    <div class="locations-illustration-wrapper">
+                        <img src="images/opdLocation.png" alt="OPD Location Map Illustration" class="locations-illustration" />
                     </div>
                 </div>
 
-                <div class="locations-right-col">
-                    <!-- Location 1 -->
+                <!-- Column 2: Gandhinagar Card & Bottom Text -->
+                <div class="locations-column locations-column--card">
                     <div class="location-clinic-card">
-                        <span class="material-symbols-outlined clinic-icon">local_hospital</span>
+                        <div class="location-clinic-card__badge">
+                            <span class="material-symbols-outlined">explore</span>
+                        </div>
                         <h4 class="clinic-name">Pramukh Neuropsychiatry Clinic</h4>
                         <div class="clinic-detail">
-                            <span class="material-symbols-outlined">location_on</span>
+                            <span class="material-symbols-outlined text-primary">location_on</span>
                             <span>Sargasan, Gandhinagar - 382421, Gujarat</span>
                         </div>
                         <div class="clinic-detail">
-                            <span class="material-symbols-outlined">schedule</span>
+                            <span class="material-symbols-outlined text-tangerine">schedule</span>
                             <span>Mon - Sat: 9:00 AM - 1:00 PM | 5:00 PM - 8:00 PM</span>
                         </div>
                         <div class="clinic-card-actions">
-                            <a href="https://maps.google.com/?q=Pramukh+Neuropsychiatry+Sargasan+Gandhinagar" target="_blank" class="btn btn--outline btn-directions">Get Directions</a>
+                            <a href="https://maps.google.com/?q=Pramukh+Neuropsychiatry+Sargasan+Gandhinagar" target="_blank" class="btn btn--outline btn-directions">
+                                <span class="material-symbols-outlined">location_on</span>
+                                Get Directions
+                            </a>
                             <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment%20in%20Gandhinagar." target="_blank" class="btn btn--primary btn-book-now">Book Now</a>
                         </div>
                     </div>
-
-                    <!-- Location 2 -->
-                    <div class="location-clinic-card">
-                        <span class="material-symbols-outlined clinic-icon">local_hospital</span>
-                        <h4 class="clinic-name">Pramukh Neuropsychiatry Clinic</h4>
-                        <div class="clinic-detail">
-                            <span class="material-symbols-outlined">location_on</span>
-                            <span>Maninagar, Ahmedabad - 380008, Gujarat</span>
+                    <div class="locations-notice-under">
+                        <div class="locations-notice-line">
+                            <span class="material-symbols-outlined notice-bullet-icon text-primary">check_circle</span>
+                            <span>Sunday: By Prior Appointment Only</span>
                         </div>
-                        <div class="clinic-detail">
-                            <span class="material-symbols-outlined">schedule</span>
-                            <span>Mon - Sat: 9:00 AM - 1:00 PM | 5:00 PM - 8:00 PM</span>
-                        </div>
-                        <div class="clinic-card-actions">
-                            <a href="https://maps.google.com/?q=Pramukh+Neuropsychiatry+Maninagar+Ahmedabad" target="_blank" class="btn btn--outline btn-directions">Get Directions</a>
-                            <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment%20in%20Ahmedabad." target="_blank" class="btn btn--primary btn-book-now">Book Now</a>
+                        <div class="locations-notice-line">
+                            <span class="material-symbols-outlined notice-bullet-icon text-primary">check_circle</span>
+                            <span>Emergency Support: Available on prior appointment.</span>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="locations-bottom-actions">
-                <a href="contact.html" class="btn btn--secondary btn-all-locations">
-                    View All Clinics &amp; Details
-                </a>
+                <!-- Column 3: Ahmedabad Card & View All Button -->
+                <div class="locations-column locations-column--card">
+                    <div class="location-clinic-card">
+                        <div class="location-clinic-card__badge">
+                            <span class="material-symbols-outlined">map</span>
+                        </div>
+                        <h4 class="clinic-name">Pramukh Neuropsychiatry Clinic</h4>
+                        <div class="clinic-detail">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            <span>Maninagar, Ahmedabad - 380008, Gujarat</span>
+                        </div>
+                        <div class="clinic-detail">
+                            <span class="material-symbols-outlined text-tangerine">schedule</span>
+                            <span>Mon - Sat: 9:00 AM - 1:00 PM | 5:00 PM - 8:00 PM</span>
+                        </div>
+                        <div class="clinic-card-actions">
+                            <a href="https://maps.google.com/?q=Pramukh+Neuropsychiatry+Maninagar+Ahmedabad" target="_blank" class="btn btn--outline btn-directions">
+                                <span class="material-symbols-outlined">location_on</span>
+                                Get Directions
+                            </a>
+                            <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment%20in%20Ahmedabad." target="_blank" class="btn btn--primary btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="locations-action-under">
+                        <a href="contact.html" class="btn btn--secondary btn-all-locations-under">
+                            View All Clinics &amp; Details
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 8: FAQ & Questions -->
-    <section class="new-faq-section">
+    <!-- Section 8: Testimonials & FAQ Section -->
+    <section class="testimonials-faq-section">
         <div class="container">
-            <div class="new-faq-grid">
-                <div class="new-faq-left-col">
-                    <span class="new-faq-tag">COMMON QUESTIONS</span>
-                    <h2 class="new-faq-left-title">Have Questions? <br/><span class="teal-highlight">We're here to help!</span></h2>
-                    <p class="new-faq-left-desc">
-                        Find professional answers to common psychiatric, de-addiction, and appointment questions. If you need immediate assistance, feel free to contact our office.
-                    </p>
-                    <div class="new-faq-contact-card">
-                        <span class="material-symbols-outlined support-icon">support_agent</span>
-                        <div>
-                            <h4>Need immediate help?</h4>
-                            <p>Call our clinic desk: <a href="tel:+918733096725" class="support-link">+91 87330 96725</a></p>
+            <div class="testimonials-faq-grid">
+                <!-- Left Column: Testimonials -->
+                <div class="testimonials-faq-column testimonials-side" x-data="{ currentSlide: 0, slides: [
+                    {
+                        text: 'Dr. Solanki and his team changed my life. The care, patience and understanding I received helped me overcome anxiety and build a better future. Truly grateful!',
+                        author: 'Rohan P.',
+                        treatment: 'Anxiety Treatment',
+                        stars: 5
+                    },
+                    {
+                        text: 'The care and support I received here changed my life. The team is compassionate, professional, and truly understands what you\'re going through.',
+                        author: 'Rahul M.',
+                        treatment: 'Depression Treatment',
+                        stars: 5
+                    },
+                    {
+                        text: 'From diagnosis to recovery, the entire journey was handled with so much patience and expertise. Highly recommend Pramukh Psychiatry.',
+                        author: 'Priya S.',
+                        treatment: 'ADHD Treatment',
+                        stars: 5
+                    }
+                ] }">
+                    <div class="section-tag-left-wrapper">
+                        <span class="locations-tag">TESTIMONIALS</span>
+                    </div>
+                    <h2 class="section-title-left">What <br/>Our Patients Say</h2>
+                    
+                    <div class="testimonials-slider-box-wrapper">
+                        <!-- Left Arrow -->
+                        <button class="slider-arrow slider-arrow--prev" @click="currentSlide = (currentSlide - 1 + slides.length) % slides.length" aria-label="Previous testimonial">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        
+                        <!-- Testimonial Box Card -->
+                        <div class="testimonial-box-card">
+                            <div class="testimonial-box-stars">
+                                <span class="material-symbols-outlined filled">star</span>
+                                <span class="material-symbols-outlined filled">star</span>
+                                <span class="material-symbols-outlined filled">star</span>
+                                <span class="material-symbols-outlined filled">star</span>
+                                <span class="material-symbols-outlined filled">star</span>
+                            </div>
+                            <p class="testimonial-box-text" x-html="'&ldquo;' + slides[currentSlide].text + '&rdquo;'"></p>
+                            <div class="testimonial-box-author">
+                                <span class="testimonial-box-author-name" x-text="'- ' + slides[currentSlide].author"></span>
+                                <span class="testimonial-box-author-treatment" x-text="slides[currentSlide].treatment"></span>
+                            </div>
                         </div>
+                        
+                        <!-- Right Arrow -->
+                        <button class="slider-arrow slider-arrow--next" @click="currentSlide = (currentSlide + 1) % slides.length" aria-label="Next testimonial">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
                     </div>
                 </div>
 
-                <div class="new-faq-right-col" x-data="{ openIndex: 0 }">
-                    <!-- FAQ Item 1 -->
-                    <div class="faq-accordion-item" :class="{ 'is-open': openIndex === 0 }">
-                        <button class="faq-accordion-question" @click="openIndex = openIndex === 0 ? null : 0">
-                            <span>What conditions do you treat?</span>
-                            <span class="material-symbols-outlined accordion-arrow" :class="{ 'rotated': openIndex === 0 }">expand_more</span>
-                        </button>
-                        <div class="faq-accordion-answer" x-show="openIndex === 0" x-collapse>
-                            <p>
-                                Dr. Solanki specializes in neuropsychiatry and de-addiction medicine, treating anxiety disorders, clinical depression, OCD, bipolar disorder, adult/child ADHD, sleep disorders, headache/migraine, and psychosexual health concerns.
-                            </p>
+                <!-- Right Column: Common Questions (FAQ) -->
+                <div class="testimonials-faq-column faq-side" x-data="{ openIndex: 0 }">
+                    <div class="section-tag-left-wrapper">
+                        <span class="locations-tag">COMMON QUESTIONS</span>
+                    </div>
+                    <h2 class="section-title-left">Have Questions? <br/><span class="sub-highlight-text">We're here to help!</span></h2>
+                    
+                    <div class="faq-accordion-box">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-accordion-item" :class="{ 'is-open': openIndex === 0 }">
+                            <button class="faq-accordion-question" @click="openIndex = openIndex === 0 ? null : 0">
+                                <span>What conditions do you treat?</span>
+                                <span class="material-symbols-outlined accordion-arrow" :class="{ 'rotated': openIndex === 0 }">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-answer" x-show="openIndex === 0" x-collapse>
+                                <p>
+                                    Dr. Solanki specializes in neuropsychiatry and de-addiction medicine, treating anxiety disorders, clinical depression, OCD, bipolar disorder, adult/child ADHD, sleep disorders, headache/migraine, and psychosexual health concerns.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-accordion-item" :class="{ 'is-open': openIndex === 1 }">
+                            <button class="faq-accordion-question" @click="openIndex = openIndex === 1 ? null : 1">
+                                <span>Do you provide online consultation?</span>
+                                <span class="material-symbols-outlined accordion-arrow" :class="{ 'rotated': openIndex === 1 }">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-answer" x-show="openIndex === 1" x-collapse>
+                                <p>
+                                    Yes, online consultations are available for follow-ups and secondary evaluations. However, a first-time in-person diagnosis at our Gandhinagar or Ahmedabad clinics is highly recommended for accurate treatment planning.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-accordion-item" :class="{ 'is-open': openIndex === 2 }">
+                            <button class="faq-accordion-question" @click="openIndex = openIndex === 2 ? null : 2">
+                                <span>Is my information confidential?</span>
+                                <span class="material-symbols-outlined accordion-arrow" :class="{ 'rotated': openIndex === 2 }">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-answer" x-show="openIndex === 2" x-collapse>
+                                <p>
+                                    Absolutely. Absolute confidentiality is the ethical cornerstone of neuropsychiatry. All patient records, diagnoses, and session details are kept fully private and secure.
+                                </p>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- FAQ Item 2 -->
-                    <div class="faq-accordion-item" :class="{ 'is-open': openIndex === 1 }">
-                        <button class="faq-accordion-question" @click="openIndex = openIndex === 1 ? null : 1">
-                            <span>Do you provide online consultation?</span>
-                            <span class="material-symbols-outlined accordion-arrow" :class="{ 'rotated': openIndex === 1 }">expand_more</span>
-                        </button>
-                        <div class="faq-accordion-answer" x-show="openIndex === 1" x-collapse>
-                            <p>
-                                Yes, online consultations are available for follow-ups and secondary evaluations. However, a first-time in-person diagnosis at our Gandhinagar or Ahmedabad clinics is highly recommended for accurate treatment planning.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 3 -->
-                    <div class="faq-accordion-item" :class="{ 'is-open': openIndex === 2 }">
-                        <button class="faq-accordion-question" @click="openIndex = openIndex === 2 ? null : 2">
-                            <span>Is my information confidential?</span>
-                            <span class="material-symbols-outlined accordion-arrow" :class="{ 'rotated': openIndex === 2 }">expand_more</span>
-                        </button>
-                        <div class="faq-accordion-answer" x-show="openIndex === 2" x-collapse>
-                            <p>
-                                Absolutely. Absolute confidentiality is the ethical cornerstone of neuropsychiatry. All patient records, diagnoses, and session details are kept fully private and secure.
-                            </p>
-                        </div>
-                    </div>
-
+                    
                     <div class="faq-more-action">
                         <a href="reviews.html" class="btn btn--primary btn-faq-all">
-                            View Patient Reviews
+                            View All Reviews
+                            <span class="material-symbols-outlined">arrow_forward</span>
                         </a>
                     </div>
                 </div>
