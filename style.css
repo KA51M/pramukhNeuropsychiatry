@@ -8091,16 +8091,18 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative; /* Context for absolute positioning of icon */
 }
 
 .specialization-card__header {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.6rem;
-    margin-bottom: 0.15rem;
+    display: block; /* No longer flex-container, letting title text sit on top and flow naturally */
+    margin-bottom: 0.65rem; /* Clean minimal space between heading and first bullet */
 }
 
 .specialization-card__icon {
+    position: absolute;
+    left: 1.15rem;
+    top: 1.1rem; /* Align icon nicely with the first line of the title */
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -8108,7 +8110,7 @@ img {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    margin-top: 0.2rem; /* move the icon little bit down */
+    z-index: 2;
 }
 
 .specialization-card__icon span {
@@ -8121,6 +8123,7 @@ img {
     color: var(--dark);
     line-height: 1.3;
     margin: 0;
+    padding-left: 4.35rem; /* Space for absolute icon on the left (60px icon + 9.6px gap) */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -8465,5 +8468,16 @@ img {
     }
     .specialization-card__content-part {
         padding: 1.25rem !important;
+        position: relative !important;
+    }
+    .specialization-card__icon {
+        left: 1.25rem !important;
+        top: 1.35rem !important; /* Adjust absolute position relative to mobile padding */
+    }
+    .specialization-card__title {
+        padding-left: 4.35rem !important;
+    }
+    .specialization-card__list {
+        padding-left: 4.35rem !important;
     }
 }
