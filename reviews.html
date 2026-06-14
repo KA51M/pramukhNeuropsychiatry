@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Reviews & Testimonials | Pramukh Neuropsychiatry Clinic</title>
+    <meta name="description" content="Read patient reviews, video stories of recovery, and testimonial feedback for Dr. Virensinh Solanki, consultant psychiatrist in Valsad, Gujarat." />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <meta name="theme-color" content="#00a8b5" />
+
+    <!-- Style and Icon Imports -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white text-slate antialiased">
+
+    <!-- Page Loader -->
+    <div id="page-loader" class="loader">
+        <a href="index.html" class="text-logo text-logo--lg text-logo--light">
+            <img src="images/logo.png" alt="Pramukh Logo" class="text-logo__img" />
+        </a>
+        <div id="loader-ecg" class="loader-content">
+            <svg class="ecg-svg" viewBox="0 0 200 60">
+                <path class="ecg-line" d="M0,30 L8,30 L12,20 L16,40 L20,5 L24,55 L28,25 L36,35 L44,20 L48,40 L52,5 L56,55 L60,25 L68,35 L76,20 L80,40 L84,5 L88,55 L92,25 L100,35 L108,20 L112,40 L116,5 L120,55 L124,25 L132,35 L140,20 L144,40 L148,5 L152,55 L156,25 L164,35 L172,20 L176,40 L180,5 L184,55 L188,25 L196,30 L200,30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <p class="loader-tagline">where Precision meets compassion</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor (Desktop only) -->
+    <div class="cursor-wrapper" id="custom-cursor">
+        <div class="cursor-dot" id="cursor-dot"></div>
+        <div class="cursor-circle" id="cursor-circle"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header scrolled">
+        <div class="header__container">
+            <nav class="header__nav">
+                <a href="index.html" class="text-logo text-logo--md">
+                    <img src="images/logo.png" alt="Pramukh Logo" class="text-logo__img" />
+                </a>
+                
+                <div class="header__nav-desktop">
+                    <a href="index.html" class="header__nav-link" style="color: var(--dark);">Home</a>
+                    <a href="about.html" class="header__nav-link" style="color: var(--dark);">About</a>
+                    
+                    <!-- Dropdown Menu for Services -->
+                    <div class="header__dropdown">
+                        <a href="services.html" class="header__nav-link" style="color: var(--dark);">
+                            Services
+                            <span class="material-symbols-outlined header__dropdown-arrow">expand_more</span>
+                        </a>
+                        <div class="header__dropdown-menu">
+                            <div class="header__dropdown-inner">
+                                <div class="header__dropdown-services">
+                                    <a href="services.html#mental-health" class="header__dropdown-card">
+                                        <span class="material-symbols-outlined header__dropdown-card-icon">psychology</span>
+                                        <div>
+                                            <span class="header__dropdown-card-title">Brain & Mental Health</span>
+                                            <span class="header__dropdown-card-desc">Depression, Anxiety, OCD, Stress</span>
+                                        </div>
+                                    </a>
+                                    <a href="services.html#de-addiction" class="header__dropdown-card">
+                                        <span class="material-symbols-outlined header__dropdown-card-icon">volunteer_activism</span>
+                                        <div>
+                                            <span class="header__dropdown-card-title">De-Addiction Clinic</span>
+                                            <span class="header__dropdown-card-desc">Alcohol, Tobacco & Drug Recovery</span>
+                                        </div>
+                                    </a>
+                                    <a href="services.html#psychosexual" class="header__dropdown-card">
+                                        <span class="material-symbols-outlined header__dropdown-card-icon">settings_accessibility</span>
+                                        <div>
+                                            <span class="header__dropdown-card-title">Psychosexual Clinic</span>
+                                            <span class="header__dropdown-card-desc">Treatment for sexual health concerns</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="header__dropdown-procedures">
+                                    <span class="header__dropdown-procedures-label">Specialist Clinics</span>
+                                    <div class="header__dropdown-procedures-list">
+                                        <a href="services.html#headache" class="header__dropdown-pill">Headache</a>
+                                        <a href="services.html#sleep" class="header__dropdown-pill">Sleep Disorders</a>
+                                        <a href="services.html#epilepsy" class="header__dropdown-pill">Epilepsy</a>
+                                        <a href="services.html#child" class="header__dropdown-pill">Child & Adolescent</a>
+                                        <a href="services.html#elderly" class="header__dropdown-pill">Elderly Care</a>
+                                        <a href="services.html#counseling" class="header__dropdown-pill">Counseling</a>
+                                    </div>
+                                </div>
+                                <a href="services.html" class="header__dropdown-all">
+                                    View All Psychiatric Services
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="header__nav-link" style="color: var(--dark);">OPD Timings</a>
+                    <a href="reviews.html" class="header__nav-link" style="color: var(--primary);">Reviews</a>
+                    <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="header__cta">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                        Book Appointment
+                    </a>
+                </div>
+
+                <div class="header__mobile-actions">
+                    <a href="tel:+918733096725" class="header__mobile-call-btn" aria-label="Call Clinic">
+                        <span class="material-symbols-outlined">call</span>
+                    </a>
+                    <button class="header__mobile-btn" style="color: var(--dark);" onclick="Alpine.store('mobileNav').toggleServicesSheet()" aria-label="Toggle menu">
+                        <span class="material-symbols-outlined header__mobile-btn-icon">menu</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Reviews Hero Section -->
+    <section class="reviews-hero">
+        <div class="container">
+            <div class="reviews-hero__grid">
+                <div class="reviews-hero__content reveal-left">
+                    <div class="reviews-hero__breadcrumbs">
+                        <a href="index.html">Home</a> 
+                        <span class="breadcrumb-arrow">&gt;</span> 
+                        <span class="current-page">Reviews</span>
+                    </div>
+                    <h1 class="reviews-hero__title">
+                        Trusted by Patients, <br/><span class="text-teal-highlight">Proven</span> by Results.
+                    </h1>
+                    <p class="reviews-hero__description">
+                        Real stories from real people. Discover how our expert care and compassionate approach have helped individuals and families on their journey to better mental health.
+                    </p>
+                    
+                    <div class="reviews-hero__stats">
+                        <div class="reviews-hero__stat-item">
+                            <span class="material-symbols-outlined stat-icon">groups</span>
+                            <div class="reviews-hero__stat-text">
+                                <span class="stat-number">1,200+</span>
+                                <span class="stat-label">Happy Patients</span>
+                            </div>
+                        </div>
+                        <div class="reviews-hero__stat-item">
+                            <span class="material-symbols-outlined stat-icon">star</span>
+                            <div class="reviews-hero__stat-text">
+                                <span class="stat-number">4.9/5</span>
+                                <span class="stat-label">Average Rating</span>
+                            </div>
+                        </div>
+                        <div class="reviews-hero__stat-item">
+                            <span class="material-symbols-outlined stat-icon">chat_bubble</span>
+                            <div class="reviews-hero__stat-text">
+                                <span class="stat-number">800+</span>
+                                <span class="stat-label">Verified Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews-hero__image-col reveal-right">
+                    <div class="reviews-hero__grid-wrapper">
+                        <div class="reviews-hero__photo-grid">
+                            <div class="reviews-hero__photo-card"><img src="images/patient-1.png" alt="Patient Story 1" /></div>
+                            <div class="reviews-hero__photo-card"><img src="images/patient-2.png" alt="Patient Story 2" /></div>
+                            <div class="reviews-hero__photo-card"><img src="images/patient-3.png" alt="Patient Story 3" /></div>
+                            <div class="reviews-hero__photo-card"><img src="images/patient-4.png" alt="Patient Story 4" /></div>
+                        </div>
+                        <div class="reviews-hero__floating-badge">
+                            <div class="stars-row">
+                                <span class="material-symbols-outlined filled">star</span>
+                                <span class="material-symbols-outlined filled">star</span>
+                                <span class="material-symbols-outlined filled">star</span>
+                                <span class="material-symbols-outlined filled">star</span>
+                                <span class="material-symbols-outlined filled">star</span>
+                            </div>
+                            <div class="badge-rating">4.9/5</div>
+                            <div class="badge-subtext">Based on 800+ reviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Patient Testimonials Section -->
+    <section class="patient-testimonials-section section">
+        <div class="container">
+            <div class="section-tag-wrapper">
+                <span class="section-tag">
+                    <span class="material-symbols-outlined">rate_review</span>
+                    <span>Patient Stories</span>
+                </span>
+            </div>
+            <h2 class="section-title">Patient Testimonials</h2>
+            <p class="section-subtitle">Hear from our patients about their experience and transformation.</p>
+            
+            <div class="testimonials-slider-container reveal">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><span class="material-symbols-outlined">format_quote</span></div>
+                        <p class="testimonial-text">Dr. Solanki is an excellent listener and made me feel comfortable from the very first session. The treatment and guidance helped me overcome anxiety and improve my daily life.</p>
+                        <div class="testimonial-rating">
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/patient_neha.png" alt="Neha P." class="author-photo" />
+                            <div class="author-info">
+                                <span class="author-name">Neha P.</span>
+                                <span class="author-treatment">Anxiety Treatment</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><span class="material-symbols-outlined">format_quote</span></div>
+                        <p class="testimonial-text">The care and support I received here changed my life. The team is compassionate, professional, and truly understands what you're going through.</p>
+                        <div class="testimonial-rating">
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/patient_rahul.png" alt="Rahul M." class="author-photo" />
+                            <div class="author-info">
+                                <span class="author-name">Rahul M.</span>
+                                <span class="author-treatment">Depression Treatment</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><span class="material-symbols-outlined">format_quote</span></div>
+                        <p class="testimonial-text">From diagnosis to recovery, the entire journey was handled with so much patience and expertise. Highly recommend Pramukh Psychiatry.</p>
+                        <div class="testimonial-rating">
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/patient_priya.png" alt="Priya S." class="author-photo" />
+                            <div class="author-info">
+                                <span class="author-name">Priya S.</span>
+                                <span class="author-treatment">ADHD Treatment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Google Reviews Section -->
+    <section class="google-reviews-section section">
+        <div class="container">
+            <div class="google-reviews__grid reveal">
+                <!-- Left Column -->
+                <div class="google-reviews__rating-col">
+                    <div class="google-brand-header">
+                        <svg class="google-g-logo" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.22-.67-.35-1.37-.35-2.09z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                        </svg>
+                        <span class="google-brand-title">GOOGLE REVIEWS</span>
+                    </div>
+                    
+                    <div class="google-reviews__big-score">
+                        <span class="big-score-num">4.9</span>
+                        <span class="big-score-total">/5</span>
+                    </div>
+                    
+                    <div class="google-reviews__stars-row">
+                        <span class="material-symbols-outlined filled">star</span>
+                        <span class="material-symbols-outlined filled">star</span>
+                        <span class="material-symbols-outlined filled">star</span>
+                        <span class="material-symbols-outlined filled">star</span>
+                        <span class="material-symbols-outlined filled">star</span>
+                    </div>
+                    
+                    <p class="google-reviews__total-text">Based on 800+ reviews</p>
+                    
+                    <a href="https://search.google.com/local/writereview?placeid=ChIJ2V0lH4a54zsRt_2Uj7ZpG_Q" target="_blank" rel="noopener noreferrer" class="google-reviews__write-btn">
+                        <span>Write a Review on Google</span>
+                        <span class="material-symbols-outlined">open_in_new</span>
+                    </a>
+                </div>
+                
+                <!-- Middle Column -->
+                <div class="google-reviews__breakdown-col">
+                    <div class="rating-breakdown-row">
+                        <span class="breakdown-label">5 Stars</span>
+                        <div class="breakdown-bar">
+                            <div class="breakdown-bar-fill" style="width: 92%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">92%</span>
+                    </div>
+                    <div class="rating-breakdown-row">
+                        <span class="breakdown-label">4 Stars</span>
+                        <div class="breakdown-bar">
+                            <div class="breakdown-bar-fill" style="width: 6%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">6%</span>
+                    </div>
+                    <div class="rating-breakdown-row">
+                        <span class="breakdown-label">3 Stars</span>
+                        <div class="breakdown-bar">
+                            <div class="breakdown-bar-fill" style="width: 2%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">2%</span>
+                    </div>
+                    <div class="rating-breakdown-row">
+                        <span class="breakdown-label">2 Stars</span>
+                        <div class="breakdown-bar">
+                            <div class="breakdown-bar-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">0%</span>
+                    </div>
+                    <div class="rating-breakdown-row">
+                        <span class="breakdown-label">1 Star</span>
+                        <div class="breakdown-bar">
+                            <div class="breakdown-bar-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">0%</span>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="google-reviews__feed-col">
+                    <div class="feed-nav-wrapper">
+                        <button class="feed-nav-btn feed-nav-btn--prev" aria-label="Previous review">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="feed-nav-btn feed-nav-btn--next" aria-label="Next review">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                    
+                    <div class="google-feed-review-card">
+                        <div class="feed-review-card-header">
+                            <img src="images/patient_amit.png" alt="Amit Shah" class="reviewer-avatar" />
+                            <div class="reviewer-meta">
+                                <span class="reviewer-name-text">Amit Shah</span>
+                                <span class="review-time-text">2 days ago</span>
+                            </div>
+                            <svg class="feed-card-google-icon" viewBox="0 0 24 24" width="18" height="18">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.22-.67-.35-1.37-.35-2.09z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="feed-review-card-stars">
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined filled">star</span>
+                        </div>
+                        
+                        <p class="feed-review-card-content">
+                            Amazing experience! The doctor and staff are very supportive. The treatment plan really works.
+                        </p>
+                        
+                        <div class="feed-review-card-footer">
+                            <div class="feed-review-like-btn">
+                                <span class="material-symbols-outlined">thumb_up</span>
+                                <span class="like-count-text">12</span>
+                            </div>
+                            
+                            <a href="#" class="feed-review-readmore">
+                                <span>Read more</span>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Stories of Hope & Recovery (Video Stories) -->
+    <section class="video-stories-section section">
+        <div class="container">
+            <div class="section-tag-wrapper">
+                <span class="section-tag">
+                    <span class="material-symbols-outlined text-secondary">play_circle</span>
+                    <span>Video Stories</span>
+                </span>
+            </div>
+            <h2 class="section-title">Stories of Hope & Recovery</h2>
+            <p class="section-subtitle">Watch how we've helped our patients heal and rebuild their lives.</p>
+            
+            <div class="video-stories-slider-container reveal">
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-card__thumbnail-wrapper">
+                            <img src="images/video_neha.png" alt="Overcoming Anxiety & Panic Attacks" class="video-card__thumbnail" />
+                            <div class="video-card__play-btn">
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="video-card__info">
+                            <h3 class="video-card__title">Overcoming Anxiety & Panic Attacks</h3>
+                            <span class="video-card__meta">Neha P. • 2:30 min</span>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-card__thumbnail-wrapper">
+                            <img src="images/video_rahul.png" alt="Journey from Depression to Confidence" class="video-card__thumbnail" />
+                            <div class="video-card__play-btn">
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="video-card__info">
+                            <h3 class="video-card__title">Journey from Depression to Confidence</h3>
+                            <span class="video-card__meta">Rahul M. • 3:15 min</span>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-card__thumbnail-wrapper">
+                            <img src="images/video_priya.png" alt="ADHD Treatment That Changed My Life" class="video-card__thumbnail" />
+                            <div class="video-card__play-btn">
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="video-card__info">
+                            <h3 class="video-card__title">ADHD Treatment That Changed My Life</h3>
+                            <span class="video-card__meta">Priya S. • 2:45 min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Patients Trust Us Section -->
+    <section class="trust-pillars-section section">
+        <div class="container">
+            <div class="section-tag-wrapper">
+                <span class="section-tag">
+                    <span class="material-symbols-outlined">verified_user</span>
+                    <span>Why Patients Trust Us</span>
+                </span>
+            </div>
+            <h2 class="section-title">Why Patients Trust Us</h2>
+            <p class="section-subtitle">Our commitment to compassionate care and proven results.</p>
+            
+            <div class="trust-pillars-row reveal">
+                <div class="trust-pillar-item">
+                    <div class="trust-pillar-icon-box">
+                        <span class="material-symbols-outlined">local_hospital</span>
+                    </div>
+                    <h3 class="trust-pillar-title">Expert Doctors</h3>
+                    <p class="trust-pillar-desc">Highly qualified and experienced neuropsychiatrists.</p>
+                </div>
+                
+                <div class="trust-pillar-item">
+                    <div class="trust-pillar-icon-box">
+                        <span class="material-symbols-outlined">volunteer_activism</span>
+                    </div>
+                    <h3 class="trust-pillar-title">Compassionate Care</h3>
+                    <p class="trust-pillar-desc">We listen, we understand, we heal.</p>
+                </div>
+                
+                <div class="trust-pillar-item">
+                    <div class="trust-pillar-icon-box">
+                        <span class="material-symbols-outlined">shield</span>
+                    </div>
+                    <h3 class="trust-pillar-title">Confidential & Safe</h3>
+                    <p class="trust-pillar-desc">Your privacy and trust are our priority.</p>
+                </div>
+                
+                <div class="trust-pillar-item">
+                    <div class="trust-pillar-icon-box">
+                        <span class="material-symbols-outlined">assignment</span>
+                    </div>
+                    <h3 class="trust-pillar-title">Personalized Treatment</h3>
+                    <p class="trust-pillar-desc">Tailored treatment plans for every individual.</p>
+                </div>
+                
+                <div class="trust-pillar-item">
+                    <div class="trust-pillar-icon-box">
+                        <span class="material-symbols-outlined">diversity_3</span>
+                    </div>
+                    <h3 class="trust-pillar-title">Complete Support</h3>
+                    <p class="trust-pillar-desc">We're with you at every step of your recovery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Bottom CTA Section -->
+    <section class="reviews-bottom-cta">
+        <div class="container">
+            <div class="reviews-bottom-cta__card reveal">
+                <div class="reviews-bottom-cta__left">
+                    <div class="reviews-bottom-cta__icon-wrapper">
+                        <!-- Brain Icon -->
+                        <svg class="reviews-bottom-cta__brain-icon" viewBox="0 0 100 100" width="50" height="50">
+                            <path fill="currentColor" d="M50 90c-1.2 0-2.3-.5-3.1-1.4-1.2-1.4-1.5-3.5-.7-5.1C47.4 81 48 78 48 75c0-1.7-.3-3.3-.8-4.9-1.8-5.6-7-9.5-12.7-10-6.1-.5-11.4 3.1-13.3 8.9-.6 1.8-1 3.7-1.1 5.6-.1 1.7-1.1 3.2-2.6 3.9-1.5.7-3.3.4-4.5-.8C11.5 76.2 10 74 10 71c0-13.4 9.1-25 21.8-27.9 3-.7 6.1-1.1 9.2-1.1 1.7 0 3 .6 4 1.7 1.4 1.5 2.1 3.5 2.1 5.6 0 1.9-.3 3.8-.8 5.6-1.1 3.9-3.7 7.2-7.2 9.1-1 .5-1.5 1.6-1.3 2.7.2 1.1 1.1 1.9 2.2 2 4.1.3 7.8 2.2 10.3 5.4 1.9 2.4 2.8 5.3 2.8 8.4 0 5-4 9.1-9.1 9.1zM50 10c13.8 0 25 11.2 25 25 0 9.2-5 17.6-13.1 21.9-2.1 1.1-3.5 3.3-3.8 5.7-.3 2.6.5 5.2 2.2 7.1 3 3.4 4.7 7.8 4.7 12.3 0 9.9-8.1 18-18 18s-18-8.1-18-18c0-4.5 1.7-8.9 4.7-12.3 1.7-1.9 2.5-4.5 2.2-7.1-.3-2.4-1.7-4.6-3.8-5.7C27.5 52.6 22.5 44.2 22.5 35c0-13.8 11.2-25 25-25z" />
+                        </svg>
+                    </div>
+                    <div class="reviews-bottom-cta__text">
+                        <h3 class="reviews-bottom-cta__title">Your Mental Wellness Journey Can Inspire Others.</h3>
+                        <p class="reviews-bottom-cta__subtitle">Share your experience and help others take the first step.</p>
+                    </div>
+                </div>
+                
+                <div class="reviews-bottom-cta__right">
+                    <a href="https://search.google.com/local/writereview?placeid=ChIJ2V0lH4a54zsRt_2Uj7ZpG_Q" target="_blank" rel="noopener noreferrer" class="reviews-bottom-cta__btn">
+                        <span>Share Your Story</span>
+                        <span class="material-symbols-outlined">edit</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mega Footer -->
+    <footer class="mega-footer">
+        <div class="footer-main">
+            <div class="footer-main__container">
+                <div class="footer-main__grid footer-main__grid--5cols">
+                    <div class="footer-main__brand">
+                        <a href="index.html" class="text-logo text-logo--lg text-logo--light">
+                            <img src="images/logo.png" alt="Pramukh Logo" class="text-logo__img" />
+                        </a>
+                        <p class="footer-main__brand-desc">
+                            Pramukh Neuropsychiatry Clinic provides Gold Medalist psychiatric solutions. Specialized in mental health, de-addiction, headache, sleep, and sexual healthcare in Valsad, Gujarat.
+                        </p>
+                        <div class="footer-main__social">
+                            <a href="#" class="social-link"><span class="material-symbols-outlined">public</span></a>
+                            <a href="#" class="social-link"><span class="material-symbols-outlined">photo_camera</span></a>
+                            <a href="#" class="social-link"><span class="material-symbols-outlined">play_circle</span></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-main__column">
+                        <h4 class="footer-heading">Psychiatric Clinics</h4>
+                        <ul class="footer-links">
+                            <li><a href="services.html#mental-health" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Mental Health Disorders</a></li>
+                            <li><a href="services.html#de-addiction" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>De-Addiction Program</a></li>
+                            <li><a href="services.html#psychosexual" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Psychosexual Clinic</a></li>
+                            <li><a href="services.html#headache" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Headache Treatment</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-main__column">
+                        <h4 class="footer-heading">Specialty Care</h4>
+                        <ul class="footer-links">
+                            <li><a href="services.html#sleep" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Sleep Clinic</a></li>
+                            <li><a href="services.html#epilepsy" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Epilepsy Fits Care</a></li>
+                            <li><a href="services.html#child" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Child Psychiatry</a></li>
+                            <li><a href="services.html#elderly" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Elderly Forgetfulness</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-main__column">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Home Page</a></li>
+                            <li><a href="about.html" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>About Dr. Solanki</a></li>
+                            <li><a href="services.html" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Our Services</a></li>
+                            <li><a href="reviews.html" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>Patient Reviews</a></li>
+                            <li><a href="contact.html" class="footer-link"><span class="material-symbols-outlined">chevron_right</span>OPD timings &amp; Map</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-main__column">
+                        <h4 class="footer-heading">Clinic Contact</h4>
+                        <ul class="footer-contacts">
+                            <li>
+                                <span class="material-symbols-outlined">phone</span>
+                                <div>
+                                    <span>Valsad Helpline</span>
+                                    <a href="tel:+918733096725">+91 87330 96725</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">location_on</span>
+                                <div>
+                                    <span>Valsad Address</span>
+                                    <span>205, B Metropolis, Abrama, Valsad</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-main__bottom">
+                    <p>&copy; 2026 Pramukh Neuropsychiatry Clinic. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="bottom-nav" x-data="{ lastScrollY: 0, hidden: false, scrollTimeout: null, init() {
+        window.addEventListener('scroll', () => {
+            const currentY = window.scrollY;
+            const atBottom = (currentY + window.innerHeight) >= (document.documentElement.scrollHeight - 5);
+            this.hidden = !atBottom && currentY > this.lastScrollY && currentY > 50;
+            this.lastScrollY = currentY;
+            
+            if (this.scrollTimeout) clearTimeout(this.scrollTimeout);
+            this.scrollTimeout = setTimeout(() => {
+                this.hidden = false;
+            }, 800);
+        }, { passive: true });
+    } }" :class="{ 'is-hidden': hidden }" x-cloak>
+        <div class="bottom-nav__inner">
+            <a href="index.html" class="bottom-nav__item">
+                <span class="bottom-nav__icon"><span class="material-symbols-outlined">home</span></span>
+                <span class="bottom-nav__label">Home</span>
+                <span class="bottom-nav__indicator"></span>
+            </a>
+            
+            <button class="bottom-nav__item" onclick="location.href='about.html'">
+                <span class="bottom-nav__icon"><span class="material-symbols-outlined">person</span></span>
+                <span class="bottom-nav__label">About</span>
+                <span class="bottom-nav__indicator"></span>
+            </button>
+            
+            <div class="bottom-nav__center">
+                <button class="bottom-nav__book" :class="{ 'is-expanded': $store.mobileNav.bookExpanded }" @click="$store.mobileNav.toggleBook()">
+                    <span class="bottom-nav__book-default" x-show="!$store.mobileNav.bookExpanded">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                    </span>
+                    <div class="bottom-nav__book-expanded" x-show="$store.mobileNav.bookExpanded" x-transition x-on:click.stop>
+                        <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="bottom-nav__book-action bottom-nav__book-action--whatsapp"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+                        <a href="tel:+918733096725" class="bottom-nav__book-action bottom-nav__book-action--call"><span class="material-symbols-outlined">call</span></a>
+                    </div>
+                </button>
+                <span class="bottom-nav__label bottom-nav__label--center">Book</span>
+            </div>
+            
+            <button class="bottom-nav__item" onclick="location.href='services.html'">
+                <span class="bottom-nav__icon"><span class="material-symbols-outlined">medical_services</span></span>
+                <span class="bottom-nav__label">Services</span>
+                <span class="bottom-nav__indicator"></span>
+            </button>
+            
+            <a href="reviews.html" class="bottom-nav__item is-active">
+                <span class="bottom-nav__icon"><span class="material-symbols-outlined filled">reviews</span></span>
+                <span class="bottom-nav__label">Reviews</span>
+                <span class="bottom-nav__indicator"></span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Services Bottom Sheet Drawer (Mobile layout responsive) -->
+    <div class="services-sheet" x-data x-show="$store.mobileNav.servicesSheetOpen" x-cloak>
+        <div class="services-sheet__backdrop" @click="$store.mobileNav.closeServicesSheet()" x-show="$store.mobileNav.servicesSheetOpen" x-transition></div>
+        <div class="services-sheet__content"
+             x-data="{
+                 startY: 0,
+                 currentY: 0,
+                 isDragging: false,
+                 onTouchStart(e) {
+                     this.startY = e.touches[0].clientY;
+                     this.currentY = 0;
+                     this.isDragging = true;
+                     this.$el.style.transition = 'none';
+                 },
+                 onTouchMove(e) {
+                     if (!this.isDragging) return;
+                     const deltaY = e.touches[0].clientY - this.startY;
+                     if (deltaY > 0) {
+                         this.currentY = deltaY;
+                         this.$el.style.transform = `translateY(${deltaY}px)`;
+                     }
+                 },
+                 onTouchEnd() {
+                     if (!this.isDragging) return;
+                     this.isDragging = false;
+                     this.$el.style.transition = 'transform 0.3s ease';
+                     if (this.currentY > 100) {
+                         $store.mobileNav.closeServicesSheet();
+                     }
+                     this.$el.style.transform = '';
+                     this.currentY = 0;
+                 }
+             }"
+             x-show="$store.mobileNav.servicesSheetOpen"
+             x-transition:enter="transition ease-out duration-300 transform"
+             x-transition:enter-start="translate-y-full"
+             x-transition:enter-end="translate-y-0"
+             x-transition:leave="transition ease-in duration-200 transform"
+             x-transition:leave-start="translate-y-0"
+             x-transition:leave-end="translate-y-full"
+             @click.stop
+             @touchstart="onTouchStart($event)"
+             @touchmove.passive="onTouchMove($event)"
+             @touchend="onTouchEnd()"
+        >
+            <div class="services-sheet__inner">
+                <div class="services-sheet__handle"><span class="services-sheet__handle-bar"></span></div>
+                <div class="services-sheet__header">
+                    <h3 class="services-sheet__title">Our Services</h3>
+                    <button class="services-sheet__close" @click="$store.mobileNav.closeServicesSheet()"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="services-sheet__list">
+                    <a href="services.html#mental-health" class="services-sheet__card" @click="$store.mobileNav.closeServicesSheet()">
+                        <span class="material-symbols-outlined services-sheet__card-icon">psychology</span>
+                        <div>
+                            <span class="services-sheet__card-title">Brain & Mental Health</span>
+                            <span class="services-sheet__card-desc">Depression, Anxiety, OCD, Stress</span>
+                        </div>
+                    </a>
+                    <a href="services.html#de-addiction" class="services-sheet__card" @click="$store.mobileNav.closeServicesSheet()">
+                        <span class="material-symbols-outlined services-sheet__card-icon">volunteer_activism</span>
+                        <div>
+                            <span class="services-sheet__card-title">De-Addiction Clinic</span>
+                            <span class="services-sheet__card-desc">Alcohol, Tobacco & Drug Recovery</span>
+                        </div>
+                    </a>
+                    <a href="services.html#psychosexual" class="services-sheet__card" @click="$store.mobileNav.closeServicesSheet()">
+                        <span class="material-symbols-outlined services-sheet__card-icon">settings_accessibility</span>
+                        <div>
+                            <span class="services-sheet__card-title">Psychosexual Clinic</span>
+                            <span class="services-sheet__card-desc">Treatment for sexual health concerns</span>
+                        </div>
+                    </a>
+                </div>
+                <a href="services.html" class="services-sheet__view-all" @click="$store.mobileNav.closeServicesSheet()">View All Services <span class="material-symbols-outlined">arrow_forward</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts for Alpine Store & General Layout Interactivity -->
+    <script>
+    document.addEventListener('alpine:init', () => {
+        // Haptic tap simulation logic
+        const haptic = (type = 'light') => {
+            if (!('vibrate' in navigator)) return;
+            const patterns = { light: 8, medium: 15, tap: 5 };
+            try { navigator.vibrate(patterns[type] || 8); } catch(e) {}
+        };
+
+        // Mobile bottom sheet global states
+        Alpine.store('mobileNav', {
+            servicesSheetOpen: false,
+            aboutSheetOpen: false,
+            bookExpanded: false,
+            bookTimeout: null,
+
+            closeAllSheets() {
+                this.servicesSheetOpen = false;
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            },
+            toggleServicesSheet() {
+                haptic('medium');
+                this.closeAllSheets();
+                this.servicesSheetOpen = !this.servicesSheetOpen;
+                this.bookExpanded = false;
+                if (this.servicesSheetOpen) {
+                    document.body.style.overflow = 'hidden';
+                    document.documentElement.style.overflow = 'hidden';
+                    history.pushState({ modal: 'services' }, '');
+                }
+            },
+            closeServicesSheet() {
+                haptic('light');
+                this.servicesSheetOpen = false;
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            },
+            toggleBook() {
+                haptic('medium');
+                if (this.bookTimeout) clearTimeout(this.bookTimeout);
+                this.bookExpanded = !this.bookExpanded;
+                this.closeAllSheets();
+                if (this.bookExpanded) {
+                    this.bookTimeout = setTimeout(() => { this.bookExpanded = false; }, 4000);
+                }
+            }
+        });
+
+        // Intercept back-button behavior to close active sheet
+        window.addEventListener('popstate', (e) => {
+            const store = Alpine.store('mobileNav');
+            if (store.servicesSheetOpen) { store.closeServicesSheet(); history.pushState(null, ''); return; }
+            if (store.bookExpanded) { store.bookExpanded = false; history.pushState(null, ''); return; }
+        });
+
+        // Push initial modal navigation intercept state
+        if (window.innerWidth < 1024) {
+            history.pushState(null, '');
+        }
+    });
+
+    if (window.innerWidth >= 1024) {
+        // Custom Cursor tracking
+        document.addEventListener('mousemove', (e) => {
+            const dot = document.getElementById('cursor-dot');
+            const circle = document.getElementById('cursor-circle');
+            if (dot && circle) {
+                dot.style.top = e.clientY + 'px';
+                dot.style.left = e.clientX + 'px';
+                
+                circle.animate({
+                    top: e.clientY + 'px',
+                    left: e.clientX + 'px'
+                }, { duration: 300, fill: 'forwards' });
+            }
+        });
+
+        // Custom Cursor hover triggers
+        const hoverElements = document.querySelectorAll('a, button, .testimonial-card, .video-card');
+        hoverElements.forEach(elem => {
+            elem.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            elem.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+    }
+
+    // Page Loader dismissal
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+            setTimeout(() => { loader.classList.add('hidden'); }, 800);
+        }
+    });
+
+    // Intersection Observer for Scroll entrance reveals
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.1 });
+    const revealTargets = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    revealTargets.forEach(target => revealObserver.observe(target));
+    </script>
+</body>
+</html>

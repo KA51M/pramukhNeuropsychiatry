@@ -105,7 +105,7 @@
                     </div>
                     
                     <a href="contact.html" class="header__nav-link" style="color: var(--dark);">OPD Timings</a>
-                    <a href="faq.html" class="header__nav-link" style="color: var(--dark);">FAQs</a>
+                    <a href="reviews.html" class="header__nav-link" style="color: var(--dark);">Reviews</a>
                     <a href="https://wa.me/918733096725?text=Hello%20Dr.%20Virensinh,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="header__cta">
                         <span class="material-symbols-outlined">calendar_month</span>
                         Book Appointment
@@ -449,11 +449,11 @@
                 <span class="bottom-nav__indicator"></span>
             </button>
             
-            <button class="bottom-nav__item" @click="$store.mobileNav.toggleFaqSheet()">
-                <span class="bottom-nav__icon"><span class="material-symbols-outlined">help</span></span>
-                <span class="bottom-nav__label">FAQs</span>
+            <a href="reviews.html" class="bottom-nav__item">
+                <span class="bottom-nav__icon"><span class="material-symbols-outlined">reviews</span></span>
+                <span class="bottom-nav__label">Reviews</span>
                 <span class="bottom-nav__indicator"></span>
-            </button>
+            </a>
         </div>
     </nav>
 
@@ -707,9 +707,9 @@
                         <span>OPD Timings</span>
                         <span class="material-symbols-outlined action-arrow">chevron_right</span>
                     </a>
-                    <a href="faq.html" class="about-sheet__action-card" @click="$store.mobileNav.closeAboutSheet()">
-                        <span class="material-symbols-outlined">help</span>
-                        <span>FAQ Center</span>
+                    <a href="reviews.html" class="about-sheet__action-card" @click="$store.mobileNav.closeAboutSheet()">
+                        <span class="material-symbols-outlined">reviews</span>
+                        <span>Patient Reviews</span>
                         <span class="material-symbols-outlined action-arrow">chevron_right</span>
                     </a>
                 </div>
@@ -717,116 +717,6 @@
                     <span>View Full Profile</span>
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAQs Bottom Sheet Drawer -->
-    <div class="faq-sheet" x-data x-show="$store.mobileNav.faqSheetOpen" x-cloak>
-        <div class="faq-sheet__backdrop" @click="$store.mobileNav.closeFaqSheet()" x-show="$store.mobileNav.faqSheetOpen" x-transition></div>
-        <div class="faq-sheet__content" 
-             x-data="{
-                 openIdx: 0,
-                 startY: 0,
-                 currentY: 0,
-                 isDragging: false,
-
-                 onTouchStart(e) {
-                     const touch = e.touches[0];
-                     this.startY = touch.clientY;
-                     this.currentY = 0;
-                     this.isDragging = true;
-                     this.$el.style.transition = 'none';
-                 },
-
-                 onTouchMove(e) {
-                     if (!this.isDragging) return;
-                     const touch = e.touches[0];
-                     const deltaY = touch.clientY - this.startY;
-                     if (deltaY > 0) {
-                         this.currentY = deltaY;
-                         this.$el.style.transform = `translateY(${deltaY}px)`;
-                     }
-                 },
-
-                 onTouchEnd() {
-                     if (!this.isDragging) return;
-                     this.isDragging = false;
-                     this.$el.style.transition = 'transform 0.3s ease';
-
-                     if (this.currentY > 100) {
-                         $store.mobileNav.closeFaqSheet();
-                     }
-                     this.$el.style.transform = '';
-                     this.currentY = 0;
-                 }
-             }"
-             x-show="$store.mobileNav.faqSheetOpen" 
-             x-transition:enter="transition ease-out duration-300 transform" 
-             x-transition:enter-start="translate-y-full" 
-             x-transition:enter-end="translate-y-0" 
-             x-transition:leave="transition ease-in duration-200 transform" 
-             x-transition:leave-start="translate-y-0" 
-             x-transition:leave-end="translate-y-full"
-             @click.stop
-             @touchstart="onTouchStart($event)"
-             @touchmove.passive="onTouchMove($event)"
-             @touchend="onTouchEnd()"
-        >
-            <div class="faq-sheet__inner">
-                <div class="faq-sheet__handle"><span class="faq-sheet__handle-bar"></span></div>
-                <div class="faq-sheet__header">
-                    <h3 class="faq-sheet__title">Common Questions</h3>
-                    <button class="faq-sheet__close" @click="$store.mobileNav.closeFaqSheet()"><span class="material-symbols-outlined">close</span></button>
-                </div>
-                <div class="faq-sheet__list" x-data="{ openIdx: 0 }">
-                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 0 }">
-                        <button class="faq-sheet__question" @click="openIdx = openIdx === 0 ? null : 0">
-                            <span>How can I book an appointment?</span>
-                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 0 }">expand_more</span>
-                        </button>
-                        <div class="faq-sheet__answer" x-show="openIdx === 0" x-collapse>
-                            <p>Call our Valsad clinic directly at <strong>+91 87330 96725</strong> or send a message via our WhatsApp booking links. Prior appointments ensure minimum waiting times.</p>
-                        </div>
-                    </div>
-                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 1 }">
-                        <button class="faq-sheet__question" @click="openIdx = openIdx === 1 ? null : 1">
-                            <span>Where is the clinic located?</span>
-                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 1 }">expand_more</span>
-                        </button>
-                        <div class="faq-sheet__answer" x-show="openIdx === 1" x-collapse>
-                            <p>Pramukh Neuropsychiatry Clinic is at <strong>205, B Metropolis, Opposite Parikh Hospital (2nd Floor), Valsad-Dharampur Road, Abrama, Valsad</strong>.</p>
-                        </div>
-                    </div>
-                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 2 }">
-                        <button class="faq-sheet__question" @click="openIdx = openIdx === 2 ? null : 2">
-                            <span>Are my consultations confidential?</span>
-                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 2 }">expand_more</span>
-                        </button>
-                        <div class="faq-sheet__answer" x-show="openIdx === 2" x-collapse>
-                            <p>Absolutely. 100% patient privacy and diagnostic confidentiality are guaranteed for all clinical visits, treatments, and therapy records.</p>
-                        </div>
-                    </div>
-                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 3 }">
-                        <button class="faq-sheet__question" @click="openIdx = openIdx === 3 ? null : 3">
-                            <span>What treatments are offered?</span>
-                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 3 }">expand_more</span>
-                        </button>
-                        <div class="faq-sheet__answer" x-show="openIdx === 3" x-collapse>
-                            <p>Dr. Solanki provides specialized treatments for depression, anxiety, OCD, migraines, sleep disorders, psychosexual clinics, addiction de-toxification, and childhood ADHD/autism.</p>
-                        </div>
-                    </div>
-                    <div class="faq-sheet__item" :class="{ 'faq-sheet__item--open': openIdx === 4 }">
-                        <button class="faq-sheet__question" @click="openIdx = openIdx === 4 ? null : 4">
-                            <span>Can I consult online/remotely?</span>
-                            <span class="material-symbols-outlined faq-sheet__icon" :class="{ 'rotated': openIdx === 4 }">expand_more</span>
-                        </button>
-                        <div class="faq-sheet__answer" x-show="openIdx === 4" x-collapse>
-                            <p>Yes. Remote video consultations are available for follow-up patients and individuals outside Valsad. Slots can be scheduled through our WhatsApp helpline.</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="faq.html" class="faq-sheet__view-all" @click="$store.mobileNav.closeFaqSheet()">View All FAQs <span class="material-symbols-outlined">arrow_forward</span></a>
             </div>
         </div>
     </div>
