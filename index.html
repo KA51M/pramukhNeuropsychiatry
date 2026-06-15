@@ -1281,6 +1281,16 @@
 
     <!-- Scripts for Alpine Store & General Layout Interactivity -->
     <script>
+    // Fix mobile viewport height: set --real-vh to actual visible height
+    (function() {
+        function setRealVH() {
+            document.documentElement.style.setProperty('--real-vh', (window.innerHeight * 0.01) + 'px');
+        }
+        setRealVH();
+        window.addEventListener('resize', setRealVH);
+        window.addEventListener('orientationchange', function() { setTimeout(setRealVH, 150); });
+    })();
+
     document.addEventListener('alpine:init', () => {
         // Haptic tap simulation logic
         const haptic = (type = 'light') => {
@@ -1310,6 +1320,7 @@
                 this.servicesSheetOpen = !this.servicesSheetOpen;
                 this.bookExpanded = false;
                 if (this.servicesSheetOpen) {
+                    document.documentElement.style.setProperty('--real-vh', (window.innerHeight * 0.01) + 'px');
                     document.body.style.overflow = 'hidden';
                     document.documentElement.style.overflow = 'hidden';
                     history.pushState({ modal: 'services' }, '');
@@ -1327,6 +1338,7 @@
                 this.aboutSheetOpen = !this.aboutSheetOpen;
                 this.bookExpanded = false;
                 if (this.aboutSheetOpen) {
+                    document.documentElement.style.setProperty('--real-vh', (window.innerHeight * 0.01) + 'px');
                     document.body.style.overflow = 'hidden';
                     document.documentElement.style.overflow = 'hidden';
                     history.pushState({ modal: 'about' }, '');
@@ -1344,6 +1356,7 @@
                 this.faqSheetOpen = !this.faqSheetOpen;
                 this.bookExpanded = false;
                 if (this.faqSheetOpen) {
+                    document.documentElement.style.setProperty('--real-vh', (window.innerHeight * 0.01) + 'px');
                     document.body.style.overflow = 'hidden';
                     document.documentElement.style.overflow = 'hidden';
                     history.pushState({ modal: 'faq' }, '');

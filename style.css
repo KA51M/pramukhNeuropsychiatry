@@ -3693,8 +3693,9 @@ img {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100dvh;
     height: 100vh;
+    height: 100dvh;
+    height: calc(var(--real-vh, 1vh) * 100);
     z-index: 2000;
     display: flex;
     flex-direction: column;
@@ -4372,9 +4373,8 @@ img {
     }
     
     .services-sheet__content, .faq-sheet__content {
-        height: 85dvh !important;
-        height: 85vh !important;
-        max-height: 85dvh !important;
+        height: auto !important;
+        max-height: 85% !important;
         overflow-y: auto !important;
         scrollbar-width: none !important;
         -webkit-overflow-scrolling: touch;
@@ -4382,8 +4382,7 @@ img {
     
     .about-sheet__content {
         height: auto !important;
-        max-height: 85vh !important;
-        max-height: 85dvh !important;
+        max-height: 85% !important;
         overflow-y: auto !important;
         scrollbar-width: none !important;
         -webkit-overflow-scrolling: touch;
