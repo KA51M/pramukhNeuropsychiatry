@@ -4382,8 +4382,8 @@ img {
     
     .about-sheet__content {
         height: auto !important;
-        max-height: 85dvh !important;
         max-height: 85vh !important;
+        max-height: 85dvh !important;
         overflow-y: auto !important;
         scrollbar-width: none !important;
         -webkit-overflow-scrolling: touch;
@@ -4559,9 +4559,10 @@ img {
         box-shadow: var(--shadow-sm) !important;
         transition: var(--transition) !important;
         border: none !important;
-        margin-top: auto !important; /* Push to bottom of content area */
+        margin-top: 0.25rem !important;
         width: 100% !important;
         box-sizing: border-box !important;
+        flex-shrink: 0 !important;
     }
     
     .services-sheet__view-all:active, .faq-sheet__view-all:active, .about-sheet__btn-dark:active {
