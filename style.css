@@ -4387,7 +4387,7 @@ img {
     }
     
     .services-sheet__inner, .faq-sheet__inner {
-        padding: 1rem 1.25rem calc(100px + env(safe-area-inset-bottom, 0px)) 1.25rem !important;
+        padding: 1rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom, 0px)) 1.25rem !important;
         gap: 0.85rem !important;
         display: flex !important;
         flex-direction: column !important;
@@ -4443,7 +4443,7 @@ img {
     }
     
     .about-sheet__inner {
-        padding: 0.85rem 1.15rem calc(100px + env(safe-area-inset-bottom, 0px)) 1.15rem !important;
+        padding: 0.85rem 1.15rem calc(1.5rem + env(safe-area-inset-bottom, 0px)) 1.15rem !important;
         gap: 0.6rem !important;
         display: flex !important;
         flex-direction: column !important;
@@ -5214,7 +5214,7 @@ img {
 }
 
 .service-block__list li::before {
-    content: "•";
+    content: "â€¢";
     color: var(--secondary);
     font-size: 1.1rem;
 }
@@ -5353,24 +5353,42 @@ img {
     margin-bottom: 2rem;
 }
 
-.why-checklists {
+.why-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     margin-bottom: 2.5rem;
     width: 100%;
 }
 
-.why-checklists li {
+.why-card-item {
+    background-color: var(--light-teal);
+    border: 1px solid var(--border-teal);
+    padding: 1.25rem 1rem;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 0.75rem;
+    transition: var(--transition);
+}
+
+.why-card-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--primary);
+}
+
+.why-card-icon {
+    color: var(--primary);
+    font-size: 1.75rem;
+    flex-shrink: 0;
+}
+
+.why-card-text {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--dark);
-}
-
-.why-checklists li .check-circle {
-    color: var(--primary);
-    font-size: 1.3rem;
+    line-height: 1.3;
 }
 
 .btn-why-cta {
@@ -6119,10 +6137,12 @@ img {
         gap: 1rem;
         background-color: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.12);
-        padding: 0.5rem 1.25rem 0.5rem 0.5rem;
-        border-radius: 50px;
+        padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+        border-radius: 12px;
         margin-bottom: 2rem;
         text-align: left;
+        margin-left: 0;
+        margin-right: auto;
     }
     .new-hero__doctor-badge-photo {
         width: 48px;
@@ -6151,14 +6171,15 @@ img {
     .new-hero__grid {
         grid-template-columns: 1fr;
         gap: 3.5rem;
-        text-align: center;
+        text-align: left;
     }
     .new-hero__content {
-        align-items: center;
+        align-items: flex-start;
     }
     .new-hero__description {
-        margin-left: auto;
+        margin-left: 0;
         margin-right: auto;
+        text-align: left;
     }
     .expert-grid {
         grid-template-columns: 1fr;
@@ -6169,11 +6190,11 @@ img {
         gap: 4rem;
     }
     .why-content-col {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
     }
     .why-illustration-card {
-        margin: 0 auto;
+        margin: 0;
     }
     .excellence-grid {
         grid-template-columns: 1fr;
@@ -6190,9 +6211,9 @@ img {
         grid-template-columns: 1fr;
         gap: 3.5rem;
     }
-    .locations-info {
-        align-items: center;
-        text-align: center;
+    .locations-info, .locations-column--info {
+        align-items: flex-start;
+        text-align: left;
     }
     .new-faq-grid {
         grid-template-columns: 1fr;
@@ -6201,8 +6222,31 @@ img {
     .new-faq-left-col {
         position: relative;
         top: 0;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    /* Force left-alignment for all headers and sections on mobile/tablet */
+    .services-header,
+    .why-header,
+    .excellence-header,
+    .approach-header,
+    .locations-header,
+    .new-faq-header,
+    .testimonials-header,
+    .section-title-centered,
+    .services-page-hero__centered-content,
+    .testimonials-header-flex {
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+    .services-page-hero__description-centered {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        text-align: left !important;
+    }
+    .badge-pill-service {
+        align-self: flex-start !important;
     }
 }
 
@@ -6233,6 +6277,23 @@ img {
     }
     .expert-stats-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .expert-checklists {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .expert-check-item {
+        background-color: var(--primary);
+        padding: 0.85rem 1.25rem;
+        border-radius: 12px;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        box-shadow: var(--shadow-sm);
+    }
+    .expert-check-item span,
+    .expert-check-item .check-icon {
+        color: var(--white) !important;
     }
     .services-grid {
         grid-template-columns: 1fr;
@@ -7206,18 +7267,18 @@ img {
     .reviews-hero__grid {
         grid-template-columns: 1fr;
         gap: 3.5rem;
-        text-align: center;
+        text-align: left;
     }
     .reviews-hero__content {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
     .reviews-hero__breadcrumbs {
-        justify-content: center;
+        justify-content: flex-start;
     }
     .reviews-hero__stats {
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
         gap: 2rem;
     }
@@ -7254,13 +7315,14 @@ img {
     
     .reviews-bottom-cta__card {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         padding: 3rem 2rem;
         gap: 2.5rem;
     }
     .reviews-bottom-cta__left {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
+        align-items: flex-start;
     }
 }
 
@@ -7275,9 +7337,9 @@ img {
     .reviews-hero__stats {
         flex-direction: column;
         gap: 1.5rem;
-        align-items: center;
-        max-width: 300px;
-        margin: 0 auto;
+        align-items: flex-start;
+        max-width: none;
+        margin: 0;
     }
     .reviews-hero__stat-item {
         width: 100%;
@@ -7531,7 +7593,7 @@ img {
 
 .locations-notice-line {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
 }
 
@@ -7539,6 +7601,7 @@ img {
     font-size: 1.1rem;
     color: var(--primary);
     flex-shrink: 0;
+    margin-top: 0.15rem;
 }
 
 .locations-notice-line span:not(.material-symbols-outlined) {
@@ -7623,12 +7686,12 @@ img {
 .testimonial-box-card {
     background: var(--white);
     border: 1px solid var(--border);
-    padding: 2.5rem;
+    padding: 1.75rem 2rem;
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-md);
     width: 100%;
-    margin: 0 1rem;
-    min-height: 250px;
+    margin: 0;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7682,31 +7745,7 @@ img {
 }
 
 .slider-arrow {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 1px solid var(--border);
-    color: var(--slate);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-    flex-shrink: 0;
-    z-index: 5;
-}
-
-.slider-arrow:hover {
-    background: var(--primary);
-    color: var(--white);
-    border-color: var(--primary);
-    box-shadow: var(--shadow-glow);
-}
-
-.slider-arrow span {
-    font-size: 1.5rem;
+    display: none !important;
 }
 
 /* FAQ Side styling */
@@ -7832,20 +7871,21 @@ img {
     }
     .section-title-left {
         font-size: 2rem;
-        text-align: center;
+        text-align: left;
         margin-bottom: 2rem;
     }
     .testimonials-side .section-tag-left-wrapper,
     .faq-side .section-tag-left-wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
     .testimonial-box-card {
-        padding: 2rem 1.5rem;
-        min-height: 220px;
+        padding: 1.5rem !important;
+        min-height: 150px !important;
+        margin: 0 !important;
     }
     .faq-more-action {
-        justify-content: center;
+        justify-content: flex-start;
     }
 }
 
@@ -9490,14 +9530,16 @@ img {
     
     .about-cta-card {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         gap: 2rem;
         padding: 2.5rem 2rem;
+        align-items: flex-start;
     }
     
     .about-cta-content {
         flex-direction: column;
         gap: 1.25rem;
+        align-items: flex-start;
     }
 }
 
@@ -9528,9 +9570,10 @@ img {
     }
     
     .about-hero__feature {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 0.75rem;
     }
     
     .about-stats-bar {

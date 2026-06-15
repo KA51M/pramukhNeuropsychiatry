@@ -152,7 +152,6 @@
         <div class="container">
             <div class="new-hero__grid">
                 <div class="new-hero__content">
-                    <span class="new-hero__badge">Advanced Care. Lasting Recovery.</span>
                     <h1 class="new-hero__title">
                         Advanced <span class="text-teal-highlight">De-Addiction</span> &amp; Neuropsychiatry Care
                     </h1>
@@ -430,24 +429,24 @@
                     <p class="why-description">
                         We combine clinical excellence with compassionate care to deliver the best outcomes for our patients.
                     </p>
-                    <ul class="why-checklists">
-                        <li>
-                            <span class="material-symbols-outlined check-circle">check_circle</span>
-                            <span>Expert &amp; Experienced Team</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined check-circle">check_circle</span>
-                            <span>Personalized Treatment Plans</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined check-circle">check_circle</span>
-                            <span>Holistic &amp; Evidence-Based Approach</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined check-circle">check_circle</span>
-                            <span>Confidential &amp; Supportive Environment</span>
-                        </li>
-                    </ul>
+                    <div class="why-cards-grid">
+                        <div class="why-card-item">
+                            <span class="material-symbols-outlined why-card-icon">groups</span>
+                            <span class="why-card-text">Expert &amp; Experienced Team</span>
+                        </div>
+                        <div class="why-card-item">
+                            <span class="material-symbols-outlined why-card-icon">clinical_notes</span>
+                            <span class="why-card-text">Personalized Treatment Plans</span>
+                        </div>
+                        <div class="why-card-item">
+                            <span class="material-symbols-outlined why-card-icon">spa</span>
+                            <span class="why-card-text">Holistic &amp; Evidence-Based Approach</span>
+                        </div>
+                        <div class="why-card-item">
+                            <span class="material-symbols-outlined why-card-icon">lock</span>
+                            <span class="why-card-text">Confidential &amp; Supportive Environment</span>
+                        </div>
+                    </div>
                     <a href="about.html" class="btn btn--primary btn-why-cta">
                         Learn More About Our Approach
                     </a>
@@ -726,7 +725,7 @@
                         treatment: 'ADHD Treatment',
                         stars: 5
                     }
-                ] }">
+                ], init() { setInterval(() => { this.currentSlide = (this.currentSlide + 1) % this.slides.length }, 5000); } }">
                     <div class="testimonials-header-flex">
                         <div>
                             <div class="section-tag-left-wrapper">
