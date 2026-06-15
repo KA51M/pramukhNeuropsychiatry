@@ -8727,35 +8727,66 @@ img {
     align-items: flex-start;
 }
 
+@keyframes floatZen {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
 .about-mission-card {
-    background: var(--white);
+    background: radial-gradient(circle at 100% 0%, rgba(0, 168, 181, 0.04) 0%, var(--white) 60%);
     border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
     border-radius: var(--radius-2xl);
     border-top-right-radius: 6rem;
-    padding: 3rem 2.5rem;
+    padding: 3.5rem 3rem;
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 360px;
+    min-height: 380px;
     position: relative;
     overflow: hidden;
+    transition: var(--transition-bounce);
+}
+
+.about-mission-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md), 0 10px 30px rgba(0, 168, 181, 0.06);
+    border-color: rgba(0, 168, 181, 0.3);
+    border-left-color: var(--primary);
 }
 
 .about-mission-card__icon {
-    width: 54px;
-    height: 54px;
-    background-color: var(--primary-light);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(0, 168, 181, 0.15) 0%, rgba(0, 168, 181, 0.05) 100%);
     color: var(--primary);
-    border-radius: var(--radius-lg); /* Square background with slight rounding */
+    border: 1px solid rgba(0, 168, 181, 0.2);
+    border-radius: var(--radius-xl); /* Square background with slight rounding */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-bounce);
+    box-shadow: 0 8px 20px rgba(0, 168, 181, 0.08);
 }
 
 .about-mission-card__icon span {
     font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.about-mission-card:hover .about-mission-card__icon {
+    transform: rotate(8deg) scale(1.05);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+    color: var(--white);
+    box-shadow: 0 8px 20px rgba(0, 168, 181, 0.25);
+    border-color: var(--primary);
+}
+
+.about-mission-card:hover .about-mission-card__icon span {
+    transform: scale(1.1);
 }
 
 .about-mission-text {
@@ -8776,6 +8807,7 @@ img {
 .about-mission-card__image img {
     width: 100%;
     height: auto;
+    animation: floatZen 5s ease-in-out infinite;
 }
 
 .about-values-area {
@@ -8793,6 +8825,11 @@ img {
 .about-value-item {
     display: flex;
     gap: 1.25rem;
+    transition: var(--transition-bounce);
+}
+
+.about-value-item:hover {
+    transform: translateX(4px);
 }
 
 .about-value-icon {
@@ -8806,6 +8843,14 @@ img {
     justify-content: center;
     flex-shrink: 0;
     box-shadow: 0 4px 10px rgba(0, 168, 181, 0.08);
+    transition: var(--transition-bounce);
+}
+
+.about-value-item:hover .about-value-icon {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 168, 181, 0.2);
 }
 
 .about-value-icon span {
@@ -9087,6 +9132,13 @@ img {
 }
 
 .about-journey__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-journey__text-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9448,6 +9500,15 @@ img {
         border-radius: var(--radius-xl);
         border: 1px solid var(--border);
     }
+
+    .about-journey__text-content {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .about-journey__year {
+        margin-top: 0 !important;
+    }
     
     .about-journey__item-desc {
         max-width: 100%;
@@ -9479,7 +9540,18 @@ img {
     }
 
     .about-hero__title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .about-hero__experience-card {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin: -2.5rem auto 1.5rem auto; /* Overlaps bottom center of image wrapper */
+        width: calc(100% - 2rem);
+        max-width: 280px;
+        justify-content: center;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
 
     .about-hero__features {
