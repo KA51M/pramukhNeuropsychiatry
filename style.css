@@ -4371,10 +4371,19 @@ img {
         width: 145px !important;
     }
     
-    .services-sheet__content, .about-sheet__content, .faq-sheet__content {
+    .services-sheet__content, .faq-sheet__content {
         height: 85dvh !important;
         height: 85vh !important;
         max-height: 85dvh !important;
+        overflow-y: auto !important;
+        scrollbar-width: none !important;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .about-sheet__content {
+        height: auto !important;
+        max-height: 85dvh !important;
+        max-height: 85vh !important;
         overflow-y: auto !important;
         scrollbar-width: none !important;
         -webkit-overflow-scrolling: touch;
